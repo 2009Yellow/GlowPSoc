@@ -108,7 +108,6 @@ typedef struct {
 #define CFG_MEMSET_COUNT (sizeof(cfg_memset_list)/sizeof(*cfg_memset_list))
 static const cfg_memset_t CYCODE cfg_memset_list [] = {
 	/* address, size */
-	{(void CYFAR *)(CYREG_PRT3_DR), 48},
 	{(void CYFAR *)(CYREG_PRT12_DR), 16},
 	{(void CYFAR *)(CYREG_PRT15_DR), 16},
 	{(void CYFAR *)(CYDEV_UCFG_B0_P0_U0_BASE), 4096},
@@ -137,11 +136,20 @@ typedef struct
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
 #define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000410)
 
+/* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
+#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000418)
+
+/* IOPINS0_4 Address: CYREG_PRT4_DM0 Size (bytes): 8 */
+#define BS_IOPINS0_4_VAL ((const uint8 CYFAR *)0x48000420)
+
+/* IOPINS0_5 Address: CYREG_PRT5_DM0 Size (bytes): 8 */
+#define BS_IOPINS0_5_VAL ((const uint8 CYFAR *)0x48000428)
+
 /* IOPINS0_6 Address: CYREG_PRT6_DR Size (bytes): 10 */
-#define BS_IOPINS0_6_VAL ((const uint8 CYFAR *)0x48000418)
+#define BS_IOPINS0_6_VAL ((const uint8 CYFAR *)0x48000430)
 
 /* CYDEV_CLKDIST_ACFG0_CFG0 Address: CYREG_CLKDIST_ACFG0_CFG0 Size (bytes): 4 */
-#define BS_CYDEV_CLKDIST_ACFG0_CFG0_VAL ((const uint8 CYFAR *)0x48000424)
+#define BS_CYDEV_CLKDIST_ACFG0_CFG0_VAL ((const uint8 CYFAR *)0x4800043C)
 
 
 /*******************************************************************************
@@ -259,16 +267,23 @@ void AnalogSetDefault(void)
 	uint8 bg_xover_inl_trim = CY_GET_XTND_REG8(CYREG_FLSHID_MFG_CFG_BG_XOVER_INL_TRIM + 1u);
 	CY_SET_XTND_REG8(CYREG_BG_DFT0, bg_xover_inl_trim & 0x07u);
 	CY_SET_XTND_REG8(CYREG_BG_DFT1, (bg_xover_inl_trim >> 4) & 0x0Fu);
-	CY_SET_XTND_REG8(CYREG_PRT1_AG, 0xC0);
+	CY_SET_XTND_REG8(CYREG_PRT1_AG, 0x40);
+	CY_SET_XTND_REG8(CYREG_PRT3_AG, 0x01);
+	CY_SET_XTND_REG8(CYREG_PRT4_AG, 0x85);
+	CY_SET_XTND_REG16(CYREG_PRT5_AMUX, 0x0202);
+	CY_SET_XTND_REG8(CYREG_PRT6_AG, 0x08);
 	CY_SET_XTND_REG8(CYREG_SAR1_CSR1, 0x80);
-	CY_SET_XTND_REG8(CYREG_SC1_SW0, 0x18);
-	CY_SET_XTND_REG8(CYREG_SC1_SW8, 0x20);
-	CY_SET_XTND_REG8(CYREG_SC3_SW0, 0x01);
-	CY_SET_XTND_REG8(CYREG_SC3_SW8, 0x04);
-	CY_SET_XTND_REG8(CYREG_DAC1_SW0, 0x01);
-	CY_SET_XTND_REG8(CYREG_DAC3_SW4, 0x10);
-	CY_SET_XTND_REG8(CYREG_SAR1_SW0, 0x20);
+	CY_SET_XTND_REG8(CYREG_SC1_SW0, 0x20);
+	CY_SET_XTND_REG8(CYREG_SC1_SW8, 0x80);
+	CY_SET_XTND_REG8(CYREG_SC3_SW2, 0x08);
+	CY_SET_XTND_REG8(CYREG_DAC1_SW2, 0x08);
+	CY_SET_XTND_REG8(CYREG_DAC2_SW4, 0x20);
+	CY_SET_XTND_REG8(CYREG_DAC3_SW0, 0x10);
+	CY_SET_XTND_REG8(CYREG_DAC3_SW2, 0x01);
+	CY_SET_XTND_REG16(CYREG_DSM0_SW3, 0x0804);
+	CY_SET_XTND_REG8(CYREG_SAR1_SW0, 0x80);
 	CY_SET_XTND_REG8(CYREG_SAR1_SW3, 0x20);
+	CY_SET_XTND_REG8(CYREG_BUS_SW0, 0x22);
 	CY_SET_XTND_REG8(CYREG_PUMP_CR0, 0x44);
 }
 
@@ -293,13 +308,473 @@ void SetAnalogRoutingPumps(uint8 enabled)
 {
 	uint8 regValue = CY_GET_XTND_REG8(CYREG_PUMP_CR0);
 	if (enabled)
-		regValue |= 0x02;
+		regValue |= 0x22;
 	else
-		regValue &= ~0x02;
+		regValue &= ~0x22;
 	CY_SET_XTND_REG8(CYREG_PUMP_CR0, regValue);
 }
 
 #define CY_AMUX_UNUSED CYREG_BOOST_SR
+/* Table used to specify registers used to implement BOTTOM_MUX_1 */
+uint8 CYXDATA * const CYCODE BOTTOM_MUX_1__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, (uint8 CYXDATA *)CY_AMUX_UNUSED, 
+	(uint8 CYXDATA *)CYREG_DAC2_SW3, (uint8 CYXDATA *)CYREG_PRT0_AG, 
+};
+
+/* Table used to define bit masks used to enable inputs for BOTTOM_MUX_1 */
+const uint8 CYCODE BOTTOM_MUX_1__maskTable[] = {
+	0x80, 0x00, 
+	0x80, 0x80, 
+};
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_1_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_1_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*BOTTOM_MUX_1__addrTable[channel] |= BOTTOM_MUX_1__maskTable[channel];
+	channel++;
+	*BOTTOM_MUX_1__addrTable[channel] |= BOTTOM_MUX_1__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_1_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_1_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*BOTTOM_MUX_1__addrTable[channel] &= ~BOTTOM_MUX_1__maskTable[channel];
+	channel++;
+	*BOTTOM_MUX_1__addrTable[channel] &= ~BOTTOM_MUX_1__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement BOTTOM_MUX_2 */
+uint8 CYXDATA * const CYCODE BOTTOM_MUX_2__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, 
+	(uint8 CYXDATA *)CYREG_DAC2_SW4, 
+};
+
+/* Table used to define bit masks used to enable inputs for BOTTOM_MUX_2 */
+const uint8 CYCODE BOTTOM_MUX_2__maskTable[] = {
+	0x10, 
+	0x10, 
+};
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_2_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_2_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	*BOTTOM_MUX_2__addrTable[channel] |= BOTTOM_MUX_2__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_2_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_2_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	*BOTTOM_MUX_2__addrTable[channel] &= ~BOTTOM_MUX_2__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement BOTTOM_MUX_3 */
+uint8 CYXDATA * const CYCODE BOTTOM_MUX_3__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, (uint8 CYXDATA *)CYREG_PRT6_AG, 
+	(uint8 CYXDATA *)CYREG_DAC2_SW3, (uint8 CYXDATA *)CYREG_PRT6_AMUX, 
+};
+
+/* Table used to define bit masks used to enable inputs for BOTTOM_MUX_3 */
+const uint8 CYCODE BOTTOM_MUX_3__maskTable[] = {
+	0x01, 0x10, 
+	0x10, 0x10, 
+};
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_3_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_3_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*BOTTOM_MUX_3__addrTable[channel] |= BOTTOM_MUX_3__maskTable[channel];
+	channel++;
+	*BOTTOM_MUX_3__addrTable[channel] |= BOTTOM_MUX_3__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_3_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_3_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*BOTTOM_MUX_3__addrTable[channel] &= ~BOTTOM_MUX_3__maskTable[channel];
+	channel++;
+	*BOTTOM_MUX_3__addrTable[channel] &= ~BOTTOM_MUX_3__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement BOTTOM_MUX_4 */
+uint8 CYXDATA * const CYCODE BOTTOM_MUX_4__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW3, 
+	(uint8 CYXDATA *)CYREG_DSM0_SW4, 
+};
+
+/* Table used to define bit masks used to enable inputs for BOTTOM_MUX_4 */
+const uint8 CYCODE BOTTOM_MUX_4__maskTable[] = {
+	0x40, 
+	0x20, 
+};
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_4_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_4_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	*BOTTOM_MUX_4__addrTable[channel] |= BOTTOM_MUX_4__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: BOTTOM_MUX_4_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void BOTTOM_MUX_4_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	*BOTTOM_MUX_4__addrTable[channel] &= ~BOTTOM_MUX_4__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement TOP_MUX_1 */
+uint8 CYXDATA * const CYCODE TOP_MUX_1__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, (uint8 CYXDATA *)CYREG_BUS_SW0, 
+	(uint8 CYXDATA *)CYREG_SC3_SW8, (uint8 CYXDATA *)CY_AMUX_UNUSED, 
+};
+
+/* Table used to define bit masks used to enable inputs for TOP_MUX_1 */
+const uint8 CYCODE TOP_MUX_1__maskTable[] = {
+	0x04, 0x04, 
+	0x04, 0x00, 
+};
+
+/*******************************************************************************
+* Function Name: TOP_MUX_1_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_1_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_1__addrTable[channel] |= TOP_MUX_1__maskTable[channel];
+	channel++;
+	*TOP_MUX_1__addrTable[channel] |= TOP_MUX_1__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: TOP_MUX_1_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_1_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_1__addrTable[channel] &= ~TOP_MUX_1__maskTable[channel];
+	channel++;
+	*TOP_MUX_1__addrTable[channel] &= ~TOP_MUX_1__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement TOP_MUX_2 */
+uint8 CYXDATA * const CYCODE TOP_MUX_2__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, (uint8 CYXDATA *)CYREG_PRT5_AMUX, 
+	(uint8 CYXDATA *)CYREG_SC3_SW8, (uint8 CYXDATA *)CYREG_PRT5_AG, 
+};
+
+/* Table used to define bit masks used to enable inputs for TOP_MUX_2 */
+const uint8 CYCODE TOP_MUX_2__maskTable[] = {
+	0x02, 0x10, 
+	0x01, 0x10, 
+};
+
+/*******************************************************************************
+* Function Name: TOP_MUX_2_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_2_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_2__addrTable[channel] |= TOP_MUX_2__maskTable[channel];
+	channel++;
+	*TOP_MUX_2__addrTable[channel] |= TOP_MUX_2__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: TOP_MUX_2_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_2_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_2__addrTable[channel] &= ~TOP_MUX_2__maskTable[channel];
+	channel++;
+	*TOP_MUX_2__addrTable[channel] &= ~TOP_MUX_2__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement TOP_MUX_3 */
+uint8 CYXDATA * const CYCODE TOP_MUX_3__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW2, (uint8 CYXDATA *)CYREG_BUS_SW2, 
+	(uint8 CYXDATA *)CYREG_SC3_SW10, (uint8 CYXDATA *)CY_AMUX_UNUSED, 
+};
+
+/* Table used to define bit masks used to enable inputs for TOP_MUX_3 */
+const uint8 CYCODE TOP_MUX_3__maskTable[] = {
+	0x01, 0x01, 
+	0x01, 0x00, 
+};
+
+/*******************************************************************************
+* Function Name: TOP_MUX_3_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_3_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_3__addrTable[channel] |= TOP_MUX_3__maskTable[channel];
+	channel++;
+	*TOP_MUX_3__addrTable[channel] |= TOP_MUX_3__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: TOP_MUX_3_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_3_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_3__addrTable[channel] &= ~TOP_MUX_3__maskTable[channel];
+	channel++;
+	*TOP_MUX_3__addrTable[channel] &= ~TOP_MUX_3__maskTable[channel];
+}
+
+/* Table used to specify registers used to implement TOP_MUX_4 */
+uint8 CYXDATA * const CYCODE TOP_MUX_4__addrTable[] = {
+	(uint8 CYXDATA *)CYREG_DSM0_SW0, (uint8 CYXDATA *)CY_AMUX_UNUSED, 
+	(uint8 CYXDATA *)CYREG_SC3_SW8, (uint8 CYXDATA *)CYREG_BUS_SW0, 
+};
+
+/* Table used to define bit masks used to enable inputs for TOP_MUX_4 */
+const uint8 CYCODE TOP_MUX_4__maskTable[] = {
+	0x40, 0x00, 
+	0x40, 0x40, 
+};
+
+/*******************************************************************************
+* Function Name: TOP_MUX_4_Set
+********************************************************************************
+* Summary:
+*  This function is used to set a particular channel as active on the AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to set as active
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_4_Set(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_4__addrTable[channel] |= TOP_MUX_4__maskTable[channel];
+	channel++;
+	*TOP_MUX_4__addrTable[channel] |= TOP_MUX_4__maskTable[channel];
+}
+
+/*******************************************************************************
+* Function Name: TOP_MUX_4_Unset
+********************************************************************************
+* Summary:
+*  This function is used to clear a particular channel from being active on the
+*  AMux.
+*
+* Parameters:  
+*   channel - The mux channel input to mark inactive
+*
+* Return:
+*   void
+*
+*******************************************************************************/
+void TOP_MUX_4_Unset(uint8 channel)
+{
+	if (channel >= 2)
+		return;
+	channel += channel;
+	*TOP_MUX_4__addrTable[channel] &= ~TOP_MUX_4__maskTable[channel];
+	channel++;
+	*TOP_MUX_4__addrTable[channel] &= ~TOP_MUX_4__maskTable[channel];
+}
+
 
 
 /*******************************************************************************
@@ -353,6 +828,9 @@ void cyfitter_cfg(void)
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT0_DM0), (void CYFAR *)(BS_IOPINS0_0_VAL), 8);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT1_DM0), (void CYFAR *)(BS_IOPINS0_1_VAL), 8);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT2_DM0), (void CYFAR *)(BS_IOPINS0_2_VAL), 8);
+	CYCONFIGCPY((void CYFAR *)(CYREG_PRT3_DM0), (void CYFAR *)(BS_IOPINS0_3_VAL), 8);
+	CYCONFIGCPY((void CYFAR *)(CYREG_PRT4_DM0), (void CYFAR *)(BS_IOPINS0_4_VAL), 8);
+	CYCONFIGCPY((void CYFAR *)(CYREG_PRT5_DM0), (void CYFAR *)(BS_IOPINS0_5_VAL), 8);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT6_DR), (void CYFAR *)(BS_IOPINS0_6_VAL), 10);
 
 	/* Switch Boost to the precision bandgap reference from its internal reference */

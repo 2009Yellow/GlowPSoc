@@ -22,6 +22,22 @@ extern void cyfitter_cfg(void);
 /* Analog Set/Unset methods */
 extern void AnalogSetDefault(void);
 extern void SetAnalogRoutingPumps(uint8 enabled);
+extern void BOTTOM_MUX_1_Set(uint8 channel);
+extern void BOTTOM_MUX_1_Unset(uint8 channel);
+extern void BOTTOM_MUX_2_Set(uint8 channel);
+extern void BOTTOM_MUX_2_Unset(uint8 channel);
+extern void BOTTOM_MUX_3_Set(uint8 channel);
+extern void BOTTOM_MUX_3_Unset(uint8 channel);
+extern void BOTTOM_MUX_4_Set(uint8 channel);
+extern void BOTTOM_MUX_4_Unset(uint8 channel);
+extern void TOP_MUX_1_Set(uint8 channel);
+extern void TOP_MUX_1_Unset(uint8 channel);
+extern void TOP_MUX_2_Set(uint8 channel);
+extern void TOP_MUX_2_Unset(uint8 channel);
+extern void TOP_MUX_3_Set(uint8 channel);
+extern void TOP_MUX_3_Unset(uint8 channel);
+extern void TOP_MUX_4_Set(uint8 channel);
+extern void TOP_MUX_4_Unset(uint8 channel);
 
 
 #endif /* CYFITTER_CFG_H */

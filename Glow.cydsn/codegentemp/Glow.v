@@ -1,6 +1,6 @@
 // ======================================================================
 // Glow.v generated from TopDesign.cysch
-// 10/15/2013 at 11:08
+// 10/15/2013 at 11:52
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -231,7 +231,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `endif
 
-// VDAC8_v1_80(Data_Source=0, Initial_Value=250, Strobe_Mode=0, VDAC_Range=0, VDAC_Speed=0, Voltage=1000, CY_COMPONENT_NAME=VDAC8_v1_80, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=VDAC8_1, CY_INSTANCE_SHORT_NAME=VDAC8_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=80, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=VDAC8_1, )
+// VDAC8_v1_80(Data_Source=0, Initial_Value=250, Strobe_Mode=0, VDAC_Range=0, VDAC_Speed=0, Voltage=1000, CY_COMPONENT_NAME=VDAC8_v1_80, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=VDAC8_REF, CY_INSTANCE_SHORT_NAME=VDAC8_REF, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=80, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=VDAC8_REF, )
 module VDAC8_v1_80_2 (
     strobe,
     data,
@@ -291,7 +291,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v"
 `endif
 
-// PGA_v1_90(Gain=1, Power=1, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_2, CY_INSTANCE_SHORT_NAME=PGA_2, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_2, )
+// PGA_v1_90(Gain=1, Power=1, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_GAIN, CY_INSTANCE_SHORT_NAME=PGA_GAIN, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_GAIN, )
 module PGA_v1_90_3 (
     Vin,
     Vref,
@@ -345,7 +345,7 @@ module PGA_v1_90_3 (
 
 endmodule
 
-// PGA_v1_90(Gain=0, Power=0, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_1, CY_INSTANCE_SHORT_NAME=PGA_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_1, )
+// PGA_v1_90(Gain=0, Power=0, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_REF, CY_INSTANCE_SHORT_NAME=PGA_REF, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_REF, )
 module PGA_v1_90_4 (
     Vin,
     Vref,
@@ -412,7 +412,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\not_v1_0\not_v1_0.v"
 `endif
 
-// IDAC8_v1_90(Current=100, Data_Source=0, Hardware_Enable=false, IDAC_Range=0, IDAC_Speed=2, Initial_Value=120, Polarity=4, Strobe_Mode=0, CY_COMPONENT_NAME=IDAC8_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=IDAC8_1, CY_INSTANCE_SHORT_NAME=IDAC8_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=IDAC8_1, )
+// IDAC8_v1_90(Current=100, Data_Source=0, Hardware_Enable=false, IDAC_Range=0, IDAC_Speed=2, Initial_Value=120, Polarity=4, Strobe_Mode=0, CY_COMPONENT_NAME=IDAC8_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=IDAC8_REF, CY_INSTANCE_SHORT_NAME=IDAC8_REF, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=IDAC8_REF, )
 module IDAC8_v1_90_5 (
     iOut,
     data,
@@ -672,26 +672,46 @@ module ADC_SAR_v1_90_6 (
 
 endmodule
 
+// Component: AMux_v1_60
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "$CYPRESS_DIR\..\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_60"
+`include "$CYPRESS_DIR\..\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_60\AMux_v1_60.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_60"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_60\AMux_v1_60.v"
+`endif
+
 // top
 module top ;
 
+    electrical  Net_574;
+    electrical  Net_573;
+    electrical  Net_572;
+    electrical  Net_579;
+    electrical  Net_535;
+    electrical  Net_538;
+    electrical  Net_536;
+    electrical  Net_537;
           wire  Net_463;
     electrical  Net_462;
           wire  Net_461;
           wire  Net_460;
           wire  Net_459;
     electrical  Net_458;
-          wire  Net_457;
-          wire  Net_456;
-          wire [7:0] Net_455;
-          wire  Net_454;
-    electrical  Net_419;
-    electrical  Net_418;
+          wire  Net_494;
+          wire  Net_493;
+          wire [7:0] Net_492;
+          wire  Net_491;
+    electrical  Net_540;
     electrical  Net_425;
-    electrical  Net_453;
-    electrical  Net_407;
-          wire [7:0] Net_452;
-          wire  Net_451;
+    electrical  Net_490;
+    electrical  Net_539;
+          wire [7:0] Net_542;
+          wire  Net_541;
           wire  Net_355;
           wire  Net_354;
           wire  Net_353;
@@ -705,7 +725,9 @@ module top ;
           wire  Net_349;
           wire  Net_194;
           wire  Net_348;
-    electrical  Net_423;
+    electrical  Net_575;
+    electrical  Net_545;
+    electrical  Net_506;
 
     CharLCD_v1_70_0 LCD ();
 
@@ -838,33 +860,33 @@ module top ;
 
 	assign tmpOE__TX_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    VDAC8_v1_80_2 VDAC8_1 (
+    VDAC8_v1_80_2 VDAC8_REF (
         .strobe(1'b0),
         .data(8'b00000000),
-        .vOut(Net_407));
-    defparam VDAC8_1.Data_Source = 0;
-    defparam VDAC8_1.Initial_Value = 250;
-    defparam VDAC8_1.Strobe_Mode = 0;
+        .vOut(Net_539));
+    defparam VDAC8_REF.Data_Source = 0;
+    defparam VDAC8_REF.Initial_Value = 250;
+    defparam VDAC8_REF.Strobe_Mode = 0;
 
-    PGA_v1_90_3 PGA_2 (
-        .Vin(Net_423),
-        .Vref(Net_453),
+    PGA_v1_90_3 PGA_GAIN (
+        .Vin(Net_575),
+        .Vref(Net_490),
         .Vout(Net_425));
 
-    PGA_v1_90_4 PGA_1 (
-        .Vin(Net_407),
-        .Vref(Net_418),
-        .Vout(Net_419));
+    PGA_v1_90_4 PGA_REF (
+        .Vin(Net_539),
+        .Vref(Net_540),
+        .Vout(Net_506));
 
-    IDAC8_v1_90_5 IDAC8_1 (
+    IDAC8_v1_90_5 IDAC8_REF (
         .strobe(1'b0),
         .data(8'b00000000),
-        .iOut(Net_423),
+        .iOut(Net_575),
         .en(1'b0),
         .ipolarity(1'b0));
-    defparam IDAC8_1.Data_Source = 0;
-    defparam IDAC8_1.Initial_Value = 120;
-    defparam IDAC8_1.Strobe_Mode = 0;
+    defparam IDAC8_REF.Data_Source = 0;
+    defparam IDAC8_REF.Initial_Value = 120;
+    defparam IDAC8_REF.Strobe_Mode = 0;
 
     ADC_SAR_v1_90_6 ADC_SAR_1 (
         .vplus(Net_425),
@@ -875,11 +897,164 @@ module top ;
         .vdac_ref(Net_462),
         .eos(Net_463));
 
-	wire [0:0] tmpOE__Pin_1_net;
-	wire [0:0] tmpFB_0__Pin_1_net;
-	wire [0:0] tmpIO_0__Pin_1_net;
-	wire [0:0] tmpINTERRUPT_0__Pin_1_net;
-	electrical [0:0] tmpSIOVREF__Pin_1_net;
+    // -- AMux TOP_MUX_2 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 TOP_MUX_2(
+        .muxin({
+            Net_506,
+            Net_545
+            }),
+        .vout(Net_537)
+        );
+    
+    defparam TOP_MUX_2.muxin_width = 2;
+    defparam TOP_MUX_2.init_mux_sel = 2'h0;
+    defparam TOP_MUX_2.one_active = 0;
+    defparam TOP_MUX_2.connect_mode = 1;
+    
+    // -- AMux TOP_MUX_2 end --
+
+    // -- AMux TOP_MUX_3 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 TOP_MUX_3(
+        .muxin({
+            Net_506,
+            Net_545
+            }),
+        .vout(Net_536)
+        );
+    
+    defparam TOP_MUX_3.muxin_width = 2;
+    defparam TOP_MUX_3.init_mux_sel = 2'h0;
+    defparam TOP_MUX_3.one_active = 0;
+    defparam TOP_MUX_3.connect_mode = 1;
+    
+    // -- AMux TOP_MUX_3 end --
+
+    // -- AMux TOP_MUX_1 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 TOP_MUX_1(
+        .muxin({
+            Net_506,
+            Net_545
+            }),
+        .vout(Net_538)
+        );
+    
+    defparam TOP_MUX_1.muxin_width = 2;
+    defparam TOP_MUX_1.init_mux_sel = 2'h0;
+    defparam TOP_MUX_1.one_active = 0;
+    defparam TOP_MUX_1.connect_mode = 1;
+    
+    // -- AMux TOP_MUX_1 end --
+
+    // -- AMux TOP_MUX_4 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 TOP_MUX_4(
+        .muxin({
+            Net_506,
+            Net_545
+            }),
+        .vout(Net_535)
+        );
+    
+    defparam TOP_MUX_4.muxin_width = 2;
+    defparam TOP_MUX_4.init_mux_sel = 2'h0;
+    defparam TOP_MUX_4.one_active = 0;
+    defparam TOP_MUX_4.connect_mode = 1;
+    
+    // -- AMux TOP_MUX_4 end --
+
+
+	cy_vref_v1_0
+		#(.autoenable(1),
+		  .guid("15B3DB15-B7B3-4d62-A2DF-25EA392A7161"),
+		  .name("Vssa (GND)"))
+		VREF_GND
+		 (.vout(Net_545));
+
+
+    // -- AMux BOTTOM_MUX_1 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_1(
+        .muxin({
+            Net_575,
+            Net_545
+            }),
+        .vout(Net_579)
+        );
+    
+    defparam BOTTOM_MUX_1.muxin_width = 2;
+    defparam BOTTOM_MUX_1.init_mux_sel = 2'h0;
+    defparam BOTTOM_MUX_1.one_active = 0;
+    defparam BOTTOM_MUX_1.connect_mode = 1;
+    
+    // -- AMux BOTTOM_MUX_1 end --
+
+    // -- AMux BOTTOM_MUX_2 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_2(
+        .muxin({
+            Net_575,
+            Net_545
+            }),
+        .vout(Net_572)
+        );
+    
+    defparam BOTTOM_MUX_2.muxin_width = 2;
+    defparam BOTTOM_MUX_2.init_mux_sel = 2'h0;
+    defparam BOTTOM_MUX_2.one_active = 0;
+    defparam BOTTOM_MUX_2.connect_mode = 1;
+    
+    // -- AMux BOTTOM_MUX_2 end --
+
+    // -- AMux BOTTOM_MUX_3 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_3(
+        .muxin({
+            Net_575,
+            Net_545
+            }),
+        .vout(Net_573)
+        );
+    
+    defparam BOTTOM_MUX_3.muxin_width = 2;
+    defparam BOTTOM_MUX_3.init_mux_sel = 2'h0;
+    defparam BOTTOM_MUX_3.one_active = 0;
+    defparam BOTTOM_MUX_3.connect_mode = 1;
+    
+    // -- AMux BOTTOM_MUX_3 end --
+
+    // -- AMux BOTTOM_MUX_4 start -- ***
+    // -- Mux A --
+    
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_4(
+        .muxin({
+            Net_575,
+            Net_545
+            }),
+        .vout(Net_574)
+        );
+    
+    defparam BOTTOM_MUX_4.muxin_width = 2;
+    defparam BOTTOM_MUX_4.init_mux_sel = 2'h0;
+    defparam BOTTOM_MUX_4.one_active = 0;
+    defparam BOTTOM_MUX_4.connect_mode = 1;
+    
+    // -- AMux BOTTOM_MUX_4 end --
+
+	wire [0:0] tmpOE__TOP_1_net;
+	wire [0:0] tmpFB_0__TOP_1_net;
+	wire [0:0] tmpIO_0__TOP_1_net;
+	wire [0:0] tmpINTERRUPT_0__TOP_1_net;
+	electrical [0:0] tmpSIOVREF__TOP_1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("05a9c8de-3ba2-4909-8250-95fdc61c0bf4"),
@@ -908,25 +1083,25 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		Pin_1
-		 (.oe(tmpOE__Pin_1_net),
+		TOP_1
+		 (.oe(tmpOE__TOP_1_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Pin_1_net[0:0]}),
-		  .analog({Net_419}),
-		  .io({tmpIO_0__Pin_1_net[0:0]}),
-		  .siovref(tmpSIOVREF__Pin_1_net),
-		  .interrupt({tmpINTERRUPT_0__Pin_1_net[0:0]}));
+		  .fb({tmpFB_0__TOP_1_net[0:0]}),
+		  .analog({Net_538}),
+		  .io({tmpIO_0__TOP_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__TOP_1_net),
+		  .interrupt({tmpINTERRUPT_0__TOP_1_net[0:0]}));
 
-	assign tmpOE__Pin_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__TOP_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Pin_2_net;
-	wire [0:0] tmpFB_0__Pin_2_net;
-	wire [0:0] tmpIO_0__Pin_2_net;
-	wire [0:0] tmpINTERRUPT_0__Pin_2_net;
-	electrical [0:0] tmpSIOVREF__Pin_2_net;
+	wire [0:0] tmpOE__TOP_2_net;
+	wire [0:0] tmpFB_0__TOP_2_net;
+	wire [0:0] tmpIO_0__TOP_2_net;
+	wire [0:0] tmpINTERRUPT_0__TOP_2_net;
+	electrical [0:0] tmpSIOVREF__TOP_2_net;
 
 	cy_psoc3_pins_v1_10
-		#(.id("037d5a52-5acb-4b32-aa9d-555b161c7249"),
+		#(.id("db511292-8eb1-49af-8792-ffeeb44f6d6c"),
 		  .drive_mode(3'b000),
 		  .ibuf_enabled(1'b0),
 		  .init_dr_st(1'b0),
@@ -952,16 +1127,280 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		Pin_2
-		 (.oe(tmpOE__Pin_2_net),
+		TOP_2
+		 (.oe(tmpOE__TOP_2_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Pin_2_net[0:0]}),
-		  .analog({Net_423}),
-		  .io({tmpIO_0__Pin_2_net[0:0]}),
-		  .siovref(tmpSIOVREF__Pin_2_net),
-		  .interrupt({tmpINTERRUPT_0__Pin_2_net[0:0]}));
+		  .fb({tmpFB_0__TOP_2_net[0:0]}),
+		  .analog({Net_537}),
+		  .io({tmpIO_0__TOP_2_net[0:0]}),
+		  .siovref(tmpSIOVREF__TOP_2_net),
+		  .interrupt({tmpINTERRUPT_0__TOP_2_net[0:0]}));
 
-	assign tmpOE__Pin_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__TOP_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__TOP_3_net;
+	wire [0:0] tmpFB_0__TOP_3_net;
+	wire [0:0] tmpIO_0__TOP_3_net;
+	wire [0:0] tmpINTERRUPT_0__TOP_3_net;
+	electrical [0:0] tmpSIOVREF__TOP_3_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("b208fb60-e39a-44b1-af19-d43690f4412c"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		TOP_3
+		 (.oe(tmpOE__TOP_3_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__TOP_3_net[0:0]}),
+		  .analog({Net_536}),
+		  .io({tmpIO_0__TOP_3_net[0:0]}),
+		  .siovref(tmpSIOVREF__TOP_3_net),
+		  .interrupt({tmpINTERRUPT_0__TOP_3_net[0:0]}));
+
+	assign tmpOE__TOP_3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__TOP_4_net;
+	wire [0:0] tmpFB_0__TOP_4_net;
+	wire [0:0] tmpIO_0__TOP_4_net;
+	wire [0:0] tmpINTERRUPT_0__TOP_4_net;
+	electrical [0:0] tmpSIOVREF__TOP_4_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("26cd5695-df42-472e-895f-f4a2fd41eb85"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		TOP_4
+		 (.oe(tmpOE__TOP_4_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__TOP_4_net[0:0]}),
+		  .analog({Net_535}),
+		  .io({tmpIO_0__TOP_4_net[0:0]}),
+		  .siovref(tmpSIOVREF__TOP_4_net),
+		  .interrupt({tmpINTERRUPT_0__TOP_4_net[0:0]}));
+
+	assign tmpOE__TOP_4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__BOTTOM_1_net;
+	wire [0:0] tmpFB_0__BOTTOM_1_net;
+	wire [0:0] tmpIO_0__BOTTOM_1_net;
+	wire [0:0] tmpINTERRUPT_0__BOTTOM_1_net;
+	electrical [0:0] tmpSIOVREF__BOTTOM_1_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("50ec9b29-3f3f-4537-9376-832ab5bea8c8"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		BOTTOM_1
+		 (.oe(tmpOE__BOTTOM_1_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__BOTTOM_1_net[0:0]}),
+		  .analog({Net_579}),
+		  .io({tmpIO_0__BOTTOM_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__BOTTOM_1_net),
+		  .interrupt({tmpINTERRUPT_0__BOTTOM_1_net[0:0]}));
+
+	assign tmpOE__BOTTOM_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__BOTTOM_2_net;
+	wire [0:0] tmpFB_0__BOTTOM_2_net;
+	wire [0:0] tmpIO_0__BOTTOM_2_net;
+	wire [0:0] tmpINTERRUPT_0__BOTTOM_2_net;
+	electrical [0:0] tmpSIOVREF__BOTTOM_2_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("6230c51e-e951-4da1-a98b-d2e42167950a"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		BOTTOM_2
+		 (.oe(tmpOE__BOTTOM_2_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__BOTTOM_2_net[0:0]}),
+		  .analog({Net_572}),
+		  .io({tmpIO_0__BOTTOM_2_net[0:0]}),
+		  .siovref(tmpSIOVREF__BOTTOM_2_net),
+		  .interrupt({tmpINTERRUPT_0__BOTTOM_2_net[0:0]}));
+
+	assign tmpOE__BOTTOM_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__BOTTOM_3_net;
+	wire [0:0] tmpFB_0__BOTTOM_3_net;
+	wire [0:0] tmpIO_0__BOTTOM_3_net;
+	wire [0:0] tmpINTERRUPT_0__BOTTOM_3_net;
+	electrical [0:0] tmpSIOVREF__BOTTOM_3_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("87fc0447-e0a8-4278-9712-0f77b5096bca"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		BOTTOM_3
+		 (.oe(tmpOE__BOTTOM_3_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__BOTTOM_3_net[0:0]}),
+		  .analog({Net_573}),
+		  .io({tmpIO_0__BOTTOM_3_net[0:0]}),
+		  .siovref(tmpSIOVREF__BOTTOM_3_net),
+		  .interrupt({tmpINTERRUPT_0__BOTTOM_3_net[0:0]}));
+
+	assign tmpOE__BOTTOM_3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__BOTTOM_4_net;
+	wire [0:0] tmpFB_0__BOTTOM_4_net;
+	wire [0:0] tmpIO_0__BOTTOM_4_net;
+	wire [0:0] tmpINTERRUPT_0__BOTTOM_4_net;
+	electrical [0:0] tmpSIOVREF__BOTTOM_4_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("12489d1d-7a06-4f0e-8d43-e14906c92031"),
+		  .drive_mode(3'b000),
+		  .ibuf_enabled(1'b0),
+		  .init_dr_st(1'b0),
+		  .input_sync(1'b1),
+		  .intr_mode(2'b00),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .output_conn(1'b0),
+		  .output_sync(1'b0),
+		  .pin_aliases(""),
+		  .pin_mode("A"),
+		  .por_state(4),
+		  .use_annotation(1'b0),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .vtrip(2'b10),
+		  .width(1))
+		BOTTOM_4
+		 (.oe(tmpOE__BOTTOM_4_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__BOTTOM_4_net[0:0]}),
+		  .analog({Net_574}),
+		  .io({tmpIO_0__BOTTOM_4_net[0:0]}),
+		  .siovref(tmpSIOVREF__BOTTOM_4_net),
+		  .interrupt({tmpINTERRUPT_0__BOTTOM_4_net[0:0]}));
+
+	assign tmpOE__BOTTOM_4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 

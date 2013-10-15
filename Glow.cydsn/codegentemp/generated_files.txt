@@ -28,28 +28,62 @@
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX_aliases.h" value="NONE;TX" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX.c" value="ARM_C_FILE;TX" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX.h" value="NONE;TX" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_1.c" value="ARM_C_FILE;VDAC8_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_1.h" value="NONE;VDAC8_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_1_PM.c" value="ARM_C_FILE;VDAC8_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_2.c" value="ARM_C_FILE;PGA_2" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_2.h" value="NONE;PGA_2" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_2_PM.c" value="ARM_C_FILE;PGA_2" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_1.c" value="ARM_C_FILE;PGA_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_1.h" value="NONE;PGA_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_1_PM.c" value="ARM_C_FILE;PGA_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_1.c" value="ARM_C_FILE;IDAC8_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_1.h" value="NONE;IDAC8_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_1_PM.c" value="ARM_C_FILE;IDAC8_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_REF.c" value="ARM_C_FILE;VDAC8_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_REF.h" value="NONE;VDAC8_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\VDAC8_REF_PM.c" value="ARM_C_FILE;VDAC8_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_GAIN.c" value="ARM_C_FILE;PGA_GAIN" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_GAIN.h" value="NONE;PGA_GAIN" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_GAIN_PM.c" value="ARM_C_FILE;PGA_GAIN" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_REF.c" value="ARM_C_FILE;PGA_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_REF.h" value="NONE;PGA_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\PGA_REF_PM.c" value="ARM_C_FILE;PGA_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_REF.c" value="ARM_C_FILE;IDAC8_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_REF.h" value="NONE;IDAC8_REF" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\IDAC8_REF_PM.c" value="ARM_C_FILE;IDAC8_REF" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\ADC_SAR_1.c" value="ARM_C_FILE;ADC_SAR_1" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\ADC_SAR_1.h" value="NONE;ADC_SAR_1" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\ADC_SAR_1_INT.c" value="ARM_C_FILE;ADC_SAR_1" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\ADC_SAR_1_PM.c" value="ARM_C_FILE;ADC_SAR_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_1_aliases.h" value="NONE;Pin_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_1.c" value="ARM_C_FILE;Pin_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_1.h" value="NONE;Pin_1" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_2_aliases.h" value="NONE;Pin_2" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_2.c" value="ARM_C_FILE;Pin_2" />
-  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Pin_2.h" value="NONE;Pin_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_2.c" value="ARM_C_FILE;TOP_MUX_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_2.h" value="NONE;TOP_MUX_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_3.c" value="ARM_C_FILE;TOP_MUX_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_3.h" value="NONE;TOP_MUX_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_1.c" value="ARM_C_FILE;TOP_MUX_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_1.h" value="NONE;TOP_MUX_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_4.c" value="ARM_C_FILE;TOP_MUX_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_MUX_4.h" value="NONE;TOP_MUX_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_1.c" value="ARM_C_FILE;BOTTOM_MUX_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_1.h" value="NONE;BOTTOM_MUX_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_2.c" value="ARM_C_FILE;BOTTOM_MUX_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_2.h" value="NONE;BOTTOM_MUX_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_3.c" value="ARM_C_FILE;BOTTOM_MUX_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_3.h" value="NONE;BOTTOM_MUX_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_4.c" value="ARM_C_FILE;BOTTOM_MUX_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_MUX_4.h" value="NONE;BOTTOM_MUX_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_1_aliases.h" value="NONE;TOP_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_1.c" value="ARM_C_FILE;TOP_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_1.h" value="NONE;TOP_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_2_aliases.h" value="NONE;TOP_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_2.c" value="ARM_C_FILE;TOP_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_2.h" value="NONE;TOP_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_3_aliases.h" value="NONE;TOP_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_3.c" value="ARM_C_FILE;TOP_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_3.h" value="NONE;TOP_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_4_aliases.h" value="NONE;TOP_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_4.c" value="ARM_C_FILE;TOP_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TOP_4.h" value="NONE;TOP_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_1_aliases.h" value="NONE;BOTTOM_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_1.c" value="ARM_C_FILE;BOTTOM_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_1.h" value="NONE;BOTTOM_1" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_2_aliases.h" value="NONE;BOTTOM_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_2.c" value="ARM_C_FILE;BOTTOM_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_2.h" value="NONE;BOTTOM_2" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_3_aliases.h" value="NONE;BOTTOM_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_3.c" value="ARM_C_FILE;BOTTOM_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_3.h" value="NONE;BOTTOM_3" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_4_aliases.h" value="NONE;BOTTOM_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_4.c" value="ARM_C_FILE;BOTTOM_4" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\BOTTOM_4.h" value="NONE;BOTTOM_4" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort_aliases.h" value="NONE;LCD_LCDPort" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort.c" value="ARM_C_FILE;LCD_LCDPort" />
   <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort.h" value="NONE;LCD_LCDPort" />

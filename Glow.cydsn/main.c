@@ -35,10 +35,10 @@ void init() {
     UART_ClearRxBuffer();
     
     // Init Electronic Components
-    PGA_1_Start();
-    VDAC8_1_Start();
-    PGA_2_Start();
-    IDAC8_1_Start();
+    PGA_REF_Start();
+    VDAC8_REF_Start();
+    PGA_GAIN_Start();
+    IDAC8_REF_Start();
     ADC_SAR_1_Start();
     ADC_SAR_1_StartConvert();
 }
@@ -89,5 +89,16 @@ void processMat() {
     for (i = 0; i < MAT_SIZE; ++i) {
         adcValues[i] = adcResult;
     }
+}
+
+void configureMat(int i, int j) {
+    // Zero all pins
+    // Set the i pin to Vref
+    // Connect the j pin to mux
+    // Set mux to j pin
+}
+
+void zeroAllPins() {
+
 }
 
