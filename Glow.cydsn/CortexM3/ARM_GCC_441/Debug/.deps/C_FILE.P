@@ -1,0 +1,50 @@
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/CortexM3/ARM_GCC_441/Debug/main.o : C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/TX.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/TX_aliases.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/UART.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/project.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/rx_int.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/tx_int.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/device.h C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/main.c 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/TX.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/TX_aliases.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/UART.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/rx_int.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/Generated_Source/PSoC5/tx_int.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/device.h : 
+
+C:/Users/Kojo/Code/GlowProcessing/Glow.cydsn/main.c : 
+

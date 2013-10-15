@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<fileSet version="1" anchorPath="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyfitter_cfg.h" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyfitter_cfg.c" value="ARM_C_FILE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\config.hex" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\protect.hex" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevice.h" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevicegnu.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevicerv.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevice_trm.h" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevicegnu_trm.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cydevicerv_trm.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyfittergnu.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyfitterrv.inc" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyfitter.h" value="NONE;" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD.c" value="ARM_C_FILE;LCD" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD.h" value="NONE;LCD" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_PM.c" value="ARM_C_FILE;LCD" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\UART.c" value="ARM_C_FILE;UART" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\UART.h" value="NONE;UART" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\UART_PM.c" value="ARM_C_FILE;UART" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\UART_INT.c" value="ARM_C_FILE;UART" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\rx_int.c" value="ARM_C_FILE;rx_int" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\rx_int.h" value="NONE;rx_int" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\tx_int.c" value="ARM_C_FILE;tx_int" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\tx_int.h" value="NONE;tx_int" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX_aliases.h" value="NONE;TX" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX.c" value="ARM_C_FILE;TX" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\TX.h" value="NONE;TX" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort_aliases.h" value="NONE;LCD_LCDPort" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort.c" value="ARM_C_FILE;LCD_LCDPort" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\LCD_LCDPort.h" value="NONE;LCD_LCDPort" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cm3gcc.ld" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Cm3RealView.scat" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\Cm3Start.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\core_cm3_psoc5.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\core_cm3.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\core_cm3.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyBootAsmGnu.s" value="GNU_ARM_ASM_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyBootAsmRv.s" value="REALVIEW_ARM_ASM_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyDmac.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyDmac.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyFlash.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyFlash.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyLib.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CyLib.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cypins.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyPm.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyPm.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CySpc.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\CySpc.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cytypes.h" value="NONE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\cyutils.c" value="ARM_C_FILE;cy_boot" />
+  <file name="C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\codegentemp\project.h" value="NONE;" />
+</fileSet>
