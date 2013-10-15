@@ -1,20 +1,128 @@
---------------- Build Started: 10/15/2013 11:55:29 Project: Glow, Configuration: ARM GCC 4.4.1 Debug ---------------
-The code generation step is up to date.
+--------------- Build Started: 10/15/2013 13:38:58 Project: Glow, Configuration: ARM GCC 4.4.1 Debug ---------------
+cydsfit.exe "-.appdatapath" "C:\Users\Kojo\AppData\Local\Cypress Semiconductor\PSoC Creator\2.1" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.cyprj" "-d" "CY8C5868AXI-LP035" "-s" "C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+ADD: pft.M0040: information: The following 8 pin(s) will be assigned a location by the fitter: \ADC_SAR_1:Bypass(0)\, \LCD:LCDPort(0)\, \LCD:LCDPort(1)\, \LCD:LCDPort(2)\, \LCD:LCDPort(3)\, \LCD:LCDPort(4)\, \LCD:LCDPort(5)\, \LCD:LCDPort(6)\
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Analog Placement ...
+Log: apr.M0058: The analog placement iterative improvement is 32% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 65% done. (App=cydsfit)
+Analog Routing ...
+Log: apr.M0017: ============ VeraRouter Improve 1 OverUse=19 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 2 OverUse=4 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 3 OverUse=6 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 4 OverUse=3 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 5 OverUse=4 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 6 OverUse=5 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 7 OverUse=8 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 8 OverUse=2 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 9 OverUse=2 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 10 OverUse=2 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 11 OverUse=1 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 12 OverUse=4 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 13 OverUse=4 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 14 OverUse=5 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 15 OverUse=3 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 16 OverUse=2 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 17 OverUse=3 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 18 OverUse=4 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 19 OverUse=2 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 20 OverUse=3 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 21 OverUse=7 ============ (App=cydsfit)
+Log: apr.M0017: ============ VeraRouter Improve 22 OverUse=1 ============ (App=cydsfit)
+Analog Code Generation ...
+Warning: apr.M0042: Bonded pin(s) "P2[3] and P4[6]" are not used in your current design but have been connected in order to route the design. (App=cydsfit)
+Digital Placement ...
+Log: plm.M0038: The pin named TOP_1(0) at location P0[0] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
+Log: plm.M0038: The pin named TOP_2(0) at location P0[1] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
+Log: plm.M0040: The pin named \ADC_SAR_1:Bypass(0)\ at location P0[2] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0040: The pin named TOP_4(0) at location P0[3] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0040: The pin named BOTTOM_3(0) at location P3[2] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0040: The pin named BOTTOM_4(0) at location P3[3] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0038: The pin named TOP_3(0) at location P3[7] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
+Info: plm.M0037: Glow.rpt: 
+      Certain internal analog resources use the following pins for preferred routing: P0[0], P0[1], P0[2], P0[3], P3[2], P3[3], P3[7].
+      Please check the "Final Placement Details" section of the report file (Glow.rpt) to see what resources are impacted by your pin selections.
+     (File=C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.rpt(1))
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
 arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\main.lst -ffunction-sections -c .\main.c -o .\CortexM3\ARM_GCC_441\Debug\main.o
 .\main.c: In function 'RX_INT':
 .\main.c:23: warning: implicit declaration of function 'processRX'
+.\main.c: In function 'init':
+.\main.c:52: warning: implicit declaration of function 'zeroAllPins'
 .\main.c: In function 'main':
-.\main.c:58: warning: implicit declaration of function 'processMat'
+.\main.c:67: warning: implicit declaration of function 'processMat'
 .\main.c: At top level:
-.\main.c:63: warning: conflicting types for 'processRX'
+.\main.c:72: warning: conflicting types for 'processRX'
 .\main.c:23: note: previous implicit declaration of 'processRX' was here
-.\main.c:83: warning: conflicting types for 'processMat'
-.\main.c:58: note: previous implicit declaration of 'processMat' was here
-arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_441\Debug\Glow.a .\CortexM3\ARM_GCC_441\Debug\core_cm3.o .\CortexM3\ARM_GCC_441\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_441\Debug\CyDmac.o .\CortexM3\ARM_GCC_441\Debug\CyFlash.o .\CortexM3\ARM_GCC_441\Debug\CyLib.o .\CortexM3\ARM_GCC_441\Debug\cyPm.o .\CortexM3\ARM_GCC_441\Debug\CySpc.o .\CortexM3\ARM_GCC_441\Debug\cyutils.o .\CortexM3\ARM_GCC_441\Debug\LCD.o .\CortexM3\ARM_GCC_441\Debug\LCD_PM.o .\CortexM3\ARM_GCC_441\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_441\Debug\UART.o .\CortexM3\ARM_GCC_441\Debug\UART_PM.o .\CortexM3\ARM_GCC_441\Debug\UART_INT.o .\CortexM3\ARM_GCC_441\Debug\tx_int.o .\CortexM3\ARM_GCC_441\Debug\rx_int.o .\CortexM3\ARM_GCC_441\Debug\TX.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_INT.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_PM.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_theACLK.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_Bypass.o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF.o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN.o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN_PM.o .\CortexM3\ARM_GCC_441\Debug\PGA_REF.o .\CortexM3\ARM_GCC_441\Debug\PGA_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF.o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_2.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_3.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_1.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_4.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_1.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_2.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_3.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_4.o .\CortexM3\ARM_GCC_441\Debug\TOP_1.o .\CortexM3\ARM_GCC_441\Debug\TOP_2.o .\CortexM3\ARM_GCC_441\Debug\TOP_3.o .\CortexM3\ARM_GCC_441\Debug\TOP_4.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_1.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_2.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_3.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_4.o .\CortexM3\ARM_GCC_441\Debug\cyfitter_cfg.o
+.\main.c:92: warning: conflicting types for 'processMat'
+.\main.c:67: note: previous implicit declaration of 'processMat' was here
+.\main.c: In function 'processMat':
+.\main.c:97: warning: implicit declaration of function 'configureMat'
+.\main.c: At top level:
+.\main.c:109: warning: conflicting types for 'configureMat'
+.\main.c:97: note: previous implicit declaration of 'configureMat' was here
+.\main.c:121: warning: conflicting types for 'zeroAllPins'
+.\main.c:52: note: previous implicit declaration of 'zeroAllPins' was here
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\Cm3Start.lst -ffunction-sections -c .\Generated_Source\PSoC5\Cm3Start.c -o .\CortexM3\ARM_GCC_441\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\CyDmac.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyDmac.c -o .\CortexM3\ARM_GCC_441\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\CyFlash.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyFlash.c -o .\CortexM3\ARM_GCC_441\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\CyLib.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyLib.c -o .\CortexM3\ARM_GCC_441\Debug\CyLib.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\cyPm.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyPm.c -o .\CortexM3\ARM_GCC_441\Debug\cyPm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\CySpc.lst -ffunction-sections -c .\Generated_Source\PSoC5\CySpc.c -o .\CortexM3\ARM_GCC_441\Debug\CySpc.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\cyutils.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyutils.c -o .\CortexM3\ARM_GCC_441\Debug\cyutils.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\LCD.lst -ffunction-sections -c .\Generated_Source\PSoC5\LCD.c -o .\CortexM3\ARM_GCC_441\Debug\LCD.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\LCD_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\LCD_PM.c -o .\CortexM3\ARM_GCC_441\Debug\LCD_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\LCD_LCDPort.lst -ffunction-sections -c .\Generated_Source\PSoC5\LCD_LCDPort.c -o .\CortexM3\ARM_GCC_441\Debug\LCD_LCDPort.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\UART.lst -ffunction-sections -c .\Generated_Source\PSoC5\UART.c -o .\CortexM3\ARM_GCC_441\Debug\UART.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\UART_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\UART_PM.c -o .\CortexM3\ARM_GCC_441\Debug\UART_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\UART_INT.lst -ffunction-sections -c .\Generated_Source\PSoC5\UART_INT.c -o .\CortexM3\ARM_GCC_441\Debug\UART_INT.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\tx_int.lst -ffunction-sections -c .\Generated_Source\PSoC5\tx_int.c -o .\CortexM3\ARM_GCC_441\Debug\tx_int.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\rx_int.lst -ffunction-sections -c .\Generated_Source\PSoC5\rx_int.c -o .\CortexM3\ARM_GCC_441\Debug\rx_int.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TX.lst -ffunction-sections -c .\Generated_Source\PSoC5\TX.c -o .\CortexM3\ARM_GCC_441\Debug\TX.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1.lst -ffunction-sections -c .\Generated_Source\PSoC5\ADC_SAR_1.c -o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_INT.lst -ffunction-sections -c .\Generated_Source\PSoC5\ADC_SAR_1_INT.c -o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_INT.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\ADC_SAR_1_PM.c -o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_theACLK.lst -ffunction-sections -c .\Generated_Source\PSoC5\ADC_SAR_1_theACLK.c -o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_theACLK.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_Bypass.lst -ffunction-sections -c .\Generated_Source\PSoC5\ADC_SAR_1_Bypass.c -o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_Bypass.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\VDAC8_REF.lst -ffunction-sections -c .\Generated_Source\PSoC5\VDAC8_REF.c -o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\VDAC8_REF_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\VDAC8_REF_PM.c -o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_GAIN.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_GAIN.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_GAIN_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_GAIN_PM.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_REF.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_REF.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_REF.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_REF_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_REF_PM.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_REF_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\IDAC8_REF.lst -ffunction-sections -c .\Generated_Source\PSoC5\IDAC8_REF.c -o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\IDAC8_REF_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\IDAC8_REF_PM.c -o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_1.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_1.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_1.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_2.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_2.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_2.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_3.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_3.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_3.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_4.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_4.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_4.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_1.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_1.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_1.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_2.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_2.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_2.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_3.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_3.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_3.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_4.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_4.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_4.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_MUX_VREF.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_MUX_VREF.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_VREF.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_GND.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_MUX_GND.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_GND.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_SENSE.lst -ffunction-sections -c .\Generated_Source\PSoC5\BOTTOM_MUX_SENSE.c -o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_SENSE.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\TOP_MUX_GND.lst -ffunction-sections -c .\Generated_Source\PSoC5\TOP_MUX_GND.c -o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_GND.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_BOTTOM_GND.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_BOTTOM_GND_PM.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_TOP_GND.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PGA_TOP_GND_PM.c -o .\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -Wa,-alh=.\CortexM3\ARM_GCC_441\Debug\cyfitter_cfg.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_441\Debug\cyfitter_cfg.o
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_441\Debug\Glow.a .\CortexM3\ARM_GCC_441\Debug\core_cm3.o .\CortexM3\ARM_GCC_441\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_441\Debug\CyDmac.o .\CortexM3\ARM_GCC_441\Debug\CyFlash.o .\CortexM3\ARM_GCC_441\Debug\CyLib.o .\CortexM3\ARM_GCC_441\Debug\cyPm.o .\CortexM3\ARM_GCC_441\Debug\CySpc.o .\CortexM3\ARM_GCC_441\Debug\cyutils.o .\CortexM3\ARM_GCC_441\Debug\LCD.o .\CortexM3\ARM_GCC_441\Debug\LCD_PM.o .\CortexM3\ARM_GCC_441\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_441\Debug\UART.o .\CortexM3\ARM_GCC_441\Debug\UART_PM.o .\CortexM3\ARM_GCC_441\Debug\UART_INT.o .\CortexM3\ARM_GCC_441\Debug\tx_int.o .\CortexM3\ARM_GCC_441\Debug\rx_int.o .\CortexM3\ARM_GCC_441\Debug\TX.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_INT.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_PM.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_theACLK.o .\CortexM3\ARM_GCC_441\Debug\ADC_SAR_1_Bypass.o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF.o .\CortexM3\ARM_GCC_441\Debug\VDAC8_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN.o .\CortexM3\ARM_GCC_441\Debug\PGA_GAIN_PM.o .\CortexM3\ARM_GCC_441\Debug\PGA_REF.o .\CortexM3\ARM_GCC_441\Debug\PGA_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF.o .\CortexM3\ARM_GCC_441\Debug\IDAC8_REF_PM.o .\CortexM3\ARM_GCC_441\Debug\TOP_1.o .\CortexM3\ARM_GCC_441\Debug\TOP_2.o .\CortexM3\ARM_GCC_441\Debug\TOP_3.o .\CortexM3\ARM_GCC_441\Debug\TOP_4.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_1.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_2.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_3.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_4.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_VREF.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_GND.o .\CortexM3\ARM_GCC_441\Debug\BOTTOM_MUX_SENSE.o .\CortexM3\ARM_GCC_441\Debug\TOP_MUX_GND.o .\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND.o .\CortexM3\ARM_GCC_441\Debug\PGA_BOTTOM_GND_PM.o .\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND.o .\CortexM3\ARM_GCC_441\Debug\PGA_TOP_GND_PM.o .\CortexM3\ARM_GCC_441\Debug\cyfitter_cfg.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_441\Debug\Glow.a
 arm-none-eabi-gcc.exe -mthumb -march=armv7-m -mfix-cortex-m3-ldrd -T .\Generated_Source\PSoC5\cm3gcc.ld -g -Wl,-Map,.\CortexM3\ARM_GCC_441\Debug\Glow.map -Wl,--gc-sections -Wl,--start-group -o .\CortexM3\ARM_GCC_441\Debug\Glow.elf .\CortexM3\ARM_GCC_441\Debug\main.o .\CortexM3\ARM_GCC_441\Debug\Cm3Start.o .\CortexM3\ARM_GCC_441\Debug\Glow.a "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_441\Debug\CyComponentLibrary.a" -Wl,--end-group
 arm-none-eabi-objcopy.exe -O ihex .\CortexM3\ARM_GCC_441\Debug\Glow.elf .\CortexM3\ARM_GCC_441\Debug\Glow.ihx
 cyhextool -o .\CortexM3\ARM_GCC_441\Debug\Glow.hex -f .\CortexM3\ARM_GCC_441\Debug\Glow.ihx -prot .\Generated_Source\PSoC5\protect.hex -id 2E123069 -a EEPROM=90200000:800,PROGRAM=00000000:40000,CONFIG=80000000:8000,PROTECT=90400000:100 -meta 0001 -cunv 00004005 -wonv AFAC90BC -ecc .\Generated_Source\PSoC5\config.hex
-Flash used: 8608 of 262144 bytes (3.3 %).
+Flash used: 11192 of 262144 bytes (4.3 %).
 SRAM used: 320 of 65536 bytes (0.5 %).
---------------- Build Succeeded: 10/15/2013 11:55:30 ---------------
+--------------- Build Succeeded: 10/15/2013 13:39:34 ---------------

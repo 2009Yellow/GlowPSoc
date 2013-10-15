@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 1
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 1
 
 
    1              		.syntax unified
@@ -20,7 +20,7 @@ ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 00010000 		.text
+  20 0000 1B010000 		.text
   20      02005300 
   20      00000201 
   20      FB0E0D00 
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 1
   12:.\main.c      **** 
   13:.\main.c      **** // ADC constnats 
   14:.\main.c      **** #define ADC_GAIN (100)
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 2
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 2
 
 
   15:.\main.c      **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 1
   82 0000 80B5     		push	{r7, lr}
   83              	.LCFI3:
   84              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 3
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 3
 
 
   85 0002 00AF     		add	r7, sp, #0
@@ -155,1257 +155,1418 @@ ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 1
  107 0022 FFF7FEFF 		bl	UART_ClearRxBuffer
   36:.\main.c      ****     
   37:.\main.c      ****     // Init Electronic Components
-  38:.\main.c      ****     PGA_REF_Start();
+  38:.\main.c      ****     PGA_TOP_GND_Start();
  108              		.loc 1 38 0
- 109 0026 FFF7FEFF 		bl	PGA_REF_Start
-  39:.\main.c      ****     VDAC8_REF_Start();
+ 109 0026 FFF7FEFF 		bl	PGA_TOP_GND_Start
+  39:.\main.c      ****     PGA_BOTTOM_GND_Start();
  110              		.loc 1 39 0
- 111 002a FFF7FEFF 		bl	VDAC8_REF_Start
-  40:.\main.c      ****     PGA_GAIN_Start();
+ 111 002a FFF7FEFF 		bl	PGA_BOTTOM_GND_Start
+  40:.\main.c      ****     PGA_REF_Start();
  112              		.loc 1 40 0
- 113 002e FFF7FEFF 		bl	PGA_GAIN_Start
-  41:.\main.c      ****     IDAC8_REF_Start();
+ 113 002e FFF7FEFF 		bl	PGA_REF_Start
+  41:.\main.c      ****     VDAC8_REF_Start();
  114              		.loc 1 41 0
- 115 0032 FFF7FEFF 		bl	IDAC8_REF_Start
-  42:.\main.c      ****     ADC_SAR_1_Start();
+ 115 0032 FFF7FEFF 		bl	VDAC8_REF_Start
+  42:.\main.c      ****     PGA_GAIN_Start();
  116              		.loc 1 42 0
- 117 0036 FFF7FEFF 		bl	ADC_SAR_1_Start
-  43:.\main.c      ****     ADC_SAR_1_StartConvert();
+ 117 0036 FFF7FEFF 		bl	PGA_GAIN_Start
+  43:.\main.c      ****     IDAC8_REF_Start();
  118              		.loc 1 43 0
- 119 003a FFF7FEFF 		bl	ADC_SAR_1_StartConvert
-  44:.\main.c      **** }
+ 119 003a FFF7FEFF 		bl	IDAC8_REF_Start
+  44:.\main.c      ****     ADC_SAR_1_Start();
  120              		.loc 1 44 0
- 121 003e 80BD     		pop	{r7, pc}
- 122              		.cfi_endproc
- 123              	.LFE30:
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 4
+ 121 003e FFF7FEFF 		bl	ADC_SAR_1_Start
+  45:.\main.c      ****     //ADC_SAR_1_StartConvert();
+  46:.\main.c      ****     
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 4
 
 
- 124              		.size	init, .-init
- 125              		.section	.text.crlf,"ax",%progbits
- 126              		.align	2
- 127              		.global	crlf
- 128              		.thumb
- 129              		.thumb_func
- 130              		.type	crlf, %function
- 131              	crlf:
- 132              	.LFB31:
-  45:.\main.c      **** 
-  46:.\main.c      **** 
-  47:.\main.c      **** void crlf(){   
- 133              		.loc 1 47 0
- 134              		.cfi_startproc
- 135              		@ args = 0, pretend = 0, frame = 0
- 136              		@ frame_needed = 1, uses_anonymous_args = 0
- 137 0000 80B5     		push	{r7, lr}
- 138              	.LCFI5:
- 139              		.cfi_def_cfa_offset 8
- 140 0002 00AF     		add	r7, sp, #0
- 141              		.cfi_offset 14, -4
- 142              		.cfi_offset 7, -8
- 143              	.LCFI6:
- 144              		.cfi_def_cfa_register 7
-  48:.\main.c      ****     UART_PutChar(10);
- 145              		.loc 1 48 0
- 146 0004 4FF00A00 		mov	r0, #10
- 147 0008 FFF7FEFF 		bl	UART_PutChar
-  49:.\main.c      ****     UART_PutChar(13);
- 148              		.loc 1 49 0
- 149 000c 4FF00D00 		mov	r0, #13
- 150 0010 FFF7FEFF 		bl	UART_PutChar
-  50:.\main.c      **** }
- 151              		.loc 1 50 0
- 152 0014 80BD     		pop	{r7, pc}
- 153              		.cfi_endproc
- 154              	.LFE31:
- 155              		.size	crlf, .-crlf
- 156 0016 00BF     		.section	.text.main,"ax",%progbits
- 157              		.align	2
- 158              		.global	main
- 159              		.thumb
- 160              		.thumb_func
- 161              		.type	main, %function
- 162              	main:
- 163              	.LFB32:
-  51:.\main.c      **** 
-  52:.\main.c      **** 
-  53:.\main.c      **** void main() {	
- 164              		.loc 1 53 0
- 165              		.cfi_startproc
- 166              		@ args = 0, pretend = 0, frame = 0
- 167              		@ frame_needed = 1, uses_anonymous_args = 0
- 168 0000 80B5     		push	{r7, lr}
- 169              	.LCFI7:
- 170              		.cfi_def_cfa_offset 8
- 171 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 5
+  47:.\main.c      ****     // Init muxes
+  48:.\main.c      ****     TOP_MUX_GND_Start();
+ 122              		.loc 1 48 0
+ 123 0042 FFF7FEFF 		bl	TOP_MUX_GND_Start
+  49:.\main.c      ****     BOTTOM_MUX_GND_Start();
+ 124              		.loc 1 49 0
+ 125 0046 FFF7FEFF 		bl	BOTTOM_MUX_GND_Start
+  50:.\main.c      ****     TOP_MUX_VREF_Start();
+ 126              		.loc 1 50 0
+ 127 004a FFF7FEFF 		bl	TOP_MUX_VREF_Start
+  51:.\main.c      ****     BOTTOM_MUX_SENSE_Start();
+ 128              		.loc 1 51 0
+ 129 004e FFF7FEFF 		bl	BOTTOM_MUX_SENSE_Start
+  52:.\main.c      ****     zeroAllPins();
+ 130              		.loc 1 52 0
+ 131 0052 FFF7FEFF 		bl	zeroAllPins
+  53:.\main.c      **** }
+ 132              		.loc 1 53 0
+ 133 0056 80BD     		pop	{r7, pc}
+ 134              		.cfi_endproc
+ 135              	.LFE30:
+ 136              		.size	init, .-init
+ 137              		.section	.text.crlf,"ax",%progbits
+ 138              		.align	2
+ 139              		.global	crlf
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.type	crlf, %function
+ 143              	crlf:
+ 144              	.LFB31:
+  54:.\main.c      **** 
+  55:.\main.c      **** 
+  56:.\main.c      **** void crlf(){   
+ 145              		.loc 1 56 0
+ 146              		.cfi_startproc
+ 147              		@ args = 0, pretend = 0, frame = 0
+ 148              		@ frame_needed = 1, uses_anonymous_args = 0
+ 149 0000 80B5     		push	{r7, lr}
+ 150              	.LCFI5:
+ 151              		.cfi_def_cfa_offset 8
+ 152 0002 00AF     		add	r7, sp, #0
+ 153              		.cfi_offset 14, -4
+ 154              		.cfi_offset 7, -8
+ 155              	.LCFI6:
+ 156              		.cfi_def_cfa_register 7
+  57:.\main.c      ****     UART_PutChar(10);
+ 157              		.loc 1 57 0
+ 158 0004 4FF00A00 		mov	r0, #10
+ 159 0008 FFF7FEFF 		bl	UART_PutChar
+  58:.\main.c      ****     UART_PutChar(13);
+ 160              		.loc 1 58 0
+ 161 000c 4FF00D00 		mov	r0, #13
+ 162 0010 FFF7FEFF 		bl	UART_PutChar
+  59:.\main.c      **** }
+ 163              		.loc 1 59 0
+ 164 0014 80BD     		pop	{r7, pc}
+ 165              		.cfi_endproc
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 5
 
 
- 172              		.cfi_offset 14, -4
- 173              		.cfi_offset 7, -8
- 174              	.LCFI8:
- 175              		.cfi_def_cfa_register 7
-  54:.\main.c      ****     init();
- 176              		.loc 1 54 0
- 177 0004 FFF7FEFF 		bl	init
- 178              	.L8:
-  55:.\main.c      ****     // Main process loop.
-  56:.\main.c      ****     while(1) {
-  57:.\main.c      ****         // Read ADC inputs
-  58:.\main.c      ****         processMat();
- 179              		.loc 1 58 0
- 180 0008 FFF7FEFF 		bl	processMat
-  59:.\main.c      ****     }
- 181              		.loc 1 59 0
- 182 000c FCE7     		b	.L8
- 183              		.cfi_endproc
- 184              	.LFE32:
- 185              		.size	main, .-main
- 186 000e 00BF     		.section	.text.processRX,"ax",%progbits
- 187              		.align	2
- 188              		.global	processRX
- 189              		.thumb
- 190              		.thumb_func
- 191              		.type	processRX, %function
- 192              	processRX:
- 193              	.LFB33:
-  60:.\main.c      **** }
+ 166              	.LFE31:
+ 167              		.size	crlf, .-crlf
+ 168 0016 00BF     		.section	.text.main,"ax",%progbits
+ 169              		.align	2
+ 170              		.global	main
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.type	main, %function
+ 174              	main:
+ 175              	.LFB32:
+  60:.\main.c      **** 
   61:.\main.c      **** 
-  62:.\main.c      **** 
-  63:.\main.c      **** void processRX(uint8 input) {
- 194              		.loc 1 63 0
- 195              		.cfi_startproc
- 196              		@ args = 0, pretend = 0, frame = 16
- 197              		@ frame_needed = 1, uses_anonymous_args = 0
- 198 0000 80B5     		push	{r7, lr}
- 199              	.LCFI9:
- 200              		.cfi_def_cfa_offset 8
- 201 0002 84B0     		sub	sp, sp, #16
- 202              	.LCFI10:
- 203              		.cfi_def_cfa_offset 24
- 204 0004 00AF     		add	r7, sp, #0
- 205              		.cfi_offset 14, -4
- 206              		.cfi_offset 7, -8
- 207              	.LCFI11:
- 208              		.cfi_def_cfa_register 7
- 209 0006 0346     		mov	r3, r0
- 210 0008 FB71     		strb	r3, [r7, #7]
-  64:.\main.c      ****     // Only start sending values if receive start char
-  65:.\main.c      ****     if (input != SERIAL_START_CHAR) {
- 211              		.loc 1 65 0
- 212 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 213 000c 412B     		cmp	r3, #65
- 214 000e 1CD1     		bne	.L16
- 215              	.L11:
-  66:.\main.c      ****         return;
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 6
-
-
-  67:.\main.c      ****     }
-  68:.\main.c      ****     
-  69:.\main.c      ****     // Send start char of sequence
-  70:.\main.c      ****     UART_PutChar(FIRST_SERIAL_RECEIVE_CHAR);
- 216              		.loc 1 70 0
- 217 0010 4FF04200 		mov	r0, #66
- 218 0014 FFF7FEFF 		bl	UART_PutChar
+  62:.\main.c      **** void main() {	
+ 176              		.loc 1 62 0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 1, uses_anonymous_args = 0
+ 180 0000 80B5     		push	{r7, lr}
+ 181              	.LCFI7:
+ 182              		.cfi_def_cfa_offset 8
+ 183 0002 00AF     		add	r7, sp, #0
+ 184              		.cfi_offset 14, -4
+ 185              		.cfi_offset 7, -8
+ 186              	.LCFI8:
+ 187              		.cfi_def_cfa_register 7
+  63:.\main.c      ****     init();
+ 188              		.loc 1 63 0
+ 189 0004 FFF7FEFF 		bl	init
+ 190              	.L8:
+  64:.\main.c      ****     // Main process loop.
+  65:.\main.c      ****     while(1) {
+  66:.\main.c      ****         // Read ADC inputs
+  67:.\main.c      ****         processMat();
+ 191              		.loc 1 67 0
+ 192 0008 FFF7FEFF 		bl	processMat
+  68:.\main.c      ****     }
+ 193              		.loc 1 68 0
+ 194 000c FCE7     		b	.L8
+ 195              		.cfi_endproc
+ 196              	.LFE32:
+ 197              		.size	main, .-main
+ 198 000e 00BF     		.section	.text.processRX,"ax",%progbits
+ 199              		.align	2
+ 200              		.global	processRX
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.type	processRX, %function
+ 204              	processRX:
+ 205              	.LFB33:
+  69:.\main.c      **** }
+  70:.\main.c      **** 
   71:.\main.c      **** 
-  72:.\main.c      ****     // Send payload data
-  73:.\main.c      ****     int i;
-  74:.\main.c      ****     for (i = 0; i < MAT_SIZE; ++i) {
- 219              		.loc 1 74 0
- 220 0018 4FF00003 		mov	r3, #0
- 221 001c FB60     		str	r3, [r7, #12]
- 222 001e 0CE0     		b	.L13
- 223              	.L14:
-  75:.\main.c      ****         UART_PutChar(adcValues[i]);
- 224              		.loc 1 75 0
- 225 0020 FA68     		ldr	r2, [r7, #12]
- 226 0022 40F20003 		movw	r3, #:lower16:adcValues
- 227 0026 C0F20003 		movt	r3, #:upper16:adcValues
- 228 002a 9B5C     		ldrb	r3, [r3, r2]	@ zero_extendqisi2
- 229 002c 1846     		mov	r0, r3
- 230 002e FFF7FEFF 		bl	UART_PutChar
- 231              		.loc 1 74 0
- 232 0032 FB68     		ldr	r3, [r7, #12]
- 233 0034 03F10103 		add	r3, r3, #1
- 234 0038 FB60     		str	r3, [r7, #12]
- 235              	.L13:
- 236 003a FB68     		ldr	r3, [r7, #12]
- 237 003c 0F2B     		cmp	r3, #15
- 238 003e EFDD     		ble	.L14
-  76:.\main.c      ****         //UART_PutChar(0xF0 * i);
-  77:.\main.c      ****     }
-  78:.\main.c      **** 
-  79:.\main.c      ****     // Send final char of sequence
-  80:.\main.c      ****     UART_PutChar(FINAL_SERIAL_RECEIVE_CHAR);
- 239              		.loc 1 80 0
- 240 0040 4FF00A00 		mov	r0, #10
- 241 0044 FFF7FEFF 		bl	UART_PutChar
- 242 0048 00E0     		b	.L15
- 243              	.L16:
- 244              		.loc 1 66 0
- 245 004a 00BF     		nop
- 246              	.L15:
-  81:.\main.c      **** }
- 247              		.loc 1 81 0
- 248 004c 07F11007 		add	r7, r7, #16
- 249 0050 BD46     		mov	sp, r7
- 250 0052 80BD     		pop	{r7, pc}
- 251              		.cfi_endproc
- 252              	.LFE33:
- 253              		.size	processRX, .-processRX
- 254              		.section	.text.processMat,"ax",%progbits
- 255              		.align	2
- 256              		.global	processMat
- 257              		.thumb
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 7
+  72:.\main.c      **** void processRX(uint8 input) {
+ 206              		.loc 1 72 0
+ 207              		.cfi_startproc
+ 208              		@ args = 0, pretend = 0, frame = 16
+ 209              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 6
 
 
- 258              		.thumb_func
- 259              		.type	processMat, %function
- 260              	processMat:
- 261              	.LFB34:
-  82:.\main.c      **** 
-  83:.\main.c      **** void processMat() {
- 262              		.loc 1 83 0
- 263              		.cfi_startproc
- 264              		@ args = 0, pretend = 0, frame = 8
- 265              		@ frame_needed = 1, uses_anonymous_args = 0
- 266 0000 80B5     		push	{r7, lr}
- 267              	.LCFI12:
- 268              		.cfi_def_cfa_offset 8
- 269 0002 82B0     		sub	sp, sp, #8
- 270              	.LCFI13:
- 271              		.cfi_def_cfa_offset 16
- 272 0004 00AF     		add	r7, sp, #0
- 273              		.cfi_offset 14, -4
- 274              		.cfi_offset 7, -8
- 275              	.LCFI14:
- 276              		.cfi_def_cfa_register 7
-  84:.\main.c      ****     ADC_SAR_1_IsEndConversion(1);
- 277              		.loc 1 84 0
- 278 0006 4FF00100 		mov	r0, #1
- 279 000a FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
-  85:.\main.c      ****     adcResult = ADC_SAR_1_GetResult16();
- 280              		.loc 1 85 0
- 281 000e FFF7FEFF 		bl	ADC_SAR_1_GetResult16
- 282 0012 0346     		mov	r3, r0
- 283 0014 9BB2     		uxth	r3, r3
- 284 0016 9AB2     		uxth	r2, r3
- 285 0018 40F20003 		movw	r3, #:lower16:adcResult
- 286 001c C0F20003 		movt	r3, #:upper16:adcResult
- 287 0020 1A80     		strh	r2, [r3, #0]	@ movhi
-  86:.\main.c      ****     LCD_ClearDisplay();
- 288              		.loc 1 86 0
- 289 0022 4FF00100 		mov	r0, #1
- 290 0026 FFF7FEFF 		bl	LCD_WriteControl
-  87:.\main.c      ****     LCD_PutChar(adcResult);     // RX ISR
- 291              		.loc 1 87 0
- 292 002a 40F20003 		movw	r3, #:lower16:adcResult
- 293 002e C0F20003 		movt	r3, #:upper16:adcResult
- 294 0032 1B88     		ldrh	r3, [r3, #0]
- 295 0034 DBB2     		uxtb	r3, r3
- 296 0036 1846     		mov	r0, r3
- 297 0038 FFF7FEFF 		bl	LCD_PutChar
-  88:.\main.c      ****     int i;
-  89:.\main.c      ****     for (i = 0; i < MAT_SIZE; ++i) {
- 298              		.loc 1 89 0
- 299 003c 4FF00003 		mov	r3, #0
- 300 0040 7B60     		str	r3, [r7, #4]
- 301 0042 0FE0     		b	.L18
- 302              	.L19:
-  90:.\main.c      ****         adcValues[i] = adcResult;
- 303              		.loc 1 90 0
- 304 0044 7A68     		ldr	r2, [r7, #4]
- 305 0046 40F20003 		movw	r3, #:lower16:adcResult
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 8
+ 210 0000 80B5     		push	{r7, lr}
+ 211              	.LCFI9:
+ 212              		.cfi_def_cfa_offset 8
+ 213 0002 84B0     		sub	sp, sp, #16
+ 214              	.LCFI10:
+ 215              		.cfi_def_cfa_offset 24
+ 216 0004 00AF     		add	r7, sp, #0
+ 217              		.cfi_offset 14, -4
+ 218              		.cfi_offset 7, -8
+ 219              	.LCFI11:
+ 220              		.cfi_def_cfa_register 7
+ 221 0006 0346     		mov	r3, r0
+ 222 0008 FB71     		strb	r3, [r7, #7]
+  73:.\main.c      ****     // Only start sending values if receive start char
+  74:.\main.c      ****     if (input != SERIAL_START_CHAR) {
+ 223              		.loc 1 74 0
+ 224 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 225 000c 412B     		cmp	r3, #65
+ 226 000e 1CD1     		bne	.L16
+ 227              	.L11:
+  75:.\main.c      ****         return;
+  76:.\main.c      ****     }
+  77:.\main.c      ****     
+  78:.\main.c      ****     // Send start char of sequence
+  79:.\main.c      ****     UART_PutChar(FIRST_SERIAL_RECEIVE_CHAR);
+ 228              		.loc 1 79 0
+ 229 0010 4FF04200 		mov	r0, #66
+ 230 0014 FFF7FEFF 		bl	UART_PutChar
+  80:.\main.c      **** 
+  81:.\main.c      ****     // Send payload data
+  82:.\main.c      ****     int i;
+  83:.\main.c      ****     for (i = 0; i < MAT_SIZE; ++i) {
+ 231              		.loc 1 83 0
+ 232 0018 4FF00003 		mov	r3, #0
+ 233 001c FB60     		str	r3, [r7, #12]
+ 234 001e 0CE0     		b	.L13
+ 235              	.L14:
+  84:.\main.c      ****         UART_PutChar(adcValues[i]);
+ 236              		.loc 1 84 0
+ 237 0020 FA68     		ldr	r2, [r7, #12]
+ 238 0022 40F20003 		movw	r3, #:lower16:adcValues
+ 239 0026 C0F20003 		movt	r3, #:upper16:adcValues
+ 240 002a 9B5C     		ldrb	r3, [r3, r2]	@ zero_extendqisi2
+ 241 002c 1846     		mov	r0, r3
+ 242 002e FFF7FEFF 		bl	UART_PutChar
+ 243              		.loc 1 83 0
+ 244 0032 FB68     		ldr	r3, [r7, #12]
+ 245 0034 03F10103 		add	r3, r3, #1
+ 246 0038 FB60     		str	r3, [r7, #12]
+ 247              	.L13:
+ 248 003a FB68     		ldr	r3, [r7, #12]
+ 249 003c 0F2B     		cmp	r3, #15
+ 250 003e EFDD     		ble	.L14
+  85:.\main.c      ****         //UART_PutChar(0xF0 * i);
+  86:.\main.c      ****     }
+  87:.\main.c      **** 
+  88:.\main.c      ****     // Send final char of sequence
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 7
 
 
- 306 004a C0F20003 		movt	r3, #:upper16:adcResult
- 307 004e 1B88     		ldrh	r3, [r3, #0]
- 308 0050 D9B2     		uxtb	r1, r3
- 309 0052 40F20003 		movw	r3, #:lower16:adcValues
- 310 0056 C0F20003 		movt	r3, #:upper16:adcValues
- 311 005a 9954     		strb	r1, [r3, r2]
- 312              		.loc 1 89 0
- 313 005c 7B68     		ldr	r3, [r7, #4]
- 314 005e 03F10103 		add	r3, r3, #1
- 315 0062 7B60     		str	r3, [r7, #4]
- 316              	.L18:
- 317 0064 7B68     		ldr	r3, [r7, #4]
- 318 0066 0F2B     		cmp	r3, #15
- 319 0068 ECDD     		ble	.L19
-  91:.\main.c      ****     }
-  92:.\main.c      **** }
- 320              		.loc 1 92 0
- 321 006a 07F10807 		add	r7, r7, #8
- 322 006e BD46     		mov	sp, r7
- 323 0070 80BD     		pop	{r7, pc}
- 324              		.cfi_endproc
- 325              	.LFE34:
- 326              		.size	processMat, .-processMat
- 327 0072 00BF     		.section	.text.configureMat,"ax",%progbits
- 328              		.align	2
- 329              		.global	configureMat
- 330              		.thumb
- 331              		.thumb_func
- 332              		.type	configureMat, %function
- 333              	configureMat:
- 334              	.LFB35:
-  93:.\main.c      **** 
-  94:.\main.c      **** void configureMat(int i, int j) {
- 335              		.loc 1 94 0
- 336              		.cfi_startproc
- 337              		@ args = 0, pretend = 0, frame = 8
- 338              		@ frame_needed = 1, uses_anonymous_args = 0
- 339              		@ link register save eliminated.
- 340 0000 80B4     		push	{r7}
- 341              	.LCFI15:
- 342              		.cfi_def_cfa_offset 4
- 343 0002 83B0     		sub	sp, sp, #12
- 344              	.LCFI16:
- 345              		.cfi_def_cfa_offset 16
- 346 0004 00AF     		add	r7, sp, #0
- 347              		.cfi_offset 7, -4
- 348              	.LCFI17:
- 349              		.cfi_def_cfa_register 7
- 350 0006 7860     		str	r0, [r7, #4]
- 351 0008 3960     		str	r1, [r7, #0]
-  95:.\main.c      ****     // Zero all pins
-  96:.\main.c      ****     // Set the i pin to Vref
-  97:.\main.c      ****     // Connect the j pin to mux
-  98:.\main.c      ****     // Set mux to j pin
-  99:.\main.c      **** }
- 352              		.loc 1 99 0
- 353 000a 07F10C07 		add	r7, r7, #12
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 9
+  89:.\main.c      ****     UART_PutChar(FINAL_SERIAL_RECEIVE_CHAR);
+ 251              		.loc 1 89 0
+ 252 0040 4FF00A00 		mov	r0, #10
+ 253 0044 FFF7FEFF 		bl	UART_PutChar
+ 254 0048 00E0     		b	.L15
+ 255              	.L16:
+ 256              		.loc 1 75 0
+ 257 004a 00BF     		nop
+ 258              	.L15:
+  90:.\main.c      **** }
+ 259              		.loc 1 90 0
+ 260 004c 07F11007 		add	r7, r7, #16
+ 261 0050 BD46     		mov	sp, r7
+ 262 0052 80BD     		pop	{r7, pc}
+ 263              		.cfi_endproc
+ 264              	.LFE33:
+ 265              		.size	processRX, .-processRX
+ 266              		.section	.text.processMat,"ax",%progbits
+ 267              		.align	2
+ 268              		.global	processMat
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	processMat, %function
+ 272              	processMat:
+ 273              	.LFB34:
+  91:.\main.c      **** 
+  92:.\main.c      **** void processMat() {
+ 274              		.loc 1 92 0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 8
+ 277              		@ frame_needed = 1, uses_anonymous_args = 0
+ 278 0000 80B5     		push	{r7, lr}
+ 279              	.LCFI12:
+ 280              		.cfi_def_cfa_offset 8
+ 281 0002 82B0     		sub	sp, sp, #8
+ 282              	.LCFI13:
+ 283              		.cfi_def_cfa_offset 16
+ 284 0004 00AF     		add	r7, sp, #0
+ 285              		.cfi_offset 14, -4
+ 286              		.cfi_offset 7, -8
+ 287              	.LCFI14:
+ 288              		.cfi_def_cfa_register 7
+  93:.\main.c      ****     int i;
+  94:.\main.c      ****     int j;
+  95:.\main.c      ****     for (i = 0; i < HEIGHT; ++i) {
+ 289              		.loc 1 95 0
+ 290 0006 4FF00003 		mov	r3, #0
+ 291 000a 3B60     		str	r3, [r7, #0]
+ 292 000c 34E0     		b	.L18
+ 293              	.L21:
+  96:.\main.c      ****         for (j = 0; j < WIDTH; ++j) {
+ 294              		.loc 1 96 0
+ 295 000e 4FF00003 		mov	r3, #0
+ 296 0012 7B60     		str	r3, [r7, #4]
+ 297 0014 29E0     		b	.L19
+ 298              	.L20:
+  97:.\main.c      ****             configureMat(i,j);
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 8
 
 
- 354 000e BD46     		mov	sp, r7
- 355 0010 80BC     		pop	{r7}
- 356 0012 7047     		bx	lr
- 357              		.cfi_endproc
- 358              	.LFE35:
- 359              		.size	configureMat, .-configureMat
- 360              		.section	.text.zeroAllPins,"ax",%progbits
- 361              		.align	2
- 362              		.global	zeroAllPins
- 363              		.thumb
- 364              		.thumb_func
- 365              		.type	zeroAllPins, %function
- 366              	zeroAllPins:
- 367              	.LFB36:
- 100:.\main.c      **** 
- 101:.\main.c      **** void zeroAllPins() {
- 368              		.loc 1 101 0
- 369              		.cfi_startproc
- 370              		@ args = 0, pretend = 0, frame = 0
- 371              		@ frame_needed = 1, uses_anonymous_args = 0
- 372              		@ link register save eliminated.
- 373 0000 80B4     		push	{r7}
- 374              	.LCFI18:
- 375              		.cfi_def_cfa_offset 4
- 376 0002 00AF     		add	r7, sp, #0
- 377              		.cfi_offset 7, -4
- 378              	.LCFI19:
- 379              		.cfi_def_cfa_register 7
- 102:.\main.c      **** 
- 103:.\main.c      **** }
- 380              		.loc 1 103 0
- 381 0004 BD46     		mov	sp, r7
- 382 0006 80BC     		pop	{r7}
- 383 0008 7047     		bx	lr
- 384              		.cfi_endproc
- 385              	.LFE36:
- 386              		.size	zeroAllPins, .-zeroAllPins
- 387 000a 00BF     		.text
- 388              	.Letext0:
- 389              		.section	.debug_loc,"",%progbits
- 390              	.Ldebug_loc0:
- 391              	.LLST0:
- 392 0000 00000000 		.4byte	.LFB29
- 393 0004 02000000 		.4byte	.LCFI0
- 394 0008 0100     		.2byte	0x1
- 395 000a 5D       		.byte	0x5d
- 396 000b 02000000 		.4byte	.LCFI0
- 397 000f 04000000 		.4byte	.LCFI1
- 398 0013 0200     		.2byte	0x2
- 399 0015 7D       		.byte	0x7d
- 400 0016 08       		.sleb128 8
- 401 0017 04000000 		.4byte	.LCFI1
- 402 001b 06000000 		.4byte	.LCFI2
- 403 001f 0200     		.2byte	0x2
- 404 0021 7D       		.byte	0x7d
- 405 0022 10       		.sleb128 16
- 406 0023 06000000 		.4byte	.LCFI2
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 10
+ 299              		.loc 1 97 0
+ 300 0016 3868     		ldr	r0, [r7, #0]
+ 301 0018 7968     		ldr	r1, [r7, #4]
+ 302 001a FFF7FEFF 		bl	configureMat
+  98:.\main.c      ****             // Start ADC conversion. Wait for next value, then stop conversion.
+  99:.\main.c      ****             ADC_SAR_1_StartConvert();
+ 303              		.loc 1 99 0
+ 304 001e FFF7FEFF 		bl	ADC_SAR_1_StartConvert
+ 100:.\main.c      ****             ADC_SAR_1_IsEndConversion(1);
+ 305              		.loc 1 100 0
+ 306 0022 4FF00100 		mov	r0, #1
+ 307 0026 FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 101:.\main.c      ****             adcResult = ADC_SAR_1_GetResult16();
+ 308              		.loc 1 101 0
+ 309 002a FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 310 002e 0346     		mov	r3, r0
+ 311 0030 9BB2     		uxth	r3, r3
+ 312 0032 9AB2     		uxth	r2, r3
+ 313 0034 40F20003 		movw	r3, #:lower16:adcResult
+ 314 0038 C0F20003 		movt	r3, #:upper16:adcResult
+ 315 003c 1A80     		strh	r2, [r3, #0]	@ movhi
+ 102:.\main.c      ****             ADC_SAR_1_StopConvert();
+ 316              		.loc 1 102 0
+ 317 003e FFF7FEFF 		bl	ADC_SAR_1_StopConvert
+ 103:.\main.c      ****             adcValues[i * WIDTH + j] = adcResult;
+ 318              		.loc 1 103 0
+ 319 0042 3B68     		ldr	r3, [r7, #0]
+ 320 0044 4FEA8302 		lsl	r2, r3, #2
+ 321 0048 7B68     		ldr	r3, [r7, #4]
+ 322 004a 1A44     		add	r2, r2, r3
+ 323 004c 40F20003 		movw	r3, #:lower16:adcResult
+ 324 0050 C0F20003 		movt	r3, #:upper16:adcResult
+ 325 0054 1B88     		ldrh	r3, [r3, #0]
+ 326 0056 D9B2     		uxtb	r1, r3
+ 327 0058 40F20003 		movw	r3, #:lower16:adcValues
+ 328 005c C0F20003 		movt	r3, #:upper16:adcValues
+ 329 0060 9954     		strb	r1, [r3, r2]
+ 330              		.loc 1 96 0
+ 331 0062 7B68     		ldr	r3, [r7, #4]
+ 332 0064 03F10103 		add	r3, r3, #1
+ 333 0068 7B60     		str	r3, [r7, #4]
+ 334              	.L19:
+ 335 006a 7B68     		ldr	r3, [r7, #4]
+ 336 006c 032B     		cmp	r3, #3
+ 337 006e D2DD     		ble	.L20
+ 338              		.loc 1 95 0
+ 339 0070 3B68     		ldr	r3, [r7, #0]
+ 340 0072 03F10103 		add	r3, r3, #1
+ 341 0076 3B60     		str	r3, [r7, #0]
+ 342              	.L18:
+ 343 0078 3B68     		ldr	r3, [r7, #0]
+ 344 007a 032B     		cmp	r3, #3
+ 345 007c C7DD     		ble	.L21
+ 104:.\main.c      **** 
+ 105:.\main.c      ****         }
+ 106:.\main.c      ****     }
+ 107:.\main.c      **** }
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 9
 
 
- 407 0027 1E000000 		.4byte	.LFE29
- 408 002b 0200     		.2byte	0x2
- 409 002d 77       		.byte	0x77
- 410 002e 10       		.sleb128 16
- 411 002f 00000000 		.4byte	0x0
- 412 0033 00000000 		.4byte	0x0
- 413              	.LLST1:
- 414 0037 00000000 		.4byte	.LFB30
- 415 003b 02000000 		.4byte	.LCFI3
- 416 003f 0100     		.2byte	0x1
- 417 0041 5D       		.byte	0x5d
- 418 0042 02000000 		.4byte	.LCFI3
- 419 0046 04000000 		.4byte	.LCFI4
- 420 004a 0200     		.2byte	0x2
- 421 004c 7D       		.byte	0x7d
- 422 004d 08       		.sleb128 8
- 423 004e 04000000 		.4byte	.LCFI4
- 424 0052 40000000 		.4byte	.LFE30
- 425 0056 0200     		.2byte	0x2
- 426 0058 77       		.byte	0x77
- 427 0059 08       		.sleb128 8
- 428 005a 00000000 		.4byte	0x0
- 429 005e 00000000 		.4byte	0x0
- 430              	.LLST2:
- 431 0062 00000000 		.4byte	.LFB31
- 432 0066 02000000 		.4byte	.LCFI5
- 433 006a 0100     		.2byte	0x1
- 434 006c 5D       		.byte	0x5d
- 435 006d 02000000 		.4byte	.LCFI5
- 436 0071 04000000 		.4byte	.LCFI6
- 437 0075 0200     		.2byte	0x2
- 438 0077 7D       		.byte	0x7d
- 439 0078 08       		.sleb128 8
- 440 0079 04000000 		.4byte	.LCFI6
- 441 007d 16000000 		.4byte	.LFE31
- 442 0081 0200     		.2byte	0x2
- 443 0083 77       		.byte	0x77
- 444 0084 08       		.sleb128 8
- 445 0085 00000000 		.4byte	0x0
- 446 0089 00000000 		.4byte	0x0
- 447              	.LLST3:
- 448 008d 00000000 		.4byte	.LFB32
- 449 0091 02000000 		.4byte	.LCFI7
- 450 0095 0100     		.2byte	0x1
- 451 0097 5D       		.byte	0x5d
- 452 0098 02000000 		.4byte	.LCFI7
- 453 009c 04000000 		.4byte	.LCFI8
- 454 00a0 0200     		.2byte	0x2
- 455 00a2 7D       		.byte	0x7d
- 456 00a3 08       		.sleb128 8
- 457 00a4 04000000 		.4byte	.LCFI8
- 458 00a8 0E000000 		.4byte	.LFE32
- 459 00ac 0200     		.2byte	0x2
- 460 00ae 77       		.byte	0x77
- 461 00af 08       		.sleb128 8
- 462 00b0 00000000 		.4byte	0x0
- 463 00b4 00000000 		.4byte	0x0
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 11
+ 346              		.loc 1 107 0
+ 347 007e 07F10807 		add	r7, r7, #8
+ 348 0082 BD46     		mov	sp, r7
+ 349 0084 80BD     		pop	{r7, pc}
+ 350              		.cfi_endproc
+ 351              	.LFE34:
+ 352              		.size	processMat, .-processMat
+ 353 0086 00BF     		.section	.text.configureMat,"ax",%progbits
+ 354              		.align	2
+ 355              		.global	configureMat
+ 356              		.thumb
+ 357              		.thumb_func
+ 358              		.type	configureMat, %function
+ 359              	configureMat:
+ 360              	.LFB35:
+ 108:.\main.c      **** 
+ 109:.\main.c      **** void configureMat(int i, int j) {
+ 361              		.loc 1 109 0
+ 362              		.cfi_startproc
+ 363              		@ args = 0, pretend = 0, frame = 8
+ 364              		@ frame_needed = 1, uses_anonymous_args = 0
+ 365 0000 80B5     		push	{r7, lr}
+ 366              	.LCFI15:
+ 367              		.cfi_def_cfa_offset 8
+ 368 0002 82B0     		sub	sp, sp, #8
+ 369              	.LCFI16:
+ 370              		.cfi_def_cfa_offset 16
+ 371 0004 00AF     		add	r7, sp, #0
+ 372              		.cfi_offset 14, -4
+ 373              		.cfi_offset 7, -8
+ 374              	.LCFI17:
+ 375              		.cfi_def_cfa_register 7
+ 376 0006 7860     		str	r0, [r7, #4]
+ 377 0008 3960     		str	r1, [r7, #0]
+ 110:.\main.c      ****     //i = 2;
+ 111:.\main.c      ****     // Zero all pins
+ 112:.\main.c      ****     zeroAllPins();
+ 378              		.loc 1 112 0
+ 379 000a FFF7FEFF 		bl	zeroAllPins
+ 113:.\main.c      ****     // Set the i pin to Vref
+ 114:.\main.c      ****     TOP_MUX_GND_Disconnect(i);
+ 380              		.loc 1 114 0
+ 381 000e 7B68     		ldr	r3, [r7, #4]
+ 382 0010 DBB2     		uxtb	r3, r3
+ 383 0012 1846     		mov	r0, r3
+ 384 0014 FFF7FEFF 		bl	TOP_MUX_GND_Unset
+ 115:.\main.c      ****     TOP_MUX_VREF_Select(i);
+ 385              		.loc 1 115 0
+ 386 0018 7B68     		ldr	r3, [r7, #4]
+ 387 001a DBB2     		uxtb	r3, r3
+ 388 001c 1846     		mov	r0, r3
+ 389 001e FFF7FEFF 		bl	TOP_MUX_VREF_Select
+ 116:.\main.c      ****     // Connect the j pin to sense
+ 117:.\main.c      ****     BOTTOM_MUX_GND_Disconnect(j);
+ 390              		.loc 1 117 0
+ 391 0022 3B68     		ldr	r3, [r7, #0]
+ 392 0024 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 10
 
 
- 464              	.LLST4:
- 465 00b8 00000000 		.4byte	.LFB33
- 466 00bc 02000000 		.4byte	.LCFI9
- 467 00c0 0100     		.2byte	0x1
- 468 00c2 5D       		.byte	0x5d
- 469 00c3 02000000 		.4byte	.LCFI9
- 470 00c7 04000000 		.4byte	.LCFI10
- 471 00cb 0200     		.2byte	0x2
- 472 00cd 7D       		.byte	0x7d
- 473 00ce 08       		.sleb128 8
- 474 00cf 04000000 		.4byte	.LCFI10
- 475 00d3 06000000 		.4byte	.LCFI11
- 476 00d7 0200     		.2byte	0x2
- 477 00d9 7D       		.byte	0x7d
- 478 00da 18       		.sleb128 24
- 479 00db 06000000 		.4byte	.LCFI11
- 480 00df 54000000 		.4byte	.LFE33
- 481 00e3 0200     		.2byte	0x2
- 482 00e5 77       		.byte	0x77
- 483 00e6 18       		.sleb128 24
- 484 00e7 00000000 		.4byte	0x0
- 485 00eb 00000000 		.4byte	0x0
- 486              	.LLST5:
- 487 00ef 00000000 		.4byte	.LFB34
- 488 00f3 02000000 		.4byte	.LCFI12
- 489 00f7 0100     		.2byte	0x1
- 490 00f9 5D       		.byte	0x5d
- 491 00fa 02000000 		.4byte	.LCFI12
- 492 00fe 04000000 		.4byte	.LCFI13
- 493 0102 0200     		.2byte	0x2
- 494 0104 7D       		.byte	0x7d
- 495 0105 08       		.sleb128 8
- 496 0106 04000000 		.4byte	.LCFI13
- 497 010a 06000000 		.4byte	.LCFI14
- 498 010e 0200     		.2byte	0x2
- 499 0110 7D       		.byte	0x7d
- 500 0111 10       		.sleb128 16
- 501 0112 06000000 		.4byte	.LCFI14
- 502 0116 72000000 		.4byte	.LFE34
- 503 011a 0200     		.2byte	0x2
- 504 011c 77       		.byte	0x77
- 505 011d 10       		.sleb128 16
- 506 011e 00000000 		.4byte	0x0
- 507 0122 00000000 		.4byte	0x0
- 508              	.LLST6:
- 509 0126 00000000 		.4byte	.LFB35
- 510 012a 02000000 		.4byte	.LCFI15
- 511 012e 0100     		.2byte	0x1
- 512 0130 5D       		.byte	0x5d
- 513 0131 02000000 		.4byte	.LCFI15
- 514 0135 04000000 		.4byte	.LCFI16
- 515 0139 0200     		.2byte	0x2
- 516 013b 7D       		.byte	0x7d
- 517 013c 04       		.sleb128 4
- 518 013d 04000000 		.4byte	.LCFI16
- 519 0141 06000000 		.4byte	.LCFI17
- 520 0145 0200     		.2byte	0x2
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 12
+ 393 0026 1846     		mov	r0, r3
+ 394 0028 FFF7FEFF 		bl	BOTTOM_MUX_GND_Unset
+ 118:.\main.c      ****     BOTTOM_MUX_SENSE_Select(j);
+ 395              		.loc 1 118 0
+ 396 002c 3B68     		ldr	r3, [r7, #0]
+ 397 002e DBB2     		uxtb	r3, r3
+ 398 0030 1846     		mov	r0, r3
+ 399 0032 FFF7FEFF 		bl	BOTTOM_MUX_SENSE_Select
+ 119:.\main.c      **** }
+ 400              		.loc 1 119 0
+ 401 0036 07F10807 		add	r7, r7, #8
+ 402 003a BD46     		mov	sp, r7
+ 403 003c 80BD     		pop	{r7, pc}
+ 404              		.cfi_endproc
+ 405              	.LFE35:
+ 406              		.size	configureMat, .-configureMat
+ 407 003e 00BF     		.section	.text.zeroAllPins,"ax",%progbits
+ 408              		.align	2
+ 409              		.global	zeroAllPins
+ 410              		.thumb
+ 411              		.thumb_func
+ 412              		.type	zeroAllPins, %function
+ 413              	zeroAllPins:
+ 414              	.LFB36:
+ 120:.\main.c      **** 
+ 121:.\main.c      **** void zeroAllPins() {
+ 415              		.loc 1 121 0
+ 416              		.cfi_startproc
+ 417              		@ args = 0, pretend = 0, frame = 8
+ 418              		@ frame_needed = 1, uses_anonymous_args = 0
+ 419 0000 80B5     		push	{r7, lr}
+ 420              	.LCFI18:
+ 421              		.cfi_def_cfa_offset 8
+ 422 0002 82B0     		sub	sp, sp, #8
+ 423              	.LCFI19:
+ 424              		.cfi_def_cfa_offset 16
+ 425 0004 00AF     		add	r7, sp, #0
+ 426              		.cfi_offset 14, -4
+ 427              		.cfi_offset 7, -8
+ 428              	.LCFI20:
+ 429              		.cfi_def_cfa_register 7
+ 122:.\main.c      ****     // Disconnect power and sense
+ 123:.\main.c      ****     TOP_MUX_VREF_DisconnectAll();
+ 430              		.loc 1 123 0
+ 431 0006 FFF7FEFF 		bl	TOP_MUX_VREF_Start
+ 124:.\main.c      ****     BOTTOM_MUX_SENSE_DisconnectAll();
+ 432              		.loc 1 124 0
+ 433 000a FFF7FEFF 		bl	BOTTOM_MUX_SENSE_Start
+ 125:.\main.c      ****     // Connect all ground pins
+ 126:.\main.c      ****     int i;
+ 127:.\main.c      ****     for (i=0; i < HEIGHT; ++i) {
+ 434              		.loc 1 127 0
+ 435 000e 4FF00003 		mov	r3, #0
+ 436 0012 3B60     		str	r3, [r7, #0]
+ 437 0014 08E0     		b	.L26
+ 438              	.L27:
+ 128:.\main.c      ****         TOP_MUX_GND_Connect(i);
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 11
 
 
- 521 0147 7D       		.byte	0x7d
- 522 0148 10       		.sleb128 16
- 523 0149 06000000 		.4byte	.LCFI17
- 524 014d 14000000 		.4byte	.LFE35
- 525 0151 0200     		.2byte	0x2
- 526 0153 77       		.byte	0x77
- 527 0154 10       		.sleb128 16
- 528 0155 00000000 		.4byte	0x0
- 529 0159 00000000 		.4byte	0x0
- 530              	.LLST7:
- 531 015d 00000000 		.4byte	.LFB36
- 532 0161 02000000 		.4byte	.LCFI18
- 533 0165 0100     		.2byte	0x1
- 534 0167 5D       		.byte	0x5d
- 535 0168 02000000 		.4byte	.LCFI18
- 536 016c 04000000 		.4byte	.LCFI19
- 537 0170 0200     		.2byte	0x2
- 538 0172 7D       		.byte	0x7d
- 539 0173 04       		.sleb128 4
- 540 0174 04000000 		.4byte	.LCFI19
- 541 0178 0A000000 		.4byte	.LFE36
- 542 017c 0200     		.2byte	0x2
- 543 017e 77       		.byte	0x77
- 544 017f 04       		.sleb128 4
- 545 0180 00000000 		.4byte	0x0
- 546 0184 00000000 		.4byte	0x0
- 547              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
- 548              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
- 549              		.section	.debug_info
- 550 0000 D6010000 		.4byte	0x1d6
- 551 0004 0200     		.2byte	0x2
- 552 0006 00000000 		.4byte	.Ldebug_abbrev0
- 553 000a 04       		.byte	0x4
- 554 000b 01       		.uleb128 0x1
- 555 000c 7D000000 		.4byte	.LASF23
- 556 0010 01       		.byte	0x1
- 557 0011 FA000000 		.4byte	.LASF24
- 558 0015 16010000 		.4byte	.LASF25
- 559 0019 00000000 		.4byte	0x0
- 560 001d 00000000 		.4byte	0x0
- 561 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
- 562 0025 00000000 		.4byte	.Ldebug_line0
- 563 0029 02       		.uleb128 0x2
- 564 002a 01       		.byte	0x1
- 565 002b 06       		.byte	0x6
- 566 002c EE000000 		.4byte	.LASF0
- 567 0030 02       		.uleb128 0x2
- 568 0031 01       		.byte	0x1
- 569 0032 08       		.byte	0x8
- 570 0033 89000000 		.4byte	.LASF1
- 571 0037 02       		.uleb128 0x2
- 572 0038 02       		.byte	0x2
- 573 0039 05       		.byte	0x5
- 574 003a B4000000 		.4byte	.LASF2
- 575 003e 02       		.uleb128 0x2
- 576 003f 02       		.byte	0x2
- 577 0040 07       		.byte	0x7
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 13
+ 439              		.loc 1 128 0
+ 440 0016 3B68     		ldr	r3, [r7, #0]
+ 441 0018 DBB2     		uxtb	r3, r3
+ 442 001a 1846     		mov	r0, r3
+ 443 001c FFF7FEFF 		bl	TOP_MUX_GND_Set
+ 444              		.loc 1 127 0
+ 445 0020 3B68     		ldr	r3, [r7, #0]
+ 446 0022 03F10103 		add	r3, r3, #1
+ 447 0026 3B60     		str	r3, [r7, #0]
+ 448              	.L26:
+ 449 0028 3B68     		ldr	r3, [r7, #0]
+ 450 002a 032B     		cmp	r3, #3
+ 451 002c F3DD     		ble	.L27
+ 129:.\main.c      ****     }
+ 130:.\main.c      ****     int j;
+ 131:.\main.c      ****     for (j=0; j < WIDTH; ++j) {
+ 452              		.loc 1 131 0
+ 453 002e 4FF00003 		mov	r3, #0
+ 454 0032 7B60     		str	r3, [r7, #4]
+ 455 0034 08E0     		b	.L28
+ 456              	.L29:
+ 132:.\main.c      ****         BOTTOM_MUX_GND_Connect(j);
+ 457              		.loc 1 132 0
+ 458 0036 7B68     		ldr	r3, [r7, #4]
+ 459 0038 DBB2     		uxtb	r3, r3
+ 460 003a 1846     		mov	r0, r3
+ 461 003c FFF7FEFF 		bl	BOTTOM_MUX_GND_Set
+ 462              		.loc 1 131 0
+ 463 0040 7B68     		ldr	r3, [r7, #4]
+ 464 0042 03F10103 		add	r3, r3, #1
+ 465 0046 7B60     		str	r3, [r7, #4]
+ 466              	.L28:
+ 467 0048 7B68     		ldr	r3, [r7, #4]
+ 468 004a 032B     		cmp	r3, #3
+ 469 004c F3DD     		ble	.L29
+ 133:.\main.c      ****     }
+ 134:.\main.c      **** }
+ 470              		.loc 1 134 0
+ 471 004e 07F10807 		add	r7, r7, #8
+ 472 0052 BD46     		mov	sp, r7
+ 473 0054 80BD     		pop	{r7, pc}
+ 474              		.cfi_endproc
+ 475              	.LFE36:
+ 476              		.size	zeroAllPins, .-zeroAllPins
+ 477 0056 00BF     		.text
+ 478              	.Letext0:
+ 479              		.section	.debug_loc,"",%progbits
+ 480              	.Ldebug_loc0:
+ 481              	.LLST0:
+ 482 0000 00000000 		.4byte	.LFB29
+ 483 0004 02000000 		.4byte	.LCFI0
+ 484 0008 0100     		.2byte	0x1
+ 485 000a 5D       		.byte	0x5d
+ 486 000b 02000000 		.4byte	.LCFI0
+ 487 000f 04000000 		.4byte	.LCFI1
+ 488 0013 0200     		.2byte	0x2
+ 489 0015 7D       		.byte	0x7d
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 12
 
 
- 578 0041 DB000000 		.4byte	.LASF3
- 579 0045 02       		.uleb128 0x2
- 580 0046 04       		.byte	0x4
- 581 0047 05       		.byte	0x5
- 582 0048 C8000000 		.4byte	.LASF4
- 583 004c 02       		.uleb128 0x2
- 584 004d 04       		.byte	0x4
- 585 004e 07       		.byte	0x7
- 586 004f 4F000000 		.4byte	.LASF5
- 587 0053 02       		.uleb128 0x2
- 588 0054 08       		.byte	0x8
- 589 0055 05       		.byte	0x5
- 590 0056 00000000 		.4byte	.LASF6
- 591 005a 02       		.uleb128 0x2
- 592 005b 08       		.byte	0x8
- 593 005c 07       		.byte	0x7
- 594 005d 66000000 		.4byte	.LASF7
- 595 0061 03       		.uleb128 0x3
- 596 0062 04       		.byte	0x4
- 597 0063 05       		.byte	0x5
- 598 0064 696E7400 		.ascii	"int\000"
- 599 0068 02       		.uleb128 0x2
- 600 0069 04       		.byte	0x4
- 601 006a 07       		.byte	0x7
- 602 006b 0E000000 		.4byte	.LASF8
- 603 006f 02       		.uleb128 0x2
- 604 0070 01       		.byte	0x1
- 605 0071 08       		.byte	0x8
- 606 0072 A2000000 		.4byte	.LASF9
- 607 0076 04       		.uleb128 0x4
- 608 0077 49000000 		.4byte	.LASF10
- 609 007b 02       		.byte	0x2
- 610 007c 60       		.byte	0x60
- 611 007d 30000000 		.4byte	0x30
- 612 0081 04       		.uleb128 0x4
- 613 0082 03010000 		.4byte	.LASF11
- 614 0086 02       		.byte	0x2
- 615 0087 61       		.byte	0x61
- 616 0088 3E000000 		.4byte	0x3e
- 617 008c 05       		.uleb128 0x5
- 618 008d 04       		.byte	0x4
- 619 008e 07       		.byte	0x7
- 620 008f 06       		.uleb128 0x6
- 621 0090 01       		.byte	0x1
- 622 0091 42000000 		.4byte	.LASF15
- 623 0095 01       		.byte	0x1
- 624 0096 14       		.byte	0x14
- 625 0097 01       		.byte	0x1
- 626 0098 00000000 		.4byte	.LFB29
- 627 009c 1E000000 		.4byte	.LFE29
- 628 00a0 00000000 		.4byte	.LLST0
- 629 00a4 B7000000 		.4byte	0xb7
- 630 00a8 07       		.uleb128 0x7
- 631 00a9 2D000000 		.4byte	.LASF17
- 632 00ad 01       		.byte	0x1
- 633 00ae 15       		.byte	0x15
- 634 00af 76000000 		.4byte	0x76
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 14
+ 490 0016 08       		.sleb128 8
+ 491 0017 04000000 		.4byte	.LCFI1
+ 492 001b 06000000 		.4byte	.LCFI2
+ 493 001f 0200     		.2byte	0x2
+ 494 0021 7D       		.byte	0x7d
+ 495 0022 10       		.sleb128 16
+ 496 0023 06000000 		.4byte	.LCFI2
+ 497 0027 1E000000 		.4byte	.LFE29
+ 498 002b 0200     		.2byte	0x2
+ 499 002d 77       		.byte	0x77
+ 500 002e 10       		.sleb128 16
+ 501 002f 00000000 		.4byte	0x0
+ 502 0033 00000000 		.4byte	0x0
+ 503              	.LLST1:
+ 504 0037 00000000 		.4byte	.LFB30
+ 505 003b 02000000 		.4byte	.LCFI3
+ 506 003f 0100     		.2byte	0x1
+ 507 0041 5D       		.byte	0x5d
+ 508 0042 02000000 		.4byte	.LCFI3
+ 509 0046 04000000 		.4byte	.LCFI4
+ 510 004a 0200     		.2byte	0x2
+ 511 004c 7D       		.byte	0x7d
+ 512 004d 08       		.sleb128 8
+ 513 004e 04000000 		.4byte	.LCFI4
+ 514 0052 58000000 		.4byte	.LFE30
+ 515 0056 0200     		.2byte	0x2
+ 516 0058 77       		.byte	0x77
+ 517 0059 08       		.sleb128 8
+ 518 005a 00000000 		.4byte	0x0
+ 519 005e 00000000 		.4byte	0x0
+ 520              	.LLST2:
+ 521 0062 00000000 		.4byte	.LFB31
+ 522 0066 02000000 		.4byte	.LCFI5
+ 523 006a 0100     		.2byte	0x1
+ 524 006c 5D       		.byte	0x5d
+ 525 006d 02000000 		.4byte	.LCFI5
+ 526 0071 04000000 		.4byte	.LCFI6
+ 527 0075 0200     		.2byte	0x2
+ 528 0077 7D       		.byte	0x7d
+ 529 0078 08       		.sleb128 8
+ 530 0079 04000000 		.4byte	.LCFI6
+ 531 007d 16000000 		.4byte	.LFE31
+ 532 0081 0200     		.2byte	0x2
+ 533 0083 77       		.byte	0x77
+ 534 0084 08       		.sleb128 8
+ 535 0085 00000000 		.4byte	0x0
+ 536 0089 00000000 		.4byte	0x0
+ 537              	.LLST3:
+ 538 008d 00000000 		.4byte	.LFB32
+ 539 0091 02000000 		.4byte	.LCFI7
+ 540 0095 0100     		.2byte	0x1
+ 541 0097 5D       		.byte	0x5d
+ 542 0098 02000000 		.4byte	.LCFI7
+ 543 009c 04000000 		.4byte	.LCFI8
+ 544 00a0 0200     		.2byte	0x2
+ 545 00a2 7D       		.byte	0x7d
+ 546 00a3 08       		.sleb128 8
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 13
 
 
- 635 00b3 02       		.byte	0x2
- 636 00b4 91       		.byte	0x91
- 637 00b5 77       		.sleb128 -9
- 638 00b6 00       		.byte	0x0
- 639 00b7 08       		.uleb128 0x8
- 640 00b8 01       		.byte	0x1
- 641 00b9 1B000000 		.4byte	.LASF12
- 642 00bd 01       		.byte	0x1
- 643 00be 1A       		.byte	0x1a
- 644 00bf 00000000 		.4byte	.LFB30
- 645 00c3 40000000 		.4byte	.LFE30
- 646 00c7 37000000 		.4byte	.LLST1
- 647 00cb 08       		.uleb128 0x8
- 648 00cc 01       		.byte	0x1
- 649 00cd 61000000 		.4byte	.LASF13
- 650 00d1 01       		.byte	0x1
- 651 00d2 2F       		.byte	0x2f
- 652 00d3 00000000 		.4byte	.LFB31
- 653 00d7 16000000 		.4byte	.LFE31
- 654 00db 62000000 		.4byte	.LLST2
- 655 00df 08       		.uleb128 0x8
- 656 00e0 01       		.byte	0x1
- 657 00e1 33000000 		.4byte	.LASF14
- 658 00e5 01       		.byte	0x1
- 659 00e6 35       		.byte	0x35
- 660 00e7 00000000 		.4byte	.LFB32
- 661 00eb 0E000000 		.4byte	.LFE32
- 662 00ef 8D000000 		.4byte	.LLST3
- 663 00f3 06       		.uleb128 0x6
- 664 00f4 01       		.byte	0x1
- 665 00f5 D1000000 		.4byte	.LASF16
- 666 00f9 01       		.byte	0x1
- 667 00fa 3F       		.byte	0x3f
- 668 00fb 01       		.byte	0x1
- 669 00fc 00000000 		.4byte	.LFB33
- 670 0100 54000000 		.4byte	.LFE33
- 671 0104 B8000000 		.4byte	.LLST4
- 672 0108 27010000 		.4byte	0x127
- 673 010c 09       		.uleb128 0x9
- 674 010d 2D000000 		.4byte	.LASF17
- 675 0111 01       		.byte	0x1
- 676 0112 3F       		.byte	0x3f
- 677 0113 76000000 		.4byte	0x76
- 678 0117 02       		.byte	0x2
- 679 0118 91       		.byte	0x91
- 680 0119 6F       		.sleb128 -17
- 681 011a 0A       		.uleb128 0xa
- 682 011b 6900     		.ascii	"i\000"
- 683 011d 01       		.byte	0x1
- 684 011e 49       		.byte	0x49
- 685 011f 61000000 		.4byte	0x61
- 686 0123 02       		.byte	0x2
- 687 0124 91       		.byte	0x91
- 688 0125 74       		.sleb128 -12
- 689 0126 00       		.byte	0x0
- 690 0127 0B       		.uleb128 0xb
- 691 0128 01       		.byte	0x1
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 15
+ 547 00a4 04000000 		.4byte	.LCFI8
+ 548 00a8 0E000000 		.4byte	.LFE32
+ 549 00ac 0200     		.2byte	0x2
+ 550 00ae 77       		.byte	0x77
+ 551 00af 08       		.sleb128 8
+ 552 00b0 00000000 		.4byte	0x0
+ 553 00b4 00000000 		.4byte	0x0
+ 554              	.LLST4:
+ 555 00b8 00000000 		.4byte	.LFB33
+ 556 00bc 02000000 		.4byte	.LCFI9
+ 557 00c0 0100     		.2byte	0x1
+ 558 00c2 5D       		.byte	0x5d
+ 559 00c3 02000000 		.4byte	.LCFI9
+ 560 00c7 04000000 		.4byte	.LCFI10
+ 561 00cb 0200     		.2byte	0x2
+ 562 00cd 7D       		.byte	0x7d
+ 563 00ce 08       		.sleb128 8
+ 564 00cf 04000000 		.4byte	.LCFI10
+ 565 00d3 06000000 		.4byte	.LCFI11
+ 566 00d7 0200     		.2byte	0x2
+ 567 00d9 7D       		.byte	0x7d
+ 568 00da 18       		.sleb128 24
+ 569 00db 06000000 		.4byte	.LCFI11
+ 570 00df 54000000 		.4byte	.LFE33
+ 571 00e3 0200     		.2byte	0x2
+ 572 00e5 77       		.byte	0x77
+ 573 00e6 18       		.sleb128 24
+ 574 00e7 00000000 		.4byte	0x0
+ 575 00eb 00000000 		.4byte	0x0
+ 576              	.LLST5:
+ 577 00ef 00000000 		.4byte	.LFB34
+ 578 00f3 02000000 		.4byte	.LCFI12
+ 579 00f7 0100     		.2byte	0x1
+ 580 00f9 5D       		.byte	0x5d
+ 581 00fa 02000000 		.4byte	.LCFI12
+ 582 00fe 04000000 		.4byte	.LCFI13
+ 583 0102 0200     		.2byte	0x2
+ 584 0104 7D       		.byte	0x7d
+ 585 0105 08       		.sleb128 8
+ 586 0106 04000000 		.4byte	.LCFI13
+ 587 010a 06000000 		.4byte	.LCFI14
+ 588 010e 0200     		.2byte	0x2
+ 589 0110 7D       		.byte	0x7d
+ 590 0111 10       		.sleb128 16
+ 591 0112 06000000 		.4byte	.LCFI14
+ 592 0116 86000000 		.4byte	.LFE34
+ 593 011a 0200     		.2byte	0x2
+ 594 011c 77       		.byte	0x77
+ 595 011d 10       		.sleb128 16
+ 596 011e 00000000 		.4byte	0x0
+ 597 0122 00000000 		.4byte	0x0
+ 598              	.LLST6:
+ 599 0126 00000000 		.4byte	.LFB35
+ 600 012a 02000000 		.4byte	.LCFI15
+ 601 012e 0100     		.2byte	0x1
+ 602 0130 5D       		.byte	0x5d
+ 603 0131 02000000 		.4byte	.LCFI15
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 14
 
 
- 692 0129 97000000 		.4byte	.LASF26
- 693 012d 01       		.byte	0x1
- 694 012e 53       		.byte	0x53
- 695 012f 00000000 		.4byte	.LFB34
- 696 0133 72000000 		.4byte	.LFE34
- 697 0137 EF000000 		.4byte	.LLST5
- 698 013b 4C010000 		.4byte	0x14c
- 699 013f 0A       		.uleb128 0xa
- 700 0140 6900     		.ascii	"i\000"
- 701 0142 01       		.byte	0x1
- 702 0143 58       		.byte	0x58
- 703 0144 61000000 		.4byte	0x61
- 704 0148 02       		.byte	0x2
- 705 0149 91       		.byte	0x91
- 706 014a 74       		.sleb128 -12
- 707 014b 00       		.byte	0x0
- 708 014c 06       		.uleb128 0x6
- 709 014d 01       		.byte	0x1
- 710 014e 20000000 		.4byte	.LASF18
- 711 0152 01       		.byte	0x1
- 712 0153 5E       		.byte	0x5e
- 713 0154 01       		.byte	0x1
- 714 0155 00000000 		.4byte	.LFB35
- 715 0159 14000000 		.4byte	.LFE35
- 716 015d 26010000 		.4byte	.LLST6
- 717 0161 7E010000 		.4byte	0x17e
- 718 0165 0C       		.uleb128 0xc
- 719 0166 6900     		.ascii	"i\000"
- 720 0168 01       		.byte	0x1
- 721 0169 5E       		.byte	0x5e
- 722 016a 61000000 		.4byte	0x61
- 723 016e 02       		.byte	0x2
- 724 016f 91       		.byte	0x91
- 725 0170 74       		.sleb128 -12
- 726 0171 0C       		.uleb128 0xc
- 727 0172 6A00     		.ascii	"j\000"
- 728 0174 01       		.byte	0x1
- 729 0175 5E       		.byte	0x5e
- 730 0176 61000000 		.4byte	0x61
- 731 017a 02       		.byte	0x2
- 732 017b 91       		.byte	0x91
- 733 017c 70       		.sleb128 -16
- 734 017d 00       		.byte	0x0
- 735 017e 08       		.uleb128 0x8
- 736 017f 01       		.byte	0x1
- 737 0180 0A010000 		.4byte	.LASF19
- 738 0184 01       		.byte	0x1
- 739 0185 65       		.byte	0x65
- 740 0186 00000000 		.4byte	.LFB36
- 741 018a 0A000000 		.4byte	.LFE36
- 742 018e 5D010000 		.4byte	.LLST7
- 743 0192 0D       		.uleb128 0xd
- 744 0193 A7000000 		.4byte	.LASF20
- 745 0197 03       		.byte	0x3
- 746 0198 CE06     		.2byte	0x6ce
- 747 019a A0010000 		.4byte	0x1a0
- 748 019e 01       		.byte	0x1
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 16
+ 604 0135 04000000 		.4byte	.LCFI16
+ 605 0139 0200     		.2byte	0x2
+ 606 013b 7D       		.byte	0x7d
+ 607 013c 08       		.sleb128 8
+ 608 013d 04000000 		.4byte	.LCFI16
+ 609 0141 06000000 		.4byte	.LCFI17
+ 610 0145 0200     		.2byte	0x2
+ 611 0147 7D       		.byte	0x7d
+ 612 0148 10       		.sleb128 16
+ 613 0149 06000000 		.4byte	.LCFI17
+ 614 014d 3E000000 		.4byte	.LFE35
+ 615 0151 0200     		.2byte	0x2
+ 616 0153 77       		.byte	0x77
+ 617 0154 10       		.sleb128 16
+ 618 0155 00000000 		.4byte	0x0
+ 619 0159 00000000 		.4byte	0x0
+ 620              	.LLST7:
+ 621 015d 00000000 		.4byte	.LFB36
+ 622 0161 02000000 		.4byte	.LCFI18
+ 623 0165 0100     		.2byte	0x1
+ 624 0167 5D       		.byte	0x5d
+ 625 0168 02000000 		.4byte	.LCFI18
+ 626 016c 04000000 		.4byte	.LCFI19
+ 627 0170 0200     		.2byte	0x2
+ 628 0172 7D       		.byte	0x7d
+ 629 0173 08       		.sleb128 8
+ 630 0174 04000000 		.4byte	.LCFI19
+ 631 0178 06000000 		.4byte	.LCFI20
+ 632 017c 0200     		.2byte	0x2
+ 633 017e 7D       		.byte	0x7d
+ 634 017f 10       		.sleb128 16
+ 635 0180 06000000 		.4byte	.LCFI20
+ 636 0184 56000000 		.4byte	.LFE36
+ 637 0188 0200     		.2byte	0x2
+ 638 018a 77       		.byte	0x77
+ 639 018b 10       		.sleb128 16
+ 640 018c 00000000 		.4byte	0x0
+ 641 0190 00000000 		.4byte	0x0
+ 642              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
+ 643              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
+ 644              		.section	.debug_info
+ 645 0000 FF010000 		.4byte	0x1ff
+ 646 0004 0200     		.2byte	0x2
+ 647 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 648 000a 04       		.byte	0x4
+ 649 000b 01       		.uleb128 0x1
+ 650 000c 7D000000 		.4byte	.LASF24
+ 651 0010 01       		.byte	0x1
+ 652 0011 FA000000 		.4byte	.LASF25
+ 653 0015 16010000 		.4byte	.LASF26
+ 654 0019 00000000 		.4byte	0x0
+ 655 001d 00000000 		.4byte	0x0
+ 656 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 657 0025 00000000 		.4byte	.Ldebug_line0
+ 658 0029 02       		.uleb128 0x2
+ 659 002a 01       		.byte	0x1
+ 660 002b 06       		.byte	0x6
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 15
 
 
- 749 019f 01       		.byte	0x1
- 750 01a0 0E       		.uleb128 0xe
- 751 01a1 61000000 		.4byte	0x61
- 752 01a5 0F       		.uleb128 0xf
- 753 01a6 38000000 		.4byte	.LASF21
- 754 01aa 01       		.byte	0x1
- 755 01ab 11       		.byte	0x11
- 756 01ac 81000000 		.4byte	0x81
- 757 01b0 01       		.byte	0x1
- 758 01b1 05       		.byte	0x5
- 759 01b2 03       		.byte	0x3
- 760 01b3 00000000 		.4byte	adcResult
- 761 01b7 10       		.uleb128 0x10
- 762 01b8 76000000 		.4byte	0x76
- 763 01bc C7010000 		.4byte	0x1c7
- 764 01c0 11       		.uleb128 0x11
- 765 01c1 8C000000 		.4byte	0x8c
- 766 01c5 0F       		.byte	0xf
- 767 01c6 00       		.byte	0x0
- 768 01c7 0F       		.uleb128 0xf
- 769 01c8 BE000000 		.4byte	.LASF22
- 770 01cc 01       		.byte	0x1
- 771 01cd 12       		.byte	0x12
- 772 01ce B7010000 		.4byte	0x1b7
- 773 01d2 01       		.byte	0x1
- 774 01d3 05       		.byte	0x5
- 775 01d4 03       		.byte	0x3
- 776 01d5 00000000 		.4byte	adcValues
- 777 01d9 00       		.byte	0x0
- 778              		.section	.debug_abbrev
- 779 0000 01       		.uleb128 0x1
- 780 0001 11       		.uleb128 0x11
- 781 0002 01       		.byte	0x1
- 782 0003 25       		.uleb128 0x25
- 783 0004 0E       		.uleb128 0xe
- 784 0005 13       		.uleb128 0x13
- 785 0006 0B       		.uleb128 0xb
- 786 0007 03       		.uleb128 0x3
- 787 0008 0E       		.uleb128 0xe
- 788 0009 1B       		.uleb128 0x1b
- 789 000a 0E       		.uleb128 0xe
- 790 000b 11       		.uleb128 0x11
- 791 000c 01       		.uleb128 0x1
- 792 000d 52       		.uleb128 0x52
- 793 000e 01       		.uleb128 0x1
- 794 000f 55       		.uleb128 0x55
- 795 0010 06       		.uleb128 0x6
- 796 0011 10       		.uleb128 0x10
- 797 0012 06       		.uleb128 0x6
- 798 0013 00       		.byte	0x0
- 799 0014 00       		.byte	0x0
- 800 0015 02       		.uleb128 0x2
- 801 0016 24       		.uleb128 0x24
- 802 0017 00       		.byte	0x0
- 803 0018 0B       		.uleb128 0xb
- 804 0019 0B       		.uleb128 0xb
- 805 001a 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 17
+ 661 002c EE000000 		.4byte	.LASF0
+ 662 0030 02       		.uleb128 0x2
+ 663 0031 01       		.byte	0x1
+ 664 0032 08       		.byte	0x8
+ 665 0033 89000000 		.4byte	.LASF1
+ 666 0037 02       		.uleb128 0x2
+ 667 0038 02       		.byte	0x2
+ 668 0039 05       		.byte	0x5
+ 669 003a B4000000 		.4byte	.LASF2
+ 670 003e 02       		.uleb128 0x2
+ 671 003f 02       		.byte	0x2
+ 672 0040 07       		.byte	0x7
+ 673 0041 DB000000 		.4byte	.LASF3
+ 674 0045 02       		.uleb128 0x2
+ 675 0046 04       		.byte	0x4
+ 676 0047 05       		.byte	0x5
+ 677 0048 C8000000 		.4byte	.LASF4
+ 678 004c 02       		.uleb128 0x2
+ 679 004d 04       		.byte	0x4
+ 680 004e 07       		.byte	0x7
+ 681 004f 4F000000 		.4byte	.LASF5
+ 682 0053 02       		.uleb128 0x2
+ 683 0054 08       		.byte	0x8
+ 684 0055 05       		.byte	0x5
+ 685 0056 00000000 		.4byte	.LASF6
+ 686 005a 02       		.uleb128 0x2
+ 687 005b 08       		.byte	0x8
+ 688 005c 07       		.byte	0x7
+ 689 005d 66000000 		.4byte	.LASF7
+ 690 0061 03       		.uleb128 0x3
+ 691 0062 04       		.byte	0x4
+ 692 0063 05       		.byte	0x5
+ 693 0064 696E7400 		.ascii	"int\000"
+ 694 0068 02       		.uleb128 0x2
+ 695 0069 04       		.byte	0x4
+ 696 006a 07       		.byte	0x7
+ 697 006b 0E000000 		.4byte	.LASF8
+ 698 006f 02       		.uleb128 0x2
+ 699 0070 01       		.byte	0x1
+ 700 0071 08       		.byte	0x8
+ 701 0072 A2000000 		.4byte	.LASF9
+ 702 0076 04       		.uleb128 0x4
+ 703 0077 49000000 		.4byte	.LASF10
+ 704 007b 02       		.byte	0x2
+ 705 007c 60       		.byte	0x60
+ 706 007d 30000000 		.4byte	0x30
+ 707 0081 04       		.uleb128 0x4
+ 708 0082 03010000 		.4byte	.LASF11
+ 709 0086 02       		.byte	0x2
+ 710 0087 61       		.byte	0x61
+ 711 0088 3E000000 		.4byte	0x3e
+ 712 008c 05       		.uleb128 0x5
+ 713 008d 04       		.byte	0x4
+ 714 008e 07       		.byte	0x7
+ 715 008f 06       		.uleb128 0x6
+ 716 0090 01       		.byte	0x1
+ 717 0091 42000000 		.4byte	.LASF15
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 16
 
 
- 806 001b 0B       		.uleb128 0xb
- 807 001c 03       		.uleb128 0x3
- 808 001d 0E       		.uleb128 0xe
- 809 001e 00       		.byte	0x0
- 810 001f 00       		.byte	0x0
- 811 0020 03       		.uleb128 0x3
- 812 0021 24       		.uleb128 0x24
- 813 0022 00       		.byte	0x0
- 814 0023 0B       		.uleb128 0xb
- 815 0024 0B       		.uleb128 0xb
- 816 0025 3E       		.uleb128 0x3e
- 817 0026 0B       		.uleb128 0xb
- 818 0027 03       		.uleb128 0x3
- 819 0028 08       		.uleb128 0x8
- 820 0029 00       		.byte	0x0
- 821 002a 00       		.byte	0x0
- 822 002b 04       		.uleb128 0x4
- 823 002c 16       		.uleb128 0x16
- 824 002d 00       		.byte	0x0
- 825 002e 03       		.uleb128 0x3
- 826 002f 0E       		.uleb128 0xe
- 827 0030 3A       		.uleb128 0x3a
- 828 0031 0B       		.uleb128 0xb
- 829 0032 3B       		.uleb128 0x3b
- 830 0033 0B       		.uleb128 0xb
- 831 0034 49       		.uleb128 0x49
- 832 0035 13       		.uleb128 0x13
- 833 0036 00       		.byte	0x0
- 834 0037 00       		.byte	0x0
- 835 0038 05       		.uleb128 0x5
- 836 0039 24       		.uleb128 0x24
- 837 003a 00       		.byte	0x0
- 838 003b 0B       		.uleb128 0xb
- 839 003c 0B       		.uleb128 0xb
- 840 003d 3E       		.uleb128 0x3e
- 841 003e 0B       		.uleb128 0xb
- 842 003f 00       		.byte	0x0
- 843 0040 00       		.byte	0x0
- 844 0041 06       		.uleb128 0x6
- 845 0042 2E       		.uleb128 0x2e
- 846 0043 01       		.byte	0x1
- 847 0044 3F       		.uleb128 0x3f
- 848 0045 0C       		.uleb128 0xc
- 849 0046 03       		.uleb128 0x3
- 850 0047 0E       		.uleb128 0xe
- 851 0048 3A       		.uleb128 0x3a
- 852 0049 0B       		.uleb128 0xb
- 853 004a 3B       		.uleb128 0x3b
- 854 004b 0B       		.uleb128 0xb
- 855 004c 27       		.uleb128 0x27
- 856 004d 0C       		.uleb128 0xc
- 857 004e 11       		.uleb128 0x11
- 858 004f 01       		.uleb128 0x1
- 859 0050 12       		.uleb128 0x12
- 860 0051 01       		.uleb128 0x1
- 861 0052 40       		.uleb128 0x40
- 862 0053 06       		.uleb128 0x6
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 18
+ 718 0095 01       		.byte	0x1
+ 719 0096 14       		.byte	0x14
+ 720 0097 01       		.byte	0x1
+ 721 0098 00000000 		.4byte	.LFB29
+ 722 009c 1E000000 		.4byte	.LFE29
+ 723 00a0 00000000 		.4byte	.LLST0
+ 724 00a4 B7000000 		.4byte	0xb7
+ 725 00a8 07       		.uleb128 0x7
+ 726 00a9 2D000000 		.4byte	.LASF17
+ 727 00ad 01       		.byte	0x1
+ 728 00ae 15       		.byte	0x15
+ 729 00af 76000000 		.4byte	0x76
+ 730 00b3 02       		.byte	0x2
+ 731 00b4 91       		.byte	0x91
+ 732 00b5 77       		.sleb128 -9
+ 733 00b6 00       		.byte	0x0
+ 734 00b7 08       		.uleb128 0x8
+ 735 00b8 01       		.byte	0x1
+ 736 00b9 1B000000 		.4byte	.LASF12
+ 737 00bd 01       		.byte	0x1
+ 738 00be 1A       		.byte	0x1a
+ 739 00bf 00000000 		.4byte	.LFB30
+ 740 00c3 58000000 		.4byte	.LFE30
+ 741 00c7 37000000 		.4byte	.LLST1
+ 742 00cb 08       		.uleb128 0x8
+ 743 00cc 01       		.byte	0x1
+ 744 00cd 61000000 		.4byte	.LASF13
+ 745 00d1 01       		.byte	0x1
+ 746 00d2 38       		.byte	0x38
+ 747 00d3 00000000 		.4byte	.LFB31
+ 748 00d7 16000000 		.4byte	.LFE31
+ 749 00db 62000000 		.4byte	.LLST2
+ 750 00df 08       		.uleb128 0x8
+ 751 00e0 01       		.byte	0x1
+ 752 00e1 33000000 		.4byte	.LASF14
+ 753 00e5 01       		.byte	0x1
+ 754 00e6 3E       		.byte	0x3e
+ 755 00e7 00000000 		.4byte	.LFB32
+ 756 00eb 0E000000 		.4byte	.LFE32
+ 757 00ef 8D000000 		.4byte	.LLST3
+ 758 00f3 06       		.uleb128 0x6
+ 759 00f4 01       		.byte	0x1
+ 760 00f5 D1000000 		.4byte	.LASF16
+ 761 00f9 01       		.byte	0x1
+ 762 00fa 48       		.byte	0x48
+ 763 00fb 01       		.byte	0x1
+ 764 00fc 00000000 		.4byte	.LFB33
+ 765 0100 54000000 		.4byte	.LFE33
+ 766 0104 B8000000 		.4byte	.LLST4
+ 767 0108 27010000 		.4byte	0x127
+ 768 010c 09       		.uleb128 0x9
+ 769 010d 2D000000 		.4byte	.LASF17
+ 770 0111 01       		.byte	0x1
+ 771 0112 48       		.byte	0x48
+ 772 0113 76000000 		.4byte	0x76
+ 773 0117 02       		.byte	0x2
+ 774 0118 91       		.byte	0x91
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 17
 
 
- 863 0054 01       		.uleb128 0x1
- 864 0055 13       		.uleb128 0x13
- 865 0056 00       		.byte	0x0
- 866 0057 00       		.byte	0x0
- 867 0058 07       		.uleb128 0x7
- 868 0059 34       		.uleb128 0x34
- 869 005a 00       		.byte	0x0
- 870 005b 03       		.uleb128 0x3
- 871 005c 0E       		.uleb128 0xe
- 872 005d 3A       		.uleb128 0x3a
- 873 005e 0B       		.uleb128 0xb
- 874 005f 3B       		.uleb128 0x3b
- 875 0060 0B       		.uleb128 0xb
- 876 0061 49       		.uleb128 0x49
- 877 0062 13       		.uleb128 0x13
- 878 0063 02       		.uleb128 0x2
- 879 0064 0A       		.uleb128 0xa
- 880 0065 00       		.byte	0x0
- 881 0066 00       		.byte	0x0
- 882 0067 08       		.uleb128 0x8
- 883 0068 2E       		.uleb128 0x2e
- 884 0069 00       		.byte	0x0
- 885 006a 3F       		.uleb128 0x3f
- 886 006b 0C       		.uleb128 0xc
- 887 006c 03       		.uleb128 0x3
- 888 006d 0E       		.uleb128 0xe
- 889 006e 3A       		.uleb128 0x3a
- 890 006f 0B       		.uleb128 0xb
- 891 0070 3B       		.uleb128 0x3b
- 892 0071 0B       		.uleb128 0xb
- 893 0072 11       		.uleb128 0x11
- 894 0073 01       		.uleb128 0x1
- 895 0074 12       		.uleb128 0x12
- 896 0075 01       		.uleb128 0x1
- 897 0076 40       		.uleb128 0x40
- 898 0077 06       		.uleb128 0x6
- 899 0078 00       		.byte	0x0
- 900 0079 00       		.byte	0x0
- 901 007a 09       		.uleb128 0x9
- 902 007b 05       		.uleb128 0x5
- 903 007c 00       		.byte	0x0
- 904 007d 03       		.uleb128 0x3
- 905 007e 0E       		.uleb128 0xe
- 906 007f 3A       		.uleb128 0x3a
- 907 0080 0B       		.uleb128 0xb
- 908 0081 3B       		.uleb128 0x3b
- 909 0082 0B       		.uleb128 0xb
- 910 0083 49       		.uleb128 0x49
- 911 0084 13       		.uleb128 0x13
- 912 0085 02       		.uleb128 0x2
- 913 0086 0A       		.uleb128 0xa
- 914 0087 00       		.byte	0x0
- 915 0088 00       		.byte	0x0
- 916 0089 0A       		.uleb128 0xa
- 917 008a 34       		.uleb128 0x34
- 918 008b 00       		.byte	0x0
- 919 008c 03       		.uleb128 0x3
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 19
+ 775 0119 6F       		.sleb128 -17
+ 776 011a 0A       		.uleb128 0xa
+ 777 011b 6900     		.ascii	"i\000"
+ 778 011d 01       		.byte	0x1
+ 779 011e 52       		.byte	0x52
+ 780 011f 61000000 		.4byte	0x61
+ 781 0123 02       		.byte	0x2
+ 782 0124 91       		.byte	0x91
+ 783 0125 74       		.sleb128 -12
+ 784 0126 00       		.byte	0x0
+ 785 0127 0B       		.uleb128 0xb
+ 786 0128 01       		.byte	0x1
+ 787 0129 97000000 		.4byte	.LASF19
+ 788 012d 01       		.byte	0x1
+ 789 012e 5C       		.byte	0x5c
+ 790 012f 00000000 		.4byte	.LFB34
+ 791 0133 86000000 		.4byte	.LFE34
+ 792 0137 EF000000 		.4byte	.LLST5
+ 793 013b 58010000 		.4byte	0x158
+ 794 013f 0A       		.uleb128 0xa
+ 795 0140 6900     		.ascii	"i\000"
+ 796 0142 01       		.byte	0x1
+ 797 0143 5D       		.byte	0x5d
+ 798 0144 61000000 		.4byte	0x61
+ 799 0148 02       		.byte	0x2
+ 800 0149 91       		.byte	0x91
+ 801 014a 70       		.sleb128 -16
+ 802 014b 0A       		.uleb128 0xa
+ 803 014c 6A00     		.ascii	"j\000"
+ 804 014e 01       		.byte	0x1
+ 805 014f 5E       		.byte	0x5e
+ 806 0150 61000000 		.4byte	0x61
+ 807 0154 02       		.byte	0x2
+ 808 0155 91       		.byte	0x91
+ 809 0156 74       		.sleb128 -12
+ 810 0157 00       		.byte	0x0
+ 811 0158 06       		.uleb128 0x6
+ 812 0159 01       		.byte	0x1
+ 813 015a 20000000 		.4byte	.LASF18
+ 814 015e 01       		.byte	0x1
+ 815 015f 6D       		.byte	0x6d
+ 816 0160 01       		.byte	0x1
+ 817 0161 00000000 		.4byte	.LFB35
+ 818 0165 3E000000 		.4byte	.LFE35
+ 819 0169 26010000 		.4byte	.LLST6
+ 820 016d 8A010000 		.4byte	0x18a
+ 821 0171 0C       		.uleb128 0xc
+ 822 0172 6900     		.ascii	"i\000"
+ 823 0174 01       		.byte	0x1
+ 824 0175 6D       		.byte	0x6d
+ 825 0176 61000000 		.4byte	0x61
+ 826 017a 02       		.byte	0x2
+ 827 017b 91       		.byte	0x91
+ 828 017c 74       		.sleb128 -12
+ 829 017d 0C       		.uleb128 0xc
+ 830 017e 6A00     		.ascii	"j\000"
+ 831 0180 01       		.byte	0x1
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 18
 
 
- 920 008d 08       		.uleb128 0x8
- 921 008e 3A       		.uleb128 0x3a
- 922 008f 0B       		.uleb128 0xb
- 923 0090 3B       		.uleb128 0x3b
- 924 0091 0B       		.uleb128 0xb
- 925 0092 49       		.uleb128 0x49
- 926 0093 13       		.uleb128 0x13
- 927 0094 02       		.uleb128 0x2
- 928 0095 0A       		.uleb128 0xa
- 929 0096 00       		.byte	0x0
- 930 0097 00       		.byte	0x0
- 931 0098 0B       		.uleb128 0xb
- 932 0099 2E       		.uleb128 0x2e
- 933 009a 01       		.byte	0x1
- 934 009b 3F       		.uleb128 0x3f
- 935 009c 0C       		.uleb128 0xc
- 936 009d 03       		.uleb128 0x3
- 937 009e 0E       		.uleb128 0xe
- 938 009f 3A       		.uleb128 0x3a
- 939 00a0 0B       		.uleb128 0xb
- 940 00a1 3B       		.uleb128 0x3b
- 941 00a2 0B       		.uleb128 0xb
- 942 00a3 11       		.uleb128 0x11
- 943 00a4 01       		.uleb128 0x1
- 944 00a5 12       		.uleb128 0x12
- 945 00a6 01       		.uleb128 0x1
- 946 00a7 40       		.uleb128 0x40
- 947 00a8 06       		.uleb128 0x6
- 948 00a9 01       		.uleb128 0x1
- 949 00aa 13       		.uleb128 0x13
- 950 00ab 00       		.byte	0x0
- 951 00ac 00       		.byte	0x0
- 952 00ad 0C       		.uleb128 0xc
- 953 00ae 05       		.uleb128 0x5
- 954 00af 00       		.byte	0x0
- 955 00b0 03       		.uleb128 0x3
- 956 00b1 08       		.uleb128 0x8
- 957 00b2 3A       		.uleb128 0x3a
- 958 00b3 0B       		.uleb128 0xb
- 959 00b4 3B       		.uleb128 0x3b
- 960 00b5 0B       		.uleb128 0xb
- 961 00b6 49       		.uleb128 0x49
- 962 00b7 13       		.uleb128 0x13
- 963 00b8 02       		.uleb128 0x2
- 964 00b9 0A       		.uleb128 0xa
- 965 00ba 00       		.byte	0x0
- 966 00bb 00       		.byte	0x0
- 967 00bc 0D       		.uleb128 0xd
- 968 00bd 34       		.uleb128 0x34
- 969 00be 00       		.byte	0x0
- 970 00bf 03       		.uleb128 0x3
- 971 00c0 0E       		.uleb128 0xe
- 972 00c1 3A       		.uleb128 0x3a
- 973 00c2 0B       		.uleb128 0xb
- 974 00c3 3B       		.uleb128 0x3b
- 975 00c4 05       		.uleb128 0x5
- 976 00c5 49       		.uleb128 0x49
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 20
+ 832 0181 6D       		.byte	0x6d
+ 833 0182 61000000 		.4byte	0x61
+ 834 0186 02       		.byte	0x2
+ 835 0187 91       		.byte	0x91
+ 836 0188 70       		.sleb128 -16
+ 837 0189 00       		.byte	0x0
+ 838 018a 0B       		.uleb128 0xb
+ 839 018b 01       		.byte	0x1
+ 840 018c 0A010000 		.4byte	.LASF20
+ 841 0190 01       		.byte	0x1
+ 842 0191 79       		.byte	0x79
+ 843 0192 00000000 		.4byte	.LFB36
+ 844 0196 56000000 		.4byte	.LFE36
+ 845 019a 5D010000 		.4byte	.LLST7
+ 846 019e BB010000 		.4byte	0x1bb
+ 847 01a2 0A       		.uleb128 0xa
+ 848 01a3 6900     		.ascii	"i\000"
+ 849 01a5 01       		.byte	0x1
+ 850 01a6 7E       		.byte	0x7e
+ 851 01a7 61000000 		.4byte	0x61
+ 852 01ab 02       		.byte	0x2
+ 853 01ac 91       		.byte	0x91
+ 854 01ad 70       		.sleb128 -16
+ 855 01ae 0A       		.uleb128 0xa
+ 856 01af 6A00     		.ascii	"j\000"
+ 857 01b1 01       		.byte	0x1
+ 858 01b2 82       		.byte	0x82
+ 859 01b3 61000000 		.4byte	0x61
+ 860 01b7 02       		.byte	0x2
+ 861 01b8 91       		.byte	0x91
+ 862 01b9 74       		.sleb128 -12
+ 863 01ba 00       		.byte	0x0
+ 864 01bb 0D       		.uleb128 0xd
+ 865 01bc A7000000 		.4byte	.LASF21
+ 866 01c0 03       		.byte	0x3
+ 867 01c1 CE06     		.2byte	0x6ce
+ 868 01c3 C9010000 		.4byte	0x1c9
+ 869 01c7 01       		.byte	0x1
+ 870 01c8 01       		.byte	0x1
+ 871 01c9 0E       		.uleb128 0xe
+ 872 01ca 61000000 		.4byte	0x61
+ 873 01ce 0F       		.uleb128 0xf
+ 874 01cf 38000000 		.4byte	.LASF22
+ 875 01d3 01       		.byte	0x1
+ 876 01d4 11       		.byte	0x11
+ 877 01d5 81000000 		.4byte	0x81
+ 878 01d9 01       		.byte	0x1
+ 879 01da 05       		.byte	0x5
+ 880 01db 03       		.byte	0x3
+ 881 01dc 00000000 		.4byte	adcResult
+ 882 01e0 10       		.uleb128 0x10
+ 883 01e1 76000000 		.4byte	0x76
+ 884 01e5 F0010000 		.4byte	0x1f0
+ 885 01e9 11       		.uleb128 0x11
+ 886 01ea 8C000000 		.4byte	0x8c
+ 887 01ee 0F       		.byte	0xf
+ 888 01ef 00       		.byte	0x0
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 19
 
 
- 977 00c6 13       		.uleb128 0x13
- 978 00c7 3F       		.uleb128 0x3f
- 979 00c8 0C       		.uleb128 0xc
- 980 00c9 3C       		.uleb128 0x3c
- 981 00ca 0C       		.uleb128 0xc
- 982 00cb 00       		.byte	0x0
- 983 00cc 00       		.byte	0x0
- 984 00cd 0E       		.uleb128 0xe
- 985 00ce 35       		.uleb128 0x35
- 986 00cf 00       		.byte	0x0
- 987 00d0 49       		.uleb128 0x49
- 988 00d1 13       		.uleb128 0x13
- 989 00d2 00       		.byte	0x0
- 990 00d3 00       		.byte	0x0
- 991 00d4 0F       		.uleb128 0xf
- 992 00d5 34       		.uleb128 0x34
- 993 00d6 00       		.byte	0x0
- 994 00d7 03       		.uleb128 0x3
- 995 00d8 0E       		.uleb128 0xe
- 996 00d9 3A       		.uleb128 0x3a
- 997 00da 0B       		.uleb128 0xb
- 998 00db 3B       		.uleb128 0x3b
- 999 00dc 0B       		.uleb128 0xb
- 1000 00dd 49       		.uleb128 0x49
- 1001 00de 13       		.uleb128 0x13
- 1002 00df 3F       		.uleb128 0x3f
- 1003 00e0 0C       		.uleb128 0xc
- 1004 00e1 02       		.uleb128 0x2
- 1005 00e2 0A       		.uleb128 0xa
- 1006 00e3 00       		.byte	0x0
- 1007 00e4 00       		.byte	0x0
- 1008 00e5 10       		.uleb128 0x10
- 1009 00e6 01       		.uleb128 0x1
- 1010 00e7 01       		.byte	0x1
- 1011 00e8 49       		.uleb128 0x49
- 1012 00e9 13       		.uleb128 0x13
- 1013 00ea 01       		.uleb128 0x1
- 1014 00eb 13       		.uleb128 0x13
- 1015 00ec 00       		.byte	0x0
- 1016 00ed 00       		.byte	0x0
- 1017 00ee 11       		.uleb128 0x11
- 1018 00ef 21       		.uleb128 0x21
- 1019 00f0 00       		.byte	0x0
- 1020 00f1 49       		.uleb128 0x49
- 1021 00f2 13       		.uleb128 0x13
- 1022 00f3 2F       		.uleb128 0x2f
- 1023 00f4 0B       		.uleb128 0xb
- 1024 00f5 00       		.byte	0x0
- 1025 00f6 00       		.byte	0x0
- 1026 00f7 00       		.byte	0x0
- 1027              		.section	.debug_pubnames,"",%progbits
- 1028 0000 8E000000 		.4byte	0x8e
- 1029 0004 0200     		.2byte	0x2
- 1030 0006 00000000 		.4byte	.Ldebug_info0
- 1031 000a DA010000 		.4byte	0x1da
- 1032 000e 8F000000 		.4byte	0x8f
- 1033 0012 52585F49 		.ascii	"RX_INT\000"
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 21
+ 889 01f0 0F       		.uleb128 0xf
+ 890 01f1 BE000000 		.4byte	.LASF23
+ 891 01f5 01       		.byte	0x1
+ 892 01f6 12       		.byte	0x12
+ 893 01f7 E0010000 		.4byte	0x1e0
+ 894 01fb 01       		.byte	0x1
+ 895 01fc 05       		.byte	0x5
+ 896 01fd 03       		.byte	0x3
+ 897 01fe 00000000 		.4byte	adcValues
+ 898 0202 00       		.byte	0x0
+ 899              		.section	.debug_abbrev
+ 900 0000 01       		.uleb128 0x1
+ 901 0001 11       		.uleb128 0x11
+ 902 0002 01       		.byte	0x1
+ 903 0003 25       		.uleb128 0x25
+ 904 0004 0E       		.uleb128 0xe
+ 905 0005 13       		.uleb128 0x13
+ 906 0006 0B       		.uleb128 0xb
+ 907 0007 03       		.uleb128 0x3
+ 908 0008 0E       		.uleb128 0xe
+ 909 0009 1B       		.uleb128 0x1b
+ 910 000a 0E       		.uleb128 0xe
+ 911 000b 11       		.uleb128 0x11
+ 912 000c 01       		.uleb128 0x1
+ 913 000d 52       		.uleb128 0x52
+ 914 000e 01       		.uleb128 0x1
+ 915 000f 55       		.uleb128 0x55
+ 916 0010 06       		.uleb128 0x6
+ 917 0011 10       		.uleb128 0x10
+ 918 0012 06       		.uleb128 0x6
+ 919 0013 00       		.byte	0x0
+ 920 0014 00       		.byte	0x0
+ 921 0015 02       		.uleb128 0x2
+ 922 0016 24       		.uleb128 0x24
+ 923 0017 00       		.byte	0x0
+ 924 0018 0B       		.uleb128 0xb
+ 925 0019 0B       		.uleb128 0xb
+ 926 001a 3E       		.uleb128 0x3e
+ 927 001b 0B       		.uleb128 0xb
+ 928 001c 03       		.uleb128 0x3
+ 929 001d 0E       		.uleb128 0xe
+ 930 001e 00       		.byte	0x0
+ 931 001f 00       		.byte	0x0
+ 932 0020 03       		.uleb128 0x3
+ 933 0021 24       		.uleb128 0x24
+ 934 0022 00       		.byte	0x0
+ 935 0023 0B       		.uleb128 0xb
+ 936 0024 0B       		.uleb128 0xb
+ 937 0025 3E       		.uleb128 0x3e
+ 938 0026 0B       		.uleb128 0xb
+ 939 0027 03       		.uleb128 0x3
+ 940 0028 08       		.uleb128 0x8
+ 941 0029 00       		.byte	0x0
+ 942 002a 00       		.byte	0x0
+ 943 002b 04       		.uleb128 0x4
+ 944 002c 16       		.uleb128 0x16
+ 945 002d 00       		.byte	0x0
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 20
 
 
- 1033      4E5400
- 1034 0019 B7000000 		.4byte	0xb7
- 1035 001d 696E6974 		.ascii	"init\000"
- 1035      00
- 1036 0022 CB000000 		.4byte	0xcb
- 1037 0026 63726C66 		.ascii	"crlf\000"
- 1037      00
- 1038 002b DF000000 		.4byte	0xdf
- 1039 002f 6D61696E 		.ascii	"main\000"
- 1039      00
- 1040 0034 F3000000 		.4byte	0xf3
- 1041 0038 70726F63 		.ascii	"processRX\000"
- 1041      65737352 
- 1041      5800
- 1042 0042 27010000 		.4byte	0x127
- 1043 0046 70726F63 		.ascii	"processMat\000"
- 1043      6573734D 
- 1043      617400
- 1044 0051 4C010000 		.4byte	0x14c
- 1045 0055 636F6E66 		.ascii	"configureMat\000"
- 1045      69677572 
- 1045      654D6174 
- 1045      00
- 1046 0062 7E010000 		.4byte	0x17e
- 1047 0066 7A65726F 		.ascii	"zeroAllPins\000"
- 1047      416C6C50 
- 1047      696E7300 
- 1048 0072 A5010000 		.4byte	0x1a5
- 1049 0076 61646352 		.ascii	"adcResult\000"
- 1049      6573756C 
- 1049      7400
- 1050 0080 C7010000 		.4byte	0x1c7
- 1051 0084 61646356 		.ascii	"adcValues\000"
- 1051      616C7565 
- 1051      7300
- 1052 008e 00000000 		.4byte	0x0
- 1053              		.section	.debug_aranges,"",%progbits
- 1054 0000 54000000 		.4byte	0x54
- 1055 0004 0200     		.2byte	0x2
- 1056 0006 00000000 		.4byte	.Ldebug_info0
- 1057 000a 04       		.byte	0x4
- 1058 000b 00       		.byte	0x0
- 1059 000c 0000     		.2byte	0x0
- 1060 000e 0000     		.2byte	0x0
- 1061 0010 00000000 		.4byte	.LFB29
- 1062 0014 1E000000 		.4byte	.LFE29-.LFB29
- 1063 0018 00000000 		.4byte	.LFB30
- 1064 001c 40000000 		.4byte	.LFE30-.LFB30
- 1065 0020 00000000 		.4byte	.LFB31
- 1066 0024 16000000 		.4byte	.LFE31-.LFB31
- 1067 0028 00000000 		.4byte	.LFB32
- 1068 002c 0E000000 		.4byte	.LFE32-.LFB32
- 1069 0030 00000000 		.4byte	.LFB33
- 1070 0034 54000000 		.4byte	.LFE33-.LFB33
- 1071 0038 00000000 		.4byte	.LFB34
- 1072 003c 72000000 		.4byte	.LFE34-.LFB34
- 1073 0040 00000000 		.4byte	.LFB35
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 22
+ 946 002e 03       		.uleb128 0x3
+ 947 002f 0E       		.uleb128 0xe
+ 948 0030 3A       		.uleb128 0x3a
+ 949 0031 0B       		.uleb128 0xb
+ 950 0032 3B       		.uleb128 0x3b
+ 951 0033 0B       		.uleb128 0xb
+ 952 0034 49       		.uleb128 0x49
+ 953 0035 13       		.uleb128 0x13
+ 954 0036 00       		.byte	0x0
+ 955 0037 00       		.byte	0x0
+ 956 0038 05       		.uleb128 0x5
+ 957 0039 24       		.uleb128 0x24
+ 958 003a 00       		.byte	0x0
+ 959 003b 0B       		.uleb128 0xb
+ 960 003c 0B       		.uleb128 0xb
+ 961 003d 3E       		.uleb128 0x3e
+ 962 003e 0B       		.uleb128 0xb
+ 963 003f 00       		.byte	0x0
+ 964 0040 00       		.byte	0x0
+ 965 0041 06       		.uleb128 0x6
+ 966 0042 2E       		.uleb128 0x2e
+ 967 0043 01       		.byte	0x1
+ 968 0044 3F       		.uleb128 0x3f
+ 969 0045 0C       		.uleb128 0xc
+ 970 0046 03       		.uleb128 0x3
+ 971 0047 0E       		.uleb128 0xe
+ 972 0048 3A       		.uleb128 0x3a
+ 973 0049 0B       		.uleb128 0xb
+ 974 004a 3B       		.uleb128 0x3b
+ 975 004b 0B       		.uleb128 0xb
+ 976 004c 27       		.uleb128 0x27
+ 977 004d 0C       		.uleb128 0xc
+ 978 004e 11       		.uleb128 0x11
+ 979 004f 01       		.uleb128 0x1
+ 980 0050 12       		.uleb128 0x12
+ 981 0051 01       		.uleb128 0x1
+ 982 0052 40       		.uleb128 0x40
+ 983 0053 06       		.uleb128 0x6
+ 984 0054 01       		.uleb128 0x1
+ 985 0055 13       		.uleb128 0x13
+ 986 0056 00       		.byte	0x0
+ 987 0057 00       		.byte	0x0
+ 988 0058 07       		.uleb128 0x7
+ 989 0059 34       		.uleb128 0x34
+ 990 005a 00       		.byte	0x0
+ 991 005b 03       		.uleb128 0x3
+ 992 005c 0E       		.uleb128 0xe
+ 993 005d 3A       		.uleb128 0x3a
+ 994 005e 0B       		.uleb128 0xb
+ 995 005f 3B       		.uleb128 0x3b
+ 996 0060 0B       		.uleb128 0xb
+ 997 0061 49       		.uleb128 0x49
+ 998 0062 13       		.uleb128 0x13
+ 999 0063 02       		.uleb128 0x2
+ 1000 0064 0A       		.uleb128 0xa
+ 1001 0065 00       		.byte	0x0
+ 1002 0066 00       		.byte	0x0
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 21
 
 
- 1074 0044 14000000 		.4byte	.LFE35-.LFB35
- 1075 0048 00000000 		.4byte	.LFB36
- 1076 004c 0A000000 		.4byte	.LFE36-.LFB36
- 1077 0050 00000000 		.4byte	0x0
- 1078 0054 00000000 		.4byte	0x0
- 1079              		.section	.debug_ranges,"",%progbits
- 1080              	.Ldebug_ranges0:
- 1081 0000 00000000 		.4byte	.Ltext0
- 1082 0004 00000000 		.4byte	.Letext0
- 1083 0008 00000000 		.4byte	.LFB29
- 1084 000c 1E000000 		.4byte	.LFE29
- 1085 0010 00000000 		.4byte	.LFB30
- 1086 0014 40000000 		.4byte	.LFE30
- 1087 0018 00000000 		.4byte	.LFB31
- 1088 001c 16000000 		.4byte	.LFE31
- 1089 0020 00000000 		.4byte	.LFB32
- 1090 0024 0E000000 		.4byte	.LFE32
- 1091 0028 00000000 		.4byte	.LFB33
- 1092 002c 54000000 		.4byte	.LFE33
- 1093 0030 00000000 		.4byte	.LFB34
- 1094 0034 72000000 		.4byte	.LFE34
- 1095 0038 00000000 		.4byte	.LFB35
- 1096 003c 14000000 		.4byte	.LFE35
- 1097 0040 00000000 		.4byte	.LFB36
- 1098 0044 0A000000 		.4byte	.LFE36
- 1099 0048 00000000 		.4byte	0x0
- 1100 004c 00000000 		.4byte	0x0
- 1101              		.section	.debug_str,"MS",%progbits,1
- 1102              	.LASF6:
- 1103 0000 6C6F6E67 		.ascii	"long long int\000"
- 1103      206C6F6E 
- 1103      6720696E 
- 1103      7400
- 1104              	.LASF8:
- 1105 000e 756E7369 		.ascii	"unsigned int\000"
- 1105      676E6564 
- 1105      20696E74 
- 1105      00
- 1106              	.LASF12:
- 1107 001b 696E6974 		.ascii	"init\000"
- 1107      00
- 1108              	.LASF18:
- 1109 0020 636F6E66 		.ascii	"configureMat\000"
- 1109      69677572 
- 1109      654D6174 
- 1109      00
- 1110              	.LASF17:
- 1111 002d 696E7075 		.ascii	"input\000"
- 1111      7400
- 1112              	.LASF14:
- 1113 0033 6D61696E 		.ascii	"main\000"
- 1113      00
- 1114              	.LASF21:
- 1115 0038 61646352 		.ascii	"adcResult\000"
- 1115      6573756C 
- 1115      7400
- 1116              	.LASF15:
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 23
+ 1003 0067 08       		.uleb128 0x8
+ 1004 0068 2E       		.uleb128 0x2e
+ 1005 0069 00       		.byte	0x0
+ 1006 006a 3F       		.uleb128 0x3f
+ 1007 006b 0C       		.uleb128 0xc
+ 1008 006c 03       		.uleb128 0x3
+ 1009 006d 0E       		.uleb128 0xe
+ 1010 006e 3A       		.uleb128 0x3a
+ 1011 006f 0B       		.uleb128 0xb
+ 1012 0070 3B       		.uleb128 0x3b
+ 1013 0071 0B       		.uleb128 0xb
+ 1014 0072 11       		.uleb128 0x11
+ 1015 0073 01       		.uleb128 0x1
+ 1016 0074 12       		.uleb128 0x12
+ 1017 0075 01       		.uleb128 0x1
+ 1018 0076 40       		.uleb128 0x40
+ 1019 0077 06       		.uleb128 0x6
+ 1020 0078 00       		.byte	0x0
+ 1021 0079 00       		.byte	0x0
+ 1022 007a 09       		.uleb128 0x9
+ 1023 007b 05       		.uleb128 0x5
+ 1024 007c 00       		.byte	0x0
+ 1025 007d 03       		.uleb128 0x3
+ 1026 007e 0E       		.uleb128 0xe
+ 1027 007f 3A       		.uleb128 0x3a
+ 1028 0080 0B       		.uleb128 0xb
+ 1029 0081 3B       		.uleb128 0x3b
+ 1030 0082 0B       		.uleb128 0xb
+ 1031 0083 49       		.uleb128 0x49
+ 1032 0084 13       		.uleb128 0x13
+ 1033 0085 02       		.uleb128 0x2
+ 1034 0086 0A       		.uleb128 0xa
+ 1035 0087 00       		.byte	0x0
+ 1036 0088 00       		.byte	0x0
+ 1037 0089 0A       		.uleb128 0xa
+ 1038 008a 34       		.uleb128 0x34
+ 1039 008b 00       		.byte	0x0
+ 1040 008c 03       		.uleb128 0x3
+ 1041 008d 08       		.uleb128 0x8
+ 1042 008e 3A       		.uleb128 0x3a
+ 1043 008f 0B       		.uleb128 0xb
+ 1044 0090 3B       		.uleb128 0x3b
+ 1045 0091 0B       		.uleb128 0xb
+ 1046 0092 49       		.uleb128 0x49
+ 1047 0093 13       		.uleb128 0x13
+ 1048 0094 02       		.uleb128 0x2
+ 1049 0095 0A       		.uleb128 0xa
+ 1050 0096 00       		.byte	0x0
+ 1051 0097 00       		.byte	0x0
+ 1052 0098 0B       		.uleb128 0xb
+ 1053 0099 2E       		.uleb128 0x2e
+ 1054 009a 01       		.byte	0x1
+ 1055 009b 3F       		.uleb128 0x3f
+ 1056 009c 0C       		.uleb128 0xc
+ 1057 009d 03       		.uleb128 0x3
+ 1058 009e 0E       		.uleb128 0xe
+ 1059 009f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 22
 
 
- 1117 0042 52585F49 		.ascii	"RX_INT\000"
- 1117      4E5400
- 1118              	.LASF10:
- 1119 0049 75696E74 		.ascii	"uint8\000"
- 1119      3800
- 1120              	.LASF5:
- 1121 004f 6C6F6E67 		.ascii	"long unsigned int\000"
- 1121      20756E73 
- 1121      69676E65 
- 1121      6420696E 
- 1121      7400
- 1122              	.LASF13:
- 1123 0061 63726C66 		.ascii	"crlf\000"
- 1123      00
- 1124              	.LASF7:
- 1125 0066 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1125      206C6F6E 
- 1125      6720756E 
- 1125      7369676E 
- 1125      65642069 
- 1126              	.LASF23:
- 1127 007d 474E5520 		.ascii	"GNU C 4.4.1\000"
- 1127      4320342E 
- 1127      342E3100 
- 1128              	.LASF1:
- 1129 0089 756E7369 		.ascii	"unsigned char\000"
- 1129      676E6564 
- 1129      20636861 
- 1129      7200
- 1130              	.LASF26:
- 1131 0097 70726F63 		.ascii	"processMat\000"
- 1131      6573734D 
- 1131      617400
- 1132              	.LASF9:
- 1133 00a2 63686172 		.ascii	"char\000"
- 1133      00
- 1134              	.LASF20:
- 1135 00a7 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1135      52784275 
- 1135      66666572 
- 1135      00
- 1136              	.LASF2:
- 1137 00b4 73686F72 		.ascii	"short int\000"
- 1137      7420696E 
- 1137      7400
- 1138              	.LASF22:
- 1139 00be 61646356 		.ascii	"adcValues\000"
- 1139      616C7565 
- 1139      7300
- 1140              	.LASF4:
- 1141 00c8 6C6F6E67 		.ascii	"long int\000"
- 1141      20696E74 
- 1141      00
- 1142              	.LASF16:
- 1143 00d1 70726F63 		.ascii	"processRX\000"
- 1143      65737352 
- 1143      5800
-ARM GAS  C:\Users\Kojo\AppData\Local\Temp\cc9sioRw.s 			page 24
+ 1060 00a0 0B       		.uleb128 0xb
+ 1061 00a1 3B       		.uleb128 0x3b
+ 1062 00a2 0B       		.uleb128 0xb
+ 1063 00a3 11       		.uleb128 0x11
+ 1064 00a4 01       		.uleb128 0x1
+ 1065 00a5 12       		.uleb128 0x12
+ 1066 00a6 01       		.uleb128 0x1
+ 1067 00a7 40       		.uleb128 0x40
+ 1068 00a8 06       		.uleb128 0x6
+ 1069 00a9 01       		.uleb128 0x1
+ 1070 00aa 13       		.uleb128 0x13
+ 1071 00ab 00       		.byte	0x0
+ 1072 00ac 00       		.byte	0x0
+ 1073 00ad 0C       		.uleb128 0xc
+ 1074 00ae 05       		.uleb128 0x5
+ 1075 00af 00       		.byte	0x0
+ 1076 00b0 03       		.uleb128 0x3
+ 1077 00b1 08       		.uleb128 0x8
+ 1078 00b2 3A       		.uleb128 0x3a
+ 1079 00b3 0B       		.uleb128 0xb
+ 1080 00b4 3B       		.uleb128 0x3b
+ 1081 00b5 0B       		.uleb128 0xb
+ 1082 00b6 49       		.uleb128 0x49
+ 1083 00b7 13       		.uleb128 0x13
+ 1084 00b8 02       		.uleb128 0x2
+ 1085 00b9 0A       		.uleb128 0xa
+ 1086 00ba 00       		.byte	0x0
+ 1087 00bb 00       		.byte	0x0
+ 1088 00bc 0D       		.uleb128 0xd
+ 1089 00bd 34       		.uleb128 0x34
+ 1090 00be 00       		.byte	0x0
+ 1091 00bf 03       		.uleb128 0x3
+ 1092 00c0 0E       		.uleb128 0xe
+ 1093 00c1 3A       		.uleb128 0x3a
+ 1094 00c2 0B       		.uleb128 0xb
+ 1095 00c3 3B       		.uleb128 0x3b
+ 1096 00c4 05       		.uleb128 0x5
+ 1097 00c5 49       		.uleb128 0x49
+ 1098 00c6 13       		.uleb128 0x13
+ 1099 00c7 3F       		.uleb128 0x3f
+ 1100 00c8 0C       		.uleb128 0xc
+ 1101 00c9 3C       		.uleb128 0x3c
+ 1102 00ca 0C       		.uleb128 0xc
+ 1103 00cb 00       		.byte	0x0
+ 1104 00cc 00       		.byte	0x0
+ 1105 00cd 0E       		.uleb128 0xe
+ 1106 00ce 35       		.uleb128 0x35
+ 1107 00cf 00       		.byte	0x0
+ 1108 00d0 49       		.uleb128 0x49
+ 1109 00d1 13       		.uleb128 0x13
+ 1110 00d2 00       		.byte	0x0
+ 1111 00d3 00       		.byte	0x0
+ 1112 00d4 0F       		.uleb128 0xf
+ 1113 00d5 34       		.uleb128 0x34
+ 1114 00d6 00       		.byte	0x0
+ 1115 00d7 03       		.uleb128 0x3
+ 1116 00d8 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 23
 
 
- 1144              	.LASF3:
- 1145 00db 73686F72 		.ascii	"short unsigned int\000"
- 1145      7420756E 
- 1145      7369676E 
- 1145      65642069 
- 1145      6E7400
- 1146              	.LASF0:
- 1147 00ee 7369676E 		.ascii	"signed char\000"
- 1147      65642063 
- 1147      68617200 
- 1148              	.LASF24:
- 1149 00fa 2E5C6D61 		.ascii	".\\main.c\000"
- 1149      696E2E63 
- 1149      00
- 1150              	.LASF11:
- 1151 0103 75696E74 		.ascii	"uint16\000"
- 1151      313600
- 1152              	.LASF19:
- 1153 010a 7A65726F 		.ascii	"zeroAllPins\000"
- 1153      416C6C50 
- 1153      696E7300 
- 1154              	.LASF25:
- 1155 0116 433A5C55 		.ascii	"C:\\Users\\Kojo\\Code\\GlowProcessing\\Glow.cydsn\000"
- 1155      73657273 
- 1155      5C4B6F6A 
- 1155      6F5C436F 
- 1155      64655C47 
- 1156              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 1117 00d9 3A       		.uleb128 0x3a
+ 1118 00da 0B       		.uleb128 0xb
+ 1119 00db 3B       		.uleb128 0x3b
+ 1120 00dc 0B       		.uleb128 0xb
+ 1121 00dd 49       		.uleb128 0x49
+ 1122 00de 13       		.uleb128 0x13
+ 1123 00df 3F       		.uleb128 0x3f
+ 1124 00e0 0C       		.uleb128 0xc
+ 1125 00e1 02       		.uleb128 0x2
+ 1126 00e2 0A       		.uleb128 0xa
+ 1127 00e3 00       		.byte	0x0
+ 1128 00e4 00       		.byte	0x0
+ 1129 00e5 10       		.uleb128 0x10
+ 1130 00e6 01       		.uleb128 0x1
+ 1131 00e7 01       		.byte	0x1
+ 1132 00e8 49       		.uleb128 0x49
+ 1133 00e9 13       		.uleb128 0x13
+ 1134 00ea 01       		.uleb128 0x1
+ 1135 00eb 13       		.uleb128 0x13
+ 1136 00ec 00       		.byte	0x0
+ 1137 00ed 00       		.byte	0x0
+ 1138 00ee 11       		.uleb128 0x11
+ 1139 00ef 21       		.uleb128 0x21
+ 1140 00f0 00       		.byte	0x0
+ 1141 00f1 49       		.uleb128 0x49
+ 1142 00f2 13       		.uleb128 0x13
+ 1143 00f3 2F       		.uleb128 0x2f
+ 1144 00f4 0B       		.uleb128 0xb
+ 1145 00f5 00       		.byte	0x0
+ 1146 00f6 00       		.byte	0x0
+ 1147 00f7 00       		.byte	0x0
+ 1148              		.section	.debug_pubnames,"",%progbits
+ 1149 0000 8E000000 		.4byte	0x8e
+ 1150 0004 0200     		.2byte	0x2
+ 1151 0006 00000000 		.4byte	.Ldebug_info0
+ 1152 000a 03020000 		.4byte	0x203
+ 1153 000e 8F000000 		.4byte	0x8f
+ 1154 0012 52585F49 		.ascii	"RX_INT\000"
+ 1154      4E5400
+ 1155 0019 B7000000 		.4byte	0xb7
+ 1156 001d 696E6974 		.ascii	"init\000"
+ 1156      00
+ 1157 0022 CB000000 		.4byte	0xcb
+ 1158 0026 63726C66 		.ascii	"crlf\000"
+ 1158      00
+ 1159 002b DF000000 		.4byte	0xdf
+ 1160 002f 6D61696E 		.ascii	"main\000"
+ 1160      00
+ 1161 0034 F3000000 		.4byte	0xf3
+ 1162 0038 70726F63 		.ascii	"processRX\000"
+ 1162      65737352 
+ 1162      5800
+ 1163 0042 27010000 		.4byte	0x127
+ 1164 0046 70726F63 		.ascii	"processMat\000"
+ 1164      6573734D 
+ 1164      617400
+ 1165 0051 58010000 		.4byte	0x158
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 24
+
+
+ 1166 0055 636F6E66 		.ascii	"configureMat\000"
+ 1166      69677572 
+ 1166      654D6174 
+ 1166      00
+ 1167 0062 8A010000 		.4byte	0x18a
+ 1168 0066 7A65726F 		.ascii	"zeroAllPins\000"
+ 1168      416C6C50 
+ 1168      696E7300 
+ 1169 0072 CE010000 		.4byte	0x1ce
+ 1170 0076 61646352 		.ascii	"adcResult\000"
+ 1170      6573756C 
+ 1170      7400
+ 1171 0080 F0010000 		.4byte	0x1f0
+ 1172 0084 61646356 		.ascii	"adcValues\000"
+ 1172      616C7565 
+ 1172      7300
+ 1173 008e 00000000 		.4byte	0x0
+ 1174              		.section	.debug_aranges,"",%progbits
+ 1175 0000 54000000 		.4byte	0x54
+ 1176 0004 0200     		.2byte	0x2
+ 1177 0006 00000000 		.4byte	.Ldebug_info0
+ 1178 000a 04       		.byte	0x4
+ 1179 000b 00       		.byte	0x0
+ 1180 000c 0000     		.2byte	0x0
+ 1181 000e 0000     		.2byte	0x0
+ 1182 0010 00000000 		.4byte	.LFB29
+ 1183 0014 1E000000 		.4byte	.LFE29-.LFB29
+ 1184 0018 00000000 		.4byte	.LFB30
+ 1185 001c 58000000 		.4byte	.LFE30-.LFB30
+ 1186 0020 00000000 		.4byte	.LFB31
+ 1187 0024 16000000 		.4byte	.LFE31-.LFB31
+ 1188 0028 00000000 		.4byte	.LFB32
+ 1189 002c 0E000000 		.4byte	.LFE32-.LFB32
+ 1190 0030 00000000 		.4byte	.LFB33
+ 1191 0034 54000000 		.4byte	.LFE33-.LFB33
+ 1192 0038 00000000 		.4byte	.LFB34
+ 1193 003c 86000000 		.4byte	.LFE34-.LFB34
+ 1194 0040 00000000 		.4byte	.LFB35
+ 1195 0044 3E000000 		.4byte	.LFE35-.LFB35
+ 1196 0048 00000000 		.4byte	.LFB36
+ 1197 004c 56000000 		.4byte	.LFE36-.LFB36
+ 1198 0050 00000000 		.4byte	0x0
+ 1199 0054 00000000 		.4byte	0x0
+ 1200              		.section	.debug_ranges,"",%progbits
+ 1201              	.Ldebug_ranges0:
+ 1202 0000 00000000 		.4byte	.Ltext0
+ 1203 0004 00000000 		.4byte	.Letext0
+ 1204 0008 00000000 		.4byte	.LFB29
+ 1205 000c 1E000000 		.4byte	.LFE29
+ 1206 0010 00000000 		.4byte	.LFB30
+ 1207 0014 58000000 		.4byte	.LFE30
+ 1208 0018 00000000 		.4byte	.LFB31
+ 1209 001c 16000000 		.4byte	.LFE31
+ 1210 0020 00000000 		.4byte	.LFB32
+ 1211 0024 0E000000 		.4byte	.LFE32
+ 1212 0028 00000000 		.4byte	.LFB33
+ 1213 002c 54000000 		.4byte	.LFE33
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 25
+
+
+ 1214 0030 00000000 		.4byte	.LFB34
+ 1215 0034 86000000 		.4byte	.LFE34
+ 1216 0038 00000000 		.4byte	.LFB35
+ 1217 003c 3E000000 		.4byte	.LFE35
+ 1218 0040 00000000 		.4byte	.LFB36
+ 1219 0044 56000000 		.4byte	.LFE36
+ 1220 0048 00000000 		.4byte	0x0
+ 1221 004c 00000000 		.4byte	0x0
+ 1222              		.section	.debug_str,"MS",%progbits,1
+ 1223              	.LASF6:
+ 1224 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1224      206C6F6E 
+ 1224      6720696E 
+ 1224      7400
+ 1225              	.LASF8:
+ 1226 000e 756E7369 		.ascii	"unsigned int\000"
+ 1226      676E6564 
+ 1226      20696E74 
+ 1226      00
+ 1227              	.LASF12:
+ 1228 001b 696E6974 		.ascii	"init\000"
+ 1228      00
+ 1229              	.LASF18:
+ 1230 0020 636F6E66 		.ascii	"configureMat\000"
+ 1230      69677572 
+ 1230      654D6174 
+ 1230      00
+ 1231              	.LASF17:
+ 1232 002d 696E7075 		.ascii	"input\000"
+ 1232      7400
+ 1233              	.LASF14:
+ 1234 0033 6D61696E 		.ascii	"main\000"
+ 1234      00
+ 1235              	.LASF22:
+ 1236 0038 61646352 		.ascii	"adcResult\000"
+ 1236      6573756C 
+ 1236      7400
+ 1237              	.LASF15:
+ 1238 0042 52585F49 		.ascii	"RX_INT\000"
+ 1238      4E5400
+ 1239              	.LASF10:
+ 1240 0049 75696E74 		.ascii	"uint8\000"
+ 1240      3800
+ 1241              	.LASF5:
+ 1242 004f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1242      20756E73 
+ 1242      69676E65 
+ 1242      6420696E 
+ 1242      7400
+ 1243              	.LASF13:
+ 1244 0061 63726C66 		.ascii	"crlf\000"
+ 1244      00
+ 1245              	.LASF7:
+ 1246 0066 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1246      206C6F6E 
+ 1246      6720756E 
+ 1246      7369676E 
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 26
+
+
+ 1246      65642069 
+ 1247              	.LASF24:
+ 1248 007d 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1248      4320342E 
+ 1248      342E3100 
+ 1249              	.LASF1:
+ 1250 0089 756E7369 		.ascii	"unsigned char\000"
+ 1250      676E6564 
+ 1250      20636861 
+ 1250      7200
+ 1251              	.LASF19:
+ 1252 0097 70726F63 		.ascii	"processMat\000"
+ 1252      6573734D 
+ 1252      617400
+ 1253              	.LASF9:
+ 1254 00a2 63686172 		.ascii	"char\000"
+ 1254      00
+ 1255              	.LASF21:
+ 1256 00a7 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1256      52784275 
+ 1256      66666572 
+ 1256      00
+ 1257              	.LASF2:
+ 1258 00b4 73686F72 		.ascii	"short int\000"
+ 1258      7420696E 
+ 1258      7400
+ 1259              	.LASF23:
+ 1260 00be 61646356 		.ascii	"adcValues\000"
+ 1260      616C7565 
+ 1260      7300
+ 1261              	.LASF4:
+ 1262 00c8 6C6F6E67 		.ascii	"long int\000"
+ 1262      20696E74 
+ 1262      00
+ 1263              	.LASF16:
+ 1264 00d1 70726F63 		.ascii	"processRX\000"
+ 1264      65737352 
+ 1264      5800
+ 1265              	.LASF3:
+ 1266 00db 73686F72 		.ascii	"short unsigned int\000"
+ 1266      7420756E 
+ 1266      7369676E 
+ 1266      65642069 
+ 1266      6E7400
+ 1267              	.LASF0:
+ 1268 00ee 7369676E 		.ascii	"signed char\000"
+ 1268      65642063 
+ 1268      68617200 
+ 1269              	.LASF25:
+ 1270 00fa 2E5C6D61 		.ascii	".\\main.c\000"
+ 1270      696E2E63 
+ 1270      00
+ 1271              	.LASF11:
+ 1272 0103 75696E74 		.ascii	"uint16\000"
+ 1272      313600
+ 1273              	.LASF20:
+ 1274 010a 7A65726F 		.ascii	"zeroAllPins\000"
+ARM GAS  C:\Users\Kojo\AppData\Local\Temp\ccug3eli.s 			page 27
+
+
+ 1274      416C6C50 
+ 1274      696E7300 
+ 1275              	.LASF26:
+ 1276 0116 433A5C55 		.ascii	"C:\\Users\\Kojo\\Code\\GlowProcessing\\Glow.cydsn\000"
+ 1276      73657273 
+ 1276      5C4B6F6A 
+ 1276      6F5C436F 
+ 1276      64655C47 
+ 1277              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

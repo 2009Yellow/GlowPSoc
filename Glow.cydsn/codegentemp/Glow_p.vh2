@@ -1,5 +1,5 @@
 -- Project:   Glow
--- Generated: 10/15/2013 11:53:06
+-- Generated: 10/15/2013 13:39:20
 -- 
 
 ENTITY Glow IS
@@ -38,8 +38,8 @@ ARCHITECTURE __DEFAULT__ OF Glow IS
     SIGNAL Net_194 : bit;
     SIGNAL Net_262 : bit;
     SIGNAL Net_263 : bit;
-    SIGNAL Net_460 : bit;
-    SIGNAL Net_463 : bit;
+    SIGNAL Net_709 : bit;
+    SIGNAL Net_712 : bit;
     SIGNAL Net_80 : bit;
     SIGNAL \ADC_SAR_1:Net_207_0\ : bit;
     SIGNAL \ADC_SAR_1:Net_207_10\ : bit;
@@ -59,8 +59,10 @@ ARCHITECTURE __DEFAULT__ OF Glow IS
     SIGNAL \ADC_SAR_1:Net_221_adig_local\ : bit;
     SIGNAL \ADC_SAR_1:Net_221_local\ : bit;
     SIGNAL \ADC_SAR_1:Net_252\ : bit;
+    SIGNAL \PGA_BOTTOM_GND:Net_41\ : bit;
     SIGNAL \PGA_GAIN:Net_41\ : bit;
     SIGNAL \PGA_REF:Net_41\ : bit;
+    SIGNAL \PGA_TOP_GND:Net_41\ : bit;
     SIGNAL \UART:BUART:counter_load_not\ : bit;
     SIGNAL \UART:BUART:pollcount_0\ : bit;
     SIGNAL \UART:BUART:pollcount_1\ : bit;
@@ -112,46 +114,34 @@ ARCHITECTURE __DEFAULT__ OF Glow IS
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE lib_model OF BOTTOM_1(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF BOTTOM_1(0) : LABEL IS "P4[7]";
+    ATTRIBUTE Location OF BOTTOM_1(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF BOTTOM_2(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF BOTTOM_2(0) : LABEL IS "P4[0]";
+    ATTRIBUTE Location OF BOTTOM_2(0) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF BOTTOM_3(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF BOTTOM_3(0) : LABEL IS "P6[4]";
+    ATTRIBUTE Location OF BOTTOM_3(0) : LABEL IS "P3[2]";
     ATTRIBUTE lib_model OF BOTTOM_4(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF BOTTOM_4(0) : LABEL IS "P6[3]";
+    ATTRIBUTE Location OF BOTTOM_4(0) : LABEL IS "P3[3]";
     ATTRIBUTE lib_model OF Net_194 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF RX(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF RX(0) : LABEL IS "P6[0]";
     ATTRIBUTE lib_model OF TOP_1(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF TOP_1(0) : LABEL IS "P1[6]";
+    ATTRIBUTE Location OF TOP_1(0) : LABEL IS "P0[0]";
     ATTRIBUTE lib_model OF TOP_2(0) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF TOP_2(0) : LABEL IS "P5[4]";
+    ATTRIBUTE Location OF TOP_2(0) : LABEL IS "P0[1]";
     ATTRIBUTE lib_model OF TOP_3(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF TOP_3(0) : LABEL IS "P3[0]";
+    ATTRIBUTE Location OF TOP_3(0) : LABEL IS "P3[7]";
     ATTRIBUTE lib_model OF TOP_4(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF TOP_4(0) : LABEL IS "P4[2]";
+    ATTRIBUTE Location OF TOP_4(0) : LABEL IS "P0[3]";
     ATTRIBUTE lib_model OF TX(0) : LABEL IS "iocell10";
     ATTRIBUTE Location OF TX(0) : LABEL IS "P6[6]";
     ATTRIBUTE Location OF \ADC_SAR_1:ADC_SAR\ : LABEL IS "F(SAR,1)";
     ATTRIBUTE lib_model OF \ADC_SAR_1:Bypass(0)\ : LABEL IS "iocell11";
     ATTRIBUTE Location OF \ADC_SAR_1:Bypass(0)\ : LABEL IS "P0[2]";
-    ATTRIBUTE Location OF \IDAC8_REF:viDAC8\ : LABEL IS "F(VIDAC,2)";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(0)\ : LABEL IS "iocell12";
-    ATTRIBUTE Location OF \LCD:LCDPort(0)\ : LABEL IS "P2[0]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(1)\ : LABEL IS "iocell13";
-    ATTRIBUTE Location OF \LCD:LCDPort(1)\ : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(2)\ : LABEL IS "iocell14";
-    ATTRIBUTE Location OF \LCD:LCDPort(2)\ : LABEL IS "P2[2]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(3)\ : LABEL IS "iocell15";
-    ATTRIBUTE Location OF \LCD:LCDPort(3)\ : LABEL IS "P2[3]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(4)\ : LABEL IS "iocell16";
-    ATTRIBUTE Location OF \LCD:LCDPort(4)\ : LABEL IS "P2[4]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(5)\ : LABEL IS "iocell17";
-    ATTRIBUTE Location OF \LCD:LCDPort(5)\ : LABEL IS "P2[5]";
-    ATTRIBUTE lib_model OF \LCD:LCDPort(6)\ : LABEL IS "iocell18";
-    ATTRIBUTE Location OF \LCD:LCDPort(6)\ : LABEL IS "P2[6]";
+    ATTRIBUTE Location OF \IDAC8_REF:viDAC8\ : LABEL IS "F(VIDAC,3)";
+    ATTRIBUTE Location OF \PGA_BOTTOM_GND:SC\ : LABEL IS "F(SC,3)";
     ATTRIBUTE Location OF \PGA_GAIN:SC\ : LABEL IS "F(SC,1)";
-    ATTRIBUTE Location OF \PGA_REF:SC\ : LABEL IS "F(SC,3)";
+    ATTRIBUTE Location OF \PGA_REF:SC\ : LABEL IS "F(SC,2)";
+    ATTRIBUTE Location OF \PGA_TOP_GND:SC\ : LABEL IS "F(SC,0)";
     ATTRIBUTE lib_model OF \UART:BUART:counter_load_not\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell3";
     ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell4";
@@ -181,7 +171,7 @@ ARCHITECTURE __DEFAULT__ OF Glow IS
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_0\ : LABEL IS "macrocell23";
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_2\ : LABEL IS "macrocell24";
     ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF \VDAC8_REF:viDAC8\ : LABEL IS "F(VIDAC,1)";
+    ATTRIBUTE Location OF \VDAC8_REF:viDAC8\ : LABEL IS "F(VIDAC,0)";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell26";
     COMPONENT abufcell
     END COMPONENT;
@@ -1475,7 +1465,7 @@ BEGIN
             vn_ctl_udb_1 => open,
             vn_ctl_udb_0 => open,
             irq => \ADC_SAR_1:Net_252\,
-            next => Net_463,
+            next => Net_712,
             data_out_udb_11 => \ADC_SAR_1:Net_207_11\,
             data_out_udb_10 => \ADC_SAR_1:Net_207_10\,
             data_out_udb_9 => \ADC_SAR_1:Net_207_9\,
@@ -1488,7 +1478,7 @@ BEGIN
             data_out_udb_2 => \ADC_SAR_1:Net_207_2\,
             data_out_udb_1 => \ADC_SAR_1:Net_207_1\,
             data_out_udb_0 => \ADC_SAR_1:Net_207_0\,
-            eof_udb => Net_460);
+            eof_udb => Net_709);
 
     \ADC_SAR_1:Bypass(0)\:iocell
         GENERIC MAP(
@@ -1535,7 +1525,7 @@ BEGIN
         GENERIC MAP(
             int_type => "10")
         PORT MAP(
-            interrupt => Net_460,
+            interrupt => Net_709,
             clock => ClockBlock_BUS_CLK);
 
     \IDAC8_REF:viDAC8\:vidaccell
@@ -1644,6 +1634,13 @@ BEGIN
             vtrip => "10101010101010",
             width => 7);
 
+    \PGA_BOTTOM_GND:SC\:sccell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            dyn_cntl_udb => open,
+            modout => \PGA_BOTTOM_GND:Net_41\);
+
     \PGA_GAIN:SC\:sccell
         GENERIC MAP(
             cy_registers => "")
@@ -1657,6 +1654,13 @@ BEGIN
         PORT MAP(
             dyn_cntl_udb => open,
             modout => \PGA_REF:Net_41\);
+
+    \PGA_TOP_GND:SC\:sccell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            dyn_cntl_udb => open,
+            modout => \PGA_TOP_GND:Net_41\);
 
     \UART:BUART:counter_load_not\:macrocell
         GENERIC MAP(

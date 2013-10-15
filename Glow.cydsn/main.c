@@ -35,12 +35,21 @@ void init() {
     UART_ClearRxBuffer();
     
     // Init Electronic Components
+    PGA_TOP_GND_Start();
+    PGA_BOTTOM_GND_Start();
     PGA_REF_Start();
     VDAC8_REF_Start();
     PGA_GAIN_Start();
     IDAC8_REF_Start();
     ADC_SAR_1_Start();
-    ADC_SAR_1_StartConvert();
+    //ADC_SAR_1_StartConvert();
+    
+    // Init muxes
+    TOP_MUX_GND_Start();
+    BOTTOM_MUX_GND_Start();
+    TOP_MUX_VREF_Start();
+    BOTTOM_MUX_SENSE_Start();
+    zeroAllPins();
 }
 
 
@@ -49,7 +58,7 @@ void crlf(){
     UART_PutChar(13);
 }
 
-
+ 
 void main() {	
     init();
     // Main process loop.
@@ -81,24 +90,46 @@ void processRX(uint8 input) {
 }
 
 void processMat() {
-    ADC_SAR_1_IsEndConversion(1);
-    adcResult = ADC_SAR_1_GetResult16();
-    LCD_ClearDisplay();
-    LCD_PutChar(adcResult);     // RX ISR
     int i;
-    for (i = 0; i < MAT_SIZE; ++i) {
-        adcValues[i] = adcResult;
+    int j;
+    for (i = 0; i < HEIGHT; ++i) {
+        for (j = 0; j < WIDTH; ++j) {
+            configureMat(i,j);
+            // Start ADC conversion. Wait for next value, then stop conversion.
+            ADC_SAR_1_StartConvert();
+            ADC_SAR_1_IsEndConversion(1);
+            adcResult = ADC_SAR_1_GetResult16();
+            ADC_SAR_1_StopConvert();
+            adcValues[i * WIDTH + j] = adcResult;
+
+        }
     }
 }
 
 void configureMat(int i, int j) {
+    //i = 2;
     // Zero all pins
+    zeroAllPins();
     // Set the i pin to Vref
-    // Connect the j pin to mux
-    // Set mux to j pin
+    TOP_MUX_GND_Disconnect(i);
+    TOP_MUX_VREF_Select(i);
+    // Connect the j pin to sense
+    BOTTOM_MUX_GND_Disconnect(j);
+    BOTTOM_MUX_SENSE_Select(j);
 }
 
 void zeroAllPins() {
-
+    // Disconnect power and sense
+    TOP_MUX_VREF_DisconnectAll();
+    BOTTOM_MUX_SENSE_DisconnectAll();
+    // Connect all ground pins
+    int i;
+    for (i=0; i < HEIGHT; ++i) {
+        TOP_MUX_GND_Connect(i);
+    }
+    int j;
+    for (j=0; j < WIDTH; ++j) {
+        BOTTOM_MUX_GND_Connect(j);
+    }
 }
 

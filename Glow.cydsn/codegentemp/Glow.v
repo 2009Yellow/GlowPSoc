@@ -1,6 +1,6 @@
 // ======================================================================
 // Glow.v generated from TopDesign.cysch
-// 10/15/2013 at 11:52
+// 10/15/2013 at 13:39
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -231,7 +231,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `endif
 
-// VDAC8_v1_80(Data_Source=0, Initial_Value=250, Strobe_Mode=0, VDAC_Range=0, VDAC_Speed=0, Voltage=1000, CY_COMPONENT_NAME=VDAC8_v1_80, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=VDAC8_REF, CY_INSTANCE_SHORT_NAME=VDAC8_REF, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=80, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=VDAC8_REF, )
+// VDAC8_v1_80(Data_Source=0, Initial_Value=125, Strobe_Mode=0, VDAC_Range=4, VDAC_Speed=0, Voltage=2000, CY_COMPONENT_NAME=VDAC8_v1_80, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=VDAC8_REF, CY_INSTANCE_SHORT_NAME=VDAC8_REF, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=80, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=VDAC8_REF, )
 module VDAC8_v1_80_2 (
     strobe,
     data,
@@ -242,7 +242,7 @@ module VDAC8_v1_80_2 (
     electrical  vOut;
 
     parameter Data_Source = 0;
-    parameter Initial_Value = 250;
+    parameter Initial_Value = 125;
     parameter Strobe_Mode = 0;
 
     electrical  Net_77;
@@ -291,7 +291,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v"
 `endif
 
-// PGA_v1_90(Gain=1, Power=1, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_GAIN, CY_INSTANCE_SHORT_NAME=PGA_GAIN, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_GAIN, )
+// PGA_v1_90(Gain=4, Power=1, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_GAIN, CY_INSTANCE_SHORT_NAME=PGA_GAIN, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_GAIN, )
 module PGA_v1_90_3 (
     Vin,
     Vref,
@@ -685,33 +685,134 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_60\AMux_v1_60.v"
 `endif
 
+// PGA_v1_90(Gain=0, Power=0, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_BOTTOM_GND, CY_INSTANCE_SHORT_NAME=PGA_BOTTOM_GND, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_BOTTOM_GND, )
+module PGA_v1_90_7 (
+    Vin,
+    Vref,
+    Vout);
+    inout       Vin;
+    electrical  Vin;
+    inout       Vref;
+    electrical  Vref;
+    inout       Vout;
+    electrical  Vout;
+
+
+    electrical  Net_75;
+          wire  Net_41;
+          wire  Net_40;
+    electrical  Net_17;
+          wire  Net_39;
+          wire  Net_38;
+          wire  Net_37;
+
+    cy_psoc3_scblock_v1_0 SC (
+        .vin(Vin),
+        .vref(Net_17),
+        .vout(Vout),
+        .modout_sync(Net_41),
+        .aclk(Net_37),
+        .clk_udb(Net_38),
+        .dyn_cntl(Net_39),
+        .bst_clk(Net_40));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_37));
+
+    ZeroTerminal ZeroTerminal_2 (
+        .z(Net_38));
+
+    ZeroTerminal ZeroTerminal_3 (
+        .z(Net_39));
+
+    ZeroTerminal ZeroTerminal_4 (
+        .z(Net_40));
+
+	// cy_analog_virtualmux_1 (cy_analog_virtualmux_v1_0)
+	cy_connect_v1_0 cy_analog_virtualmux_1_connect(Net_17, Net_75);
+	defparam cy_analog_virtualmux_1_connect.sig_width = 1;
+
+    cy_analog_noconnect_v1_0 cy_analog_noconnect_2 (
+        .noconnect(Net_75));
+
+
+
+endmodule
+
+// PGA_v1_90(Gain=0, Power=0, VddaValue=5, Vref_Input=0, CY_COMPONENT_NAME=PGA_v1_90, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PGA_TOP_GND, CY_INSTANCE_SHORT_NAME=PGA_TOP_GND, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PGA_TOP_GND, )
+module PGA_v1_90_8 (
+    Vin,
+    Vref,
+    Vout);
+    inout       Vin;
+    electrical  Vin;
+    inout       Vref;
+    electrical  Vref;
+    inout       Vout;
+    electrical  Vout;
+
+
+    electrical  Net_75;
+          wire  Net_41;
+          wire  Net_40;
+    electrical  Net_17;
+          wire  Net_39;
+          wire  Net_38;
+          wire  Net_37;
+
+    cy_psoc3_scblock_v1_0 SC (
+        .vin(Vin),
+        .vref(Net_17),
+        .vout(Vout),
+        .modout_sync(Net_41),
+        .aclk(Net_37),
+        .clk_udb(Net_38),
+        .dyn_cntl(Net_39),
+        .bst_clk(Net_40));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_37));
+
+    ZeroTerminal ZeroTerminal_2 (
+        .z(Net_38));
+
+    ZeroTerminal ZeroTerminal_3 (
+        .z(Net_39));
+
+    ZeroTerminal ZeroTerminal_4 (
+        .z(Net_40));
+
+	// cy_analog_virtualmux_1 (cy_analog_virtualmux_v1_0)
+	cy_connect_v1_0 cy_analog_virtualmux_1_connect(Net_17, Net_75);
+	defparam cy_analog_virtualmux_1_connect.sig_width = 1;
+
+    cy_analog_noconnect_v1_0 cy_analog_noconnect_2 (
+        .noconnect(Net_75));
+
+
+
+endmodule
+
 // top
 module top ;
 
-    electrical  Net_574;
-    electrical  Net_573;
-    electrical  Net_572;
-    electrical  Net_579;
-    electrical  Net_535;
-    electrical  Net_538;
-    electrical  Net_536;
-    electrical  Net_537;
-          wire  Net_463;
-    electrical  Net_462;
-          wire  Net_461;
-          wire  Net_460;
-          wire  Net_459;
-    electrical  Net_458;
+    electrical  Net_675;
+    electrical  Net_676;
+          wire  Net_712;
+    electrical  Net_711;
+          wire  Net_710;
+          wire  Net_709;
+          wire  Net_708;
+    electrical  Net_707;
           wire  Net_494;
           wire  Net_493;
           wire [7:0] Net_492;
           wire  Net_491;
     electrical  Net_540;
     electrical  Net_425;
-    electrical  Net_490;
-    electrical  Net_539;
-          wire [7:0] Net_542;
-          wire  Net_541;
+    electrical  Net_717;
+          wire [7:0] Net_716;
+          wire  Net_715;
           wire  Net_355;
           wire  Net_354;
           wire  Net_353;
@@ -725,9 +826,20 @@ module top ;
           wire  Net_349;
           wire  Net_194;
           wire  Net_348;
-    electrical  Net_575;
-    electrical  Net_545;
-    electrical  Net_506;
+    electrical  Net_616;
+    electrical  Net_660;
+    electrical  Net_585;
+    electrical  Net_669;
+    electrical  Net_645;
+    electrical  Net_643;
+    electrical  Net_644;
+    electrical  Net_642;
+    electrical  Net_535;
+    electrical  Net_536;
+    electrical  Net_647;
+    electrical  Net_650;
+    electrical  Net_539;
+    electrical  Net_593;
 
     CharLCD_v1_70_0 LCD ();
 
@@ -865,23 +977,23 @@ module top ;
         .data(8'b00000000),
         .vOut(Net_539));
     defparam VDAC8_REF.Data_Source = 0;
-    defparam VDAC8_REF.Initial_Value = 250;
+    defparam VDAC8_REF.Initial_Value = 125;
     defparam VDAC8_REF.Strobe_Mode = 0;
 
     PGA_v1_90_3 PGA_GAIN (
-        .Vin(Net_575),
-        .Vref(Net_490),
+        .Vin(Net_593),
+        .Vref(Net_717),
         .Vout(Net_425));
 
     PGA_v1_90_4 PGA_REF (
         .Vin(Net_539),
         .Vref(Net_540),
-        .Vout(Net_506));
+        .Vout(Net_616));
 
     IDAC8_v1_90_5 IDAC8_REF (
         .strobe(1'b0),
         .data(8'b00000000),
-        .iOut(Net_575),
+        .iOut(Net_593),
         .en(1'b0),
         .ipolarity(1'b0));
     defparam IDAC8_REF.Data_Source = 0;
@@ -890,84 +1002,37 @@ module top ;
 
     ADC_SAR_v1_90_6 ADC_SAR_1 (
         .vplus(Net_425),
-        .vminus(Net_458),
+        .vminus(Net_707),
         .soc(1'b1),
-        .eoc(Net_460),
+        .eoc(Net_709),
         .aclk(1'b0),
-        .vdac_ref(Net_462),
-        .eos(Net_463));
+        .vdac_ref(Net_711),
+        .eos(Net_712));
 
-    // -- AMux TOP_MUX_2 start -- ***
+    // -- AMux TOP_MUX_VREF start -- ***
     // -- Mux A --
     
-    cy_psoc3_amux_v1_0 TOP_MUX_2(
+    cy_psoc3_amux_v1_0 TOP_MUX_VREF(
         .muxin({
-            Net_506,
-            Net_545
+            Net_535,
+            Net_536,
+            Net_647,
+            Net_650
             }),
-        .vout(Net_537)
+        .vout(Net_616)
         );
     
-    defparam TOP_MUX_2.muxin_width = 2;
-    defparam TOP_MUX_2.init_mux_sel = 2'h0;
-    defparam TOP_MUX_2.one_active = 0;
-    defparam TOP_MUX_2.connect_mode = 1;
+    defparam TOP_MUX_VREF.muxin_width = 4;
+    defparam TOP_MUX_VREF.init_mux_sel = 4'h0;
+    defparam TOP_MUX_VREF.one_active = 0;
+    defparam TOP_MUX_VREF.connect_mode = 1;
     
-    // -- AMux TOP_MUX_2 end --
+    // -- AMux TOP_MUX_VREF end --
 
-    // -- AMux TOP_MUX_3 start -- ***
-    // -- Mux A --
-    
-    cy_psoc3_amux_v1_0 TOP_MUX_3(
-        .muxin({
-            Net_506,
-            Net_545
-            }),
-        .vout(Net_536)
-        );
-    
-    defparam TOP_MUX_3.muxin_width = 2;
-    defparam TOP_MUX_3.init_mux_sel = 2'h0;
-    defparam TOP_MUX_3.one_active = 0;
-    defparam TOP_MUX_3.connect_mode = 1;
-    
-    // -- AMux TOP_MUX_3 end --
-
-    // -- AMux TOP_MUX_1 start -- ***
-    // -- Mux A --
-    
-    cy_psoc3_amux_v1_0 TOP_MUX_1(
-        .muxin({
-            Net_506,
-            Net_545
-            }),
-        .vout(Net_538)
-        );
-    
-    defparam TOP_MUX_1.muxin_width = 2;
-    defparam TOP_MUX_1.init_mux_sel = 2'h0;
-    defparam TOP_MUX_1.one_active = 0;
-    defparam TOP_MUX_1.connect_mode = 1;
-    
-    // -- AMux TOP_MUX_1 end --
-
-    // -- AMux TOP_MUX_4 start -- ***
-    // -- Mux A --
-    
-    cy_psoc3_amux_v1_0 TOP_MUX_4(
-        .muxin({
-            Net_506,
-            Net_545
-            }),
-        .vout(Net_535)
-        );
-    
-    defparam TOP_MUX_4.muxin_width = 2;
-    defparam TOP_MUX_4.init_mux_sel = 2'h0;
-    defparam TOP_MUX_4.one_active = 0;
-    defparam TOP_MUX_4.connect_mode = 1;
-    
-    // -- AMux TOP_MUX_4 end --
+    PGA_v1_90_7 PGA_BOTTOM_GND (
+        .Vin(Net_660),
+        .Vref(Net_676),
+        .Vout(Net_585));
 
 
 	cy_vref_v1_0
@@ -975,80 +1040,73 @@ module top ;
 		  .guid("15B3DB15-B7B3-4d62-A2DF-25EA392A7161"),
 		  .name("Vssa (GND)"))
 		VREF_GND
-		 (.vout(Net_545));
+		 (.vout(Net_660));
 
 
-    // -- AMux BOTTOM_MUX_1 start -- ***
+    // -- AMux BOTTOM_MUX_GND start -- ***
     // -- Mux A --
     
-    cy_psoc3_amux_v1_0 BOTTOM_MUX_1(
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_GND(
         .muxin({
-            Net_575,
-            Net_545
+            Net_645,
+            Net_644,
+            Net_643,
+            Net_642
             }),
-        .vout(Net_579)
+        .vout(Net_585)
         );
     
-    defparam BOTTOM_MUX_1.muxin_width = 2;
-    defparam BOTTOM_MUX_1.init_mux_sel = 2'h0;
-    defparam BOTTOM_MUX_1.one_active = 0;
-    defparam BOTTOM_MUX_1.connect_mode = 1;
+    defparam BOTTOM_MUX_GND.muxin_width = 4;
+    defparam BOTTOM_MUX_GND.init_mux_sel = 4'h0;
+    defparam BOTTOM_MUX_GND.one_active = 0;
+    defparam BOTTOM_MUX_GND.connect_mode = 1;
     
-    // -- AMux BOTTOM_MUX_1 end --
+    // -- AMux BOTTOM_MUX_GND end --
 
-    // -- AMux BOTTOM_MUX_2 start -- ***
+    PGA_v1_90_8 PGA_TOP_GND (
+        .Vin(Net_660),
+        .Vref(Net_675),
+        .Vout(Net_669));
+
+    // -- AMux BOTTOM_MUX_SENSE start -- ***
     // -- Mux A --
     
-    cy_psoc3_amux_v1_0 BOTTOM_MUX_2(
+    cy_psoc3_amux_v1_0 BOTTOM_MUX_SENSE(
         .muxin({
-            Net_575,
-            Net_545
+            Net_645,
+            Net_644,
+            Net_643,
+            Net_642
             }),
-        .vout(Net_572)
+        .vout(Net_593)
         );
     
-    defparam BOTTOM_MUX_2.muxin_width = 2;
-    defparam BOTTOM_MUX_2.init_mux_sel = 2'h0;
-    defparam BOTTOM_MUX_2.one_active = 0;
-    defparam BOTTOM_MUX_2.connect_mode = 1;
+    defparam BOTTOM_MUX_SENSE.muxin_width = 4;
+    defparam BOTTOM_MUX_SENSE.init_mux_sel = 4'h0;
+    defparam BOTTOM_MUX_SENSE.one_active = 0;
+    defparam BOTTOM_MUX_SENSE.connect_mode = 1;
     
-    // -- AMux BOTTOM_MUX_2 end --
+    // -- AMux BOTTOM_MUX_SENSE end --
 
-    // -- AMux BOTTOM_MUX_3 start -- ***
+    // -- AMux TOP_MUX_GND start -- ***
     // -- Mux A --
     
-    cy_psoc3_amux_v1_0 BOTTOM_MUX_3(
+    cy_psoc3_amux_v1_0 TOP_MUX_GND(
         .muxin({
-            Net_575,
-            Net_545
+            Net_535,
+            Net_536,
+            Net_647,
+            Net_650
             }),
-        .vout(Net_573)
+        .vout(Net_669)
         );
     
-    defparam BOTTOM_MUX_3.muxin_width = 2;
-    defparam BOTTOM_MUX_3.init_mux_sel = 2'h0;
-    defparam BOTTOM_MUX_3.one_active = 0;
-    defparam BOTTOM_MUX_3.connect_mode = 1;
+    defparam TOP_MUX_GND.muxin_width = 4;
+    defparam TOP_MUX_GND.init_mux_sel = 4'h0;
+    defparam TOP_MUX_GND.one_active = 0;
+    defparam TOP_MUX_GND.connect_mode = 1;
     
-    // -- AMux BOTTOM_MUX_3 end --
-
-    // -- AMux BOTTOM_MUX_4 start -- ***
-    // -- Mux A --
-    
-    cy_psoc3_amux_v1_0 BOTTOM_MUX_4(
-        .muxin({
-            Net_575,
-            Net_545
-            }),
-        .vout(Net_574)
-        );
-    
-    defparam BOTTOM_MUX_4.muxin_width = 2;
-    defparam BOTTOM_MUX_4.init_mux_sel = 2'h0;
-    defparam BOTTOM_MUX_4.one_active = 0;
-    defparam BOTTOM_MUX_4.connect_mode = 1;
-    
-    // -- AMux BOTTOM_MUX_4 end --
+    // -- AMux TOP_MUX_GND end --
 
 	wire [0:0] tmpOE__TOP_1_net;
 	wire [0:0] tmpFB_0__TOP_1_net;
@@ -1087,7 +1145,7 @@ module top ;
 		 (.oe(tmpOE__TOP_1_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__TOP_1_net[0:0]}),
-		  .analog({Net_538}),
+		  .analog({Net_650}),
 		  .io({tmpIO_0__TOP_1_net[0:0]}),
 		  .siovref(tmpSIOVREF__TOP_1_net),
 		  .interrupt({tmpINTERRUPT_0__TOP_1_net[0:0]}));
@@ -1131,7 +1189,7 @@ module top ;
 		 (.oe(tmpOE__TOP_2_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__TOP_2_net[0:0]}),
-		  .analog({Net_537}),
+		  .analog({Net_647}),
 		  .io({tmpIO_0__TOP_2_net[0:0]}),
 		  .siovref(tmpSIOVREF__TOP_2_net),
 		  .interrupt({tmpINTERRUPT_0__TOP_2_net[0:0]}));
@@ -1263,7 +1321,7 @@ module top ;
 		 (.oe(tmpOE__BOTTOM_1_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__BOTTOM_1_net[0:0]}),
-		  .analog({Net_579}),
+		  .analog({Net_642}),
 		  .io({tmpIO_0__BOTTOM_1_net[0:0]}),
 		  .siovref(tmpSIOVREF__BOTTOM_1_net),
 		  .interrupt({tmpINTERRUPT_0__BOTTOM_1_net[0:0]}));
@@ -1307,7 +1365,7 @@ module top ;
 		 (.oe(tmpOE__BOTTOM_2_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__BOTTOM_2_net[0:0]}),
-		  .analog({Net_572}),
+		  .analog({Net_643}),
 		  .io({tmpIO_0__BOTTOM_2_net[0:0]}),
 		  .siovref(tmpSIOVREF__BOTTOM_2_net),
 		  .interrupt({tmpINTERRUPT_0__BOTTOM_2_net[0:0]}));
@@ -1351,7 +1409,7 @@ module top ;
 		 (.oe(tmpOE__BOTTOM_3_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__BOTTOM_3_net[0:0]}),
-		  .analog({Net_573}),
+		  .analog({Net_644}),
 		  .io({tmpIO_0__BOTTOM_3_net[0:0]}),
 		  .siovref(tmpSIOVREF__BOTTOM_3_net),
 		  .interrupt({tmpINTERRUPT_0__BOTTOM_3_net[0:0]}));
@@ -1395,7 +1453,7 @@ module top ;
 		 (.oe(tmpOE__BOTTOM_4_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__BOTTOM_4_net[0:0]}),
-		  .analog({Net_574}),
+		  .analog({Net_645}),
 		  .io({tmpIO_0__BOTTOM_4_net[0:0]}),
 		  .siovref(tmpSIOVREF__BOTTOM_4_net),
 		  .interrupt({tmpINTERRUPT_0__BOTTOM_4_net[0:0]}));

@@ -2,7 +2,7 @@
 --	Conversion of Glow.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Oct 15 11:53:00 2013
+--	Tue Oct 15 13:39:09 2013
 --
 
 USE cypress.cypress.all;
@@ -393,7 +393,7 @@ SIGNAL \VDAC8_REF:Net_82\ : bit;
 TERMINAL Net_539 : bit;
 TERMINAL \VDAC8_REF:Net_77\ : bit;
 TERMINAL \PGA_GAIN:Net_17\ : bit;
-TERMINAL Net_575 : bit;
+TERMINAL Net_593 : bit;
 SIGNAL \PGA_GAIN:Net_37\ : bit;
 SIGNAL \PGA_GAIN:Net_40\ : bit;
 SIGNAL \PGA_GAIN:Net_38\ : bit;
@@ -407,7 +407,7 @@ SIGNAL \PGA_REF:Net_40\ : bit;
 SIGNAL \PGA_REF:Net_38\ : bit;
 SIGNAL \PGA_REF:Net_39\ : bit;
 SIGNAL \PGA_REF:Net_41\ : bit;
-TERMINAL Net_506 : bit;
+TERMINAL Net_616 : bit;
 TERMINAL \PGA_REF:Net_75\ : bit;
 SIGNAL \IDAC8_REF:Net_125\ : bit;
 SIGNAL \IDAC8_REF:Net_158\ : bit;
@@ -418,7 +418,7 @@ SIGNAL \IDAC8_REF:Net_194\ : bit;
 SIGNAL \IDAC8_REF:Net_195\ : bit;
 TERMINAL \ADC_SAR_1:Net_248\ : bit;
 TERMINAL \ADC_SAR_1:Net_233\ : bit;
-SIGNAL Net_460 : bit;
+SIGNAL Net_709 : bit;
 SIGNAL \ADC_SAR_1:vp_ctl_0\ : bit;
 SIGNAL \ADC_SAR_1:vp_ctl_2\ : bit;
 SIGNAL \ADC_SAR_1:vn_ctl_1\ : bit;
@@ -434,7 +434,7 @@ TERMINAL \ADC_SAR_1:Net_215\ : bit;
 TERMINAL \ADC_SAR_1:Net_257\ : bit;
 SIGNAL \ADC_SAR_1:soc\ : bit;
 SIGNAL \ADC_SAR_1:Net_252\ : bit;
-SIGNAL Net_463 : bit;
+SIGNAL Net_712 : bit;
 SIGNAL \ADC_SAR_1:Net_207_11\ : bit;
 SIGNAL \ADC_SAR_1:Net_207_10\ : bit;
 SIGNAL \ADC_SAR_1:Net_207_9\ : bit;
@@ -456,15 +456,31 @@ SIGNAL \ADC_SAR_1:tmpINTERRUPT_0__Bypass_net_0\ : bit;
 TERMINAL \ADC_SAR_1:Net_149\ : bit;
 TERMINAL \ADC_SAR_1:Net_209\ : bit;
 TERMINAL \ADC_SAR_1:Net_255\ : bit;
-TERMINAL Net_545 : bit;
-TERMINAL Net_537 : bit;
-TERMINAL Net_536 : bit;
-TERMINAL Net_538 : bit;
 TERMINAL Net_535 : bit;
-TERMINAL Net_579 : bit;
-TERMINAL Net_572 : bit;
-TERMINAL Net_573 : bit;
-TERMINAL Net_574 : bit;
+TERMINAL Net_536 : bit;
+TERMINAL Net_647 : bit;
+TERMINAL Net_650 : bit;
+TERMINAL \PGA_BOTTOM_GND:Net_17\ : bit;
+TERMINAL Net_660 : bit;
+SIGNAL \PGA_BOTTOM_GND:Net_37\ : bit;
+SIGNAL \PGA_BOTTOM_GND:Net_40\ : bit;
+SIGNAL \PGA_BOTTOM_GND:Net_38\ : bit;
+SIGNAL \PGA_BOTTOM_GND:Net_39\ : bit;
+SIGNAL \PGA_BOTTOM_GND:Net_41\ : bit;
+TERMINAL Net_585 : bit;
+TERMINAL \PGA_BOTTOM_GND:Net_75\ : bit;
+TERMINAL Net_645 : bit;
+TERMINAL Net_644 : bit;
+TERMINAL Net_643 : bit;
+TERMINAL Net_642 : bit;
+TERMINAL \PGA_TOP_GND:Net_17\ : bit;
+SIGNAL \PGA_TOP_GND:Net_37\ : bit;
+SIGNAL \PGA_TOP_GND:Net_40\ : bit;
+SIGNAL \PGA_TOP_GND:Net_38\ : bit;
+SIGNAL \PGA_TOP_GND:Net_39\ : bit;
+SIGNAL \PGA_TOP_GND:Net_41\ : bit;
+TERMINAL Net_669 : bit;
+TERMINAL \PGA_TOP_GND:Net_75\ : bit;
 SIGNAL tmpOE__TOP_1_net_0 : bit;
 SIGNAL tmpFB_0__TOP_1_net_0 : bit;
 SIGNAL tmpIO_0__TOP_1_net_0 : bit;
@@ -1092,7 +1108,7 @@ TX:cy_psoc3_pins_v1_10
 \PGA_GAIN:SC\:cy_psoc3_scblock_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(vref=>\PGA_GAIN:Net_17\,
-		vin=>Net_575,
+		vin=>Net_593,
 		aclk=>zero,
 		bst_clk=>zero,
 		clk_udb=>zero,
@@ -1115,7 +1131,7 @@ TX:cy_psoc3_pins_v1_10
 		clk_udb=>zero,
 		dyn_cntl=>zero,
 		modout_sync=>\PGA_REF:Net_41\,
-		vout=>Net_506);
+		vout=>Net_616);
 \PGA_REF:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
@@ -1135,7 +1151,7 @@ TX:cy_psoc3_pins_v1_10
 		strobe=>zero,
 		strobe_udb=>zero,
 		vout=>\IDAC8_REF:Net_124\,
-		iout=>Net_575);
+		iout=>Net_593);
 \IDAC8_REF:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
 	PORT MAP(noconnect=>\IDAC8_REF:Net_124\);
 \ADC_SAR_1:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
@@ -1145,7 +1161,7 @@ TX:cy_psoc3_pins_v1_10
 		signal2=>\ADC_SAR_1:Net_233\);
 \ADC_SAR_1:IRQ\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10")
-	PORT MAP(int_signal=>Net_460);
+	PORT MAP(int_signal=>Net_709);
 \ADC_SAR_1:theACLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"5c283494-aedc-4e13-ab1b-03fc51902eac/696a0979-21fc-4185-bf38-6c79febcde7a",
@@ -1170,11 +1186,11 @@ TX:cy_psoc3_pins_v1_10
 		vp_ctl_udb=>(zero, zero, zero, zero),
 		vn_ctl_udb=>(zero, zero, zero, zero),
 		irq=>\ADC_SAR_1:Net_252\,
-		next_out=>Net_463,
+		next_out=>Net_712,
 		data_out=>(\ADC_SAR_1:Net_207_11\, \ADC_SAR_1:Net_207_10\, \ADC_SAR_1:Net_207_9\, \ADC_SAR_1:Net_207_8\,
 			\ADC_SAR_1:Net_207_7\, \ADC_SAR_1:Net_207_6\, \ADC_SAR_1:Net_207_5\, \ADC_SAR_1:Net_207_4\,
 			\ADC_SAR_1:Net_207_3\, \ADC_SAR_1:Net_207_2\, \ADC_SAR_1:Net_207_1\, \ADC_SAR_1:Net_207_0\),
-		eof_udb=>Net_460);
+		eof_udb=>Net_709);
 \ADC_SAR_1:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
@@ -1239,100 +1255,90 @@ TX:cy_psoc3_pins_v1_10
 		signal2=>\ADC_SAR_1:Net_149\);
 \ADC_SAR_1:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
 	PORT MAP(noconnect=>\ADC_SAR_1:Net_255\);
-TOP_MUX_2:cy_psoc3_amux_v1_0
+TOP_MUX_VREF:cy_psoc3_amux_v1_0
 	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
+		muxin_width=>4,
 		hw_control=>'0',
 		one_active=>'0',
-		init_mux_sel=>"00",
+		init_mux_sel=>"0000",
 		api_type=>0,
 		connect_mode=>1)
-	PORT MAP(muxin=>(Net_506, Net_545),
+	PORT MAP(muxin=>(Net_535, Net_536, Net_647, Net_650),
 		hw_ctrl_en=>(others => zero),
-		vout=>Net_537);
-TOP_MUX_3:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(Net_506, Net_545),
-		hw_ctrl_en=>(others => zero),
-		vout=>Net_536);
-TOP_MUX_1:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(Net_506, Net_545),
-		hw_ctrl_en=>(others => zero),
-		vout=>Net_538);
-TOP_MUX_4:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(Net_506, Net_545),
-		hw_ctrl_en=>(others => zero),
-		vout=>Net_535);
+		vout=>Net_616);
+\PGA_BOTTOM_GND:SC\:cy_psoc3_scblock_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vref=>\PGA_BOTTOM_GND:Net_17\,
+		vin=>Net_660,
+		aclk=>zero,
+		bst_clk=>zero,
+		clk_udb=>zero,
+		dyn_cntl=>zero,
+		modout_sync=>\PGA_BOTTOM_GND:Net_41\,
+		vout=>Net_585);
+\PGA_BOTTOM_GND:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\PGA_BOTTOM_GND:Net_17\,
+		signal2=>\PGA_BOTTOM_GND:Net_75\);
+\PGA_BOTTOM_GND:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\PGA_BOTTOM_GND:Net_75\);
 VREF_GND:cy_vref_v1_0
 	GENERIC MAP(guid=>"15B3DB15-B7B3-4d62-A2DF-25EA392A7161",
 		name=>"Vssa (GND)",
 		autoenable=>'1',
 		ignoresleep=>'0')
-	PORT MAP(vout=>Net_545);
-BOTTOM_MUX_1:cy_psoc3_amux_v1_0
+	PORT MAP(vout=>Net_660);
+BOTTOM_MUX_GND:cy_psoc3_amux_v1_0
 	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
+		muxin_width=>4,
 		hw_control=>'0',
 		one_active=>'0',
-		init_mux_sel=>"00",
+		init_mux_sel=>"0000",
 		api_type=>0,
 		connect_mode=>1)
-	PORT MAP(muxin=>(Net_575, Net_545),
+	PORT MAP(muxin=>(Net_645, Net_644, Net_643, Net_642),
 		hw_ctrl_en=>(others => zero),
-		vout=>Net_579);
-BOTTOM_MUX_2:cy_psoc3_amux_v1_0
+		vout=>Net_585);
+\PGA_TOP_GND:SC\:cy_psoc3_scblock_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vref=>\PGA_TOP_GND:Net_17\,
+		vin=>Net_660,
+		aclk=>zero,
+		bst_clk=>zero,
+		clk_udb=>zero,
+		dyn_cntl=>zero,
+		modout_sync=>\PGA_TOP_GND:Net_41\,
+		vout=>Net_669);
+\PGA_TOP_GND:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\PGA_TOP_GND:Net_17\,
+		signal2=>\PGA_TOP_GND:Net_75\);
+\PGA_TOP_GND:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\PGA_TOP_GND:Net_75\);
+BOTTOM_MUX_SENSE:cy_psoc3_amux_v1_0
 	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
+		muxin_width=>4,
 		hw_control=>'0',
 		one_active=>'0',
-		init_mux_sel=>"00",
+		init_mux_sel=>"0000",
 		api_type=>0,
 		connect_mode=>1)
-	PORT MAP(muxin=>(Net_575, Net_545),
+	PORT MAP(muxin=>(Net_645, Net_644, Net_643, Net_642),
 		hw_ctrl_en=>(others => zero),
-		vout=>Net_572);
-BOTTOM_MUX_3:cy_psoc3_amux_v1_0
+		vout=>Net_593);
+TOP_MUX_GND:cy_psoc3_amux_v1_0
 	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
+		muxin_width=>4,
 		hw_control=>'0',
 		one_active=>'0',
-		init_mux_sel=>"00",
+		init_mux_sel=>"0000",
 		api_type=>0,
 		connect_mode=>1)
-	PORT MAP(muxin=>(Net_575, Net_545),
+	PORT MAP(muxin=>(Net_535, Net_536, Net_647, Net_650),
 		hw_ctrl_en=>(others => zero),
-		vout=>Net_573);
-BOTTOM_MUX_4:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(Net_575, Net_545),
-		hw_ctrl_en=>(others => zero),
-		vout=>Net_574);
+		vout=>Net_669);
 TOP_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"05a9c8de-3ba2-4909-8250-95fdc61c0bf4",
 		drive_mode=>"000",
@@ -1367,7 +1373,7 @@ TOP_1:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__TOP_1_net_0),
-		analog=>Net_538,
+		analog=>Net_650,
 		io=>(tmpIO_0__TOP_1_net_0),
 		siovref=>(tmpSIOVREF__TOP_1_net_0),
 		annotation=>(open),
@@ -1406,7 +1412,7 @@ TOP_2:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__TOP_2_net_0),
-		analog=>Net_537,
+		analog=>Net_647,
 		io=>(tmpIO_0__TOP_2_net_0),
 		siovref=>(tmpSIOVREF__TOP_2_net_0),
 		annotation=>(open),
@@ -1523,7 +1529,7 @@ BOTTOM_1:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__BOTTOM_1_net_0),
-		analog=>Net_579,
+		analog=>Net_642,
 		io=>(tmpIO_0__BOTTOM_1_net_0),
 		siovref=>(tmpSIOVREF__BOTTOM_1_net_0),
 		annotation=>(open),
@@ -1562,7 +1568,7 @@ BOTTOM_2:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__BOTTOM_2_net_0),
-		analog=>Net_572,
+		analog=>Net_643,
 		io=>(tmpIO_0__BOTTOM_2_net_0),
 		siovref=>(tmpSIOVREF__BOTTOM_2_net_0),
 		annotation=>(open),
@@ -1601,7 +1607,7 @@ BOTTOM_3:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__BOTTOM_3_net_0),
-		analog=>Net_573,
+		analog=>Net_644,
 		io=>(tmpIO_0__BOTTOM_3_net_0),
 		siovref=>(tmpSIOVREF__BOTTOM_3_net_0),
 		annotation=>(open),
@@ -1640,7 +1646,7 @@ BOTTOM_4:cy_psoc3_pins_v1_10
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(tmpFB_0__BOTTOM_4_net_0),
-		analog=>Net_574,
+		analog=>Net_645,
 		io=>(tmpIO_0__BOTTOM_4_net_0),
 		siovref=>(tmpSIOVREF__BOTTOM_4_net_0),
 		annotation=>(open),

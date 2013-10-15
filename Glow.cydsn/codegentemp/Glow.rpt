@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.628ms
-Initializing data phase: Elapsed time ==> 3s.347ms
+Loading plugins phase: Elapsed time ==> 0s.647ms
+Initializing data phase: Elapsed time ==> 3s.343ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.cyprj -d CY8C5868AXI-LP035 -s C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Generated_Source\PSoC5 -- -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 4s.727ms
+Elaboration phase: Elapsed time ==> 4s.738ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.156ms
+HDL generation phase: Elapsed time ==> 0s.160ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Kojo\
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Oct 15 11:52:58 2013
+Tue Oct 15 13:39:07 2013
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Glow.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Oct 15 11:52:58 2013
+Tue Oct 15 13:39:07 2013
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\..\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_20\B_UART_v2_20.v'
@@ -100,7 +100,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Kojo\
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Oct 15 11:52:59 2013
+Tue Oct 15 13:39:08 2013
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -137,7 +137,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Kojo\
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Oct 15 11:52:59 2013
+Tue Oct 15 13:39:08 2013
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -270,6 +270,14 @@ Aliasing \ADC_SAR_1:vn_ctl_0\ to zero
 Aliasing \ADC_SAR_1:vn_ctl_2\ to zero
 Aliasing \ADC_SAR_1:soc\ to \LCD:tmpOE__LCDPort_net_6\
 Aliasing \ADC_SAR_1:tmpOE__Bypass_net_0\ to \LCD:tmpOE__LCDPort_net_6\
+Aliasing \PGA_BOTTOM_GND:Net_37\ to zero
+Aliasing \PGA_BOTTOM_GND:Net_40\ to zero
+Aliasing \PGA_BOTTOM_GND:Net_38\ to zero
+Aliasing \PGA_BOTTOM_GND:Net_39\ to zero
+Aliasing \PGA_TOP_GND:Net_37\ to zero
+Aliasing \PGA_TOP_GND:Net_40\ to zero
+Aliasing \PGA_TOP_GND:Net_38\ to zero
+Aliasing \PGA_TOP_GND:Net_39\ to zero
 Aliasing tmpOE__TOP_1_net_0 to \LCD:tmpOE__LCDPort_net_6\
 Aliasing tmpOE__TOP_2_net_0 to \LCD:tmpOE__LCDPort_net_6\
 Aliasing tmpOE__TOP_3_net_0 to \LCD:tmpOE__LCDPort_net_6\
@@ -411,23 +419,31 @@ Removing Lhs of wire \ADC_SAR_1:vn_ctl_2\[380] = zero[8]
 Removing Lhs of wire \ADC_SAR_1:Net_188\[383] = \ADC_SAR_1:Net_221\[382]
 Removing Lhs of wire \ADC_SAR_1:soc\[388] = one[29]
 Removing Lhs of wire \ADC_SAR_1:tmpOE__Bypass_net_0\[406] = one[29]
-Removing Lhs of wire tmpOE__TOP_1_net_0[438] = one[29]
-Removing Lhs of wire tmpOE__TOP_2_net_0[444] = one[29]
-Removing Lhs of wire tmpOE__TOP_3_net_0[450] = one[29]
-Removing Lhs of wire tmpOE__TOP_4_net_0[456] = one[29]
-Removing Lhs of wire tmpOE__BOTTOM_1_net_0[462] = one[29]
-Removing Lhs of wire tmpOE__BOTTOM_2_net_0[468] = one[29]
-Removing Lhs of wire tmpOE__BOTTOM_3_net_0[474] = one[29]
-Removing Lhs of wire tmpOE__BOTTOM_4_net_0[480] = one[29]
-Removing Lhs of wire \UART:BUART:reset_reg\\D\[485] = zero[8]
-Removing Lhs of wire \UART:BUART:tx_bitclk\\D\[490] = \UART:BUART:tx_bitclk_enable_pre\[53]
-Removing Lhs of wire Net_350D[491] = zero[8]
-Removing Lhs of wire \UART:BUART:rx_bitclk\\D\[500] = \UART:BUART:rx_bitclk_pre\[156]
-Removing Lhs of wire \UART:BUART:rx_parity_error_pre\\D\[509] = \UART:BUART:rx_parity_error_pre\[233]
-Removing Lhs of wire \UART:BUART:rx_break_status\\D\[510] = zero[8]
+Removing Lhs of wire \PGA_BOTTOM_GND:Net_37\[427] = zero[8]
+Removing Lhs of wire \PGA_BOTTOM_GND:Net_40\[428] = zero[8]
+Removing Lhs of wire \PGA_BOTTOM_GND:Net_38\[429] = zero[8]
+Removing Lhs of wire \PGA_BOTTOM_GND:Net_39\[430] = zero[8]
+Removing Lhs of wire \PGA_TOP_GND:Net_37\[444] = zero[8]
+Removing Lhs of wire \PGA_TOP_GND:Net_40\[445] = zero[8]
+Removing Lhs of wire \PGA_TOP_GND:Net_38\[446] = zero[8]
+Removing Lhs of wire \PGA_TOP_GND:Net_39\[447] = zero[8]
+Removing Lhs of wire tmpOE__TOP_1_net_0[456] = one[29]
+Removing Lhs of wire tmpOE__TOP_2_net_0[462] = one[29]
+Removing Lhs of wire tmpOE__TOP_3_net_0[468] = one[29]
+Removing Lhs of wire tmpOE__TOP_4_net_0[474] = one[29]
+Removing Lhs of wire tmpOE__BOTTOM_1_net_0[480] = one[29]
+Removing Lhs of wire tmpOE__BOTTOM_2_net_0[486] = one[29]
+Removing Lhs of wire tmpOE__BOTTOM_3_net_0[492] = one[29]
+Removing Lhs of wire tmpOE__BOTTOM_4_net_0[498] = one[29]
+Removing Lhs of wire \UART:BUART:reset_reg\\D\[503] = zero[8]
+Removing Lhs of wire \UART:BUART:tx_bitclk\\D\[508] = \UART:BUART:tx_bitclk_enable_pre\[53]
+Removing Lhs of wire Net_350D[509] = zero[8]
+Removing Lhs of wire \UART:BUART:rx_bitclk\\D\[518] = \UART:BUART:rx_bitclk_pre\[156]
+Removing Lhs of wire \UART:BUART:rx_parity_error_pre\\D\[527] = \UART:BUART:rx_parity_error_pre\[233]
+Removing Lhs of wire \UART:BUART:rx_break_status\\D\[528] = zero[8]
 
 ------------------------------------------------------
-Aliased 0 equations, 145 wires.
+Aliased 0 equations, 153 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -582,12 +598,12 @@ Aliasing \UART:BUART:rx_addr_match_status\\D\ to zero
 Removing Rhs of wire \UART:BUART:rx_bitclk_enable\[120] = \UART:BUART:rx_bitclk\[168]
 Removing Lhs of wire \UART:BUART:rx_status_0\[219] = zero[8]
 Removing Lhs of wire \UART:BUART:rx_status_6\[228] = zero[8]
-Removing Lhs of wire \UART:BUART:tx_ctrl_mark_last\\D\[492] = \UART:BUART:tx_ctrl_mark_last\[111]
-Removing Lhs of wire \UART:BUART:rx_markspace_status\\D\[504] = zero[8]
-Removing Lhs of wire \UART:BUART:rx_parity_error_status\\D\[505] = zero[8]
-Removing Lhs of wire \UART:BUART:rx_addr_match_status\\D\[507] = zero[8]
-Removing Lhs of wire \UART:BUART:rx_markspace_pre\\D\[508] = \UART:BUART:rx_markspace_pre\[232]
-Removing Lhs of wire \UART:BUART:rx_parity_bit\\D\[513] = \UART:BUART:rx_parity_bit\[238]
+Removing Lhs of wire \UART:BUART:tx_ctrl_mark_last\\D\[510] = \UART:BUART:tx_ctrl_mark_last\[111]
+Removing Lhs of wire \UART:BUART:rx_markspace_status\\D\[522] = zero[8]
+Removing Lhs of wire \UART:BUART:rx_parity_error_status\\D\[523] = zero[8]
+Removing Lhs of wire \UART:BUART:rx_addr_match_status\\D\[525] = zero[8]
+Removing Lhs of wire \UART:BUART:rx_markspace_pre\\D\[526] = \UART:BUART:rx_markspace_pre\[232]
+Removing Lhs of wire \UART:BUART:rx_parity_bit\\D\[531] = \UART:BUART:rx_parity_bit\[238]
 
 ------------------------------------------------------
 Aliased 0 equations, 9 wires.
@@ -626,14 +642,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.cyprj -dcpsoc3 Glow.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.719ms
+Warp synthesis phase: Elapsed time ==> 1s.798ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V2.1.0.1118, Family: PSoC3, Started at: Tuesday, 15 October 2013 11:53:00
+cyp3fit: V2.1.0.1118, Family: PSoC3, Started at: Tuesday, 15 October 2013 13:39:09
 Options: -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.cyprj -d CY8C5868AXI-LP035 Glow.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.108ms
+Design parsing phase: Elapsed time ==> 0s.106ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -660,7 +676,7 @@ Done removing unused cells.
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: UART_IntClock, EnableOut: Constant 1
 </CYPRESSTAG>
-ADD: pft.M0040: information: The following 8 pin(s) will be assigned a location by the fitter: \ADC_SAR_1:Bypass(0)\, BOTTOM_1(0), BOTTOM_2(0), BOTTOM_3(0), BOTTOM_4(0), TOP_2(0), TOP_3(0), TOP_4(0)
+ADD: pft.M0040: information: The following 8 pin(s) will be assigned a location by the fitter: \ADC_SAR_1:Bypass(0)\, \LCD:LCDPort(0)\, \LCD:LCDPort(1)\, \LCD:LCDPort(2)\, \LCD:LCDPort(3)\, \LCD:LCDPort(4)\, \LCD:LCDPort(5)\, \LCD:LCDPort(6)\
 
 
 Removing unused cells resulting from optimization
@@ -828,8 +844,11 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_579 ,
+            analog_term => Net_642 ,
             pad => BOTTOM_1(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = BOTTOM_2(0)
         Attributes:
@@ -863,8 +882,11 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_572 ,
+            analog_term => Net_643 ,
             pad => BOTTOM_2(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = BOTTOM_3(0)
         Attributes:
@@ -898,8 +920,11 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_573 ,
+            analog_term => Net_644 ,
             pad => BOTTOM_3(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = BOTTOM_4(0)
         Attributes:
@@ -933,8 +958,11 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_574 ,
+            analog_term => Net_645 ,
             pad => BOTTOM_4(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = RX(0)
         Attributes:
@@ -1006,7 +1034,7 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_538 ,
+            analog_term => Net_650 ,
             pad => TOP_1(0)_PAD );
         Properties:
         {
@@ -1044,8 +1072,11 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            analog_term => Net_537 ,
+            analog_term => Net_647 ,
             pad => TOP_2(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = TOP_3(0)
         Attributes:
@@ -1081,6 +1112,9 @@ Design Equations
         PORT MAP (
             analog_term => Net_536 ,
             pad => TOP_3(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = TOP_4(0)
         Attributes:
@@ -1116,6 +1150,9 @@ Design Equations
         PORT MAP (
             analog_term => Net_535 ,
             pad => TOP_4(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = TX(0)
         Attributes:
@@ -1223,9 +1260,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(0)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(1)\
         Attributes:
@@ -1260,9 +1294,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(1)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(2)\
         Attributes:
@@ -1297,9 +1328,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(2)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(3)\
         Attributes:
@@ -1334,9 +1362,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(3)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(4)\
         Attributes:
@@ -1371,9 +1396,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(4)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(5)\
         Attributes:
@@ -1408,9 +1430,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(5)_PAD\ );
-        Properties:
-        {
-        }
 
     Pin : Name = \LCD:LCDPort(6)\
         Attributes:
@@ -1445,9 +1464,6 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pad => \LCD:LCDPort(6)_PAD\ );
-        Properties:
-        {
-        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -2034,7 +2050,7 @@ Design Equations
 
     interrupt: Name =\ADC_SAR_1:IRQ\
         PORT MAP (
-            interrupt => Net_460 );
+            interrupt => Net_709 );
         Properties:
         {
             int_type = "10"
@@ -2080,7 +2096,7 @@ DMA Channels                  :    0 :   24 :   24 :   0.00%
 Interrupts                    :    3 :   29 :   32 :   9.38%
 DSM Fixed Blocks              :    0 :    1 :    1 :   0.00%
 VIDAC Fixed Blocks            :    2 :    2 :    4 :  50.00%
-SC Fixed Blocks               :    2 :    2 :    4 :  50.00%
+SC Fixed Blocks               :    4 :    0 :    4 : 100.00%
 Comparator Fixed Blocks       :    0 :    4 :    4 :   0.00%
 Opamp Fixed Blocks            :    0 :    4 :    4 :   0.00%
 CapSense Buffers              :    0 :    2 :    2 :   0.00%
@@ -2095,436 +2111,476 @@ EMIF Fixed Blocks             :    0 :    1 :    1 :   0.00%
 LPF Fixed Blocks              :    0 :    2 :    2 :   0.00%
 SAR Fixed Blocks              :    1 :    1 :    2 :  50.00%
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.337ms
+Technology Mapping: Elapsed time ==> 0s.331ms
 Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
-Tech mapping phase: Elapsed time ==> 0s.497ms
+Tech mapping phase: Elapsed time ==> 0s.486ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
+IO_0@[IOP=(3)][IoId=(0)] : BOTTOM_1(0) (fixed)
+IO_1@[IOP=(3)][IoId=(1)] : BOTTOM_2(0) (fixed)
+IO_2@[IOP=(3)][IoId=(2)] : BOTTOM_3(0) (fixed)
+IO_3@[IOP=(3)][IoId=(3)] : BOTTOM_4(0) (fixed)
 IO_0@[IOP=(6)][IoId=(0)] : RX(0) (fixed)
-IO_6@[IOP=(1)][IoId=(6)] : TOP_1(0) (fixed)
+IO_0@[IOP=(0)][IoId=(0)] : TOP_1(0) (fixed)
+IO_1@[IOP=(0)][IoId=(1)] : TOP_2(0) (fixed)
+IO_7@[IOP=(3)][IoId=(7)] : TOP_3(0) (fixed)
+IO_3@[IOP=(0)][IoId=(3)] : TOP_4(0) (fixed)
 IO_6@[IOP=(6)][IoId=(6)] : TX(0) (fixed)
-IO_0@[IOP=(2)][IoId=(0)] : \LCD:LCDPort(0)\ (fixed)
-IO_1@[IOP=(2)][IoId=(1)] : \LCD:LCDPort(1)\ (fixed)
-IO_2@[IOP=(2)][IoId=(2)] : \LCD:LCDPort(2)\ (fixed)
-IO_3@[IOP=(2)][IoId=(3)] : \LCD:LCDPort(3)\ (fixed)
-IO_4@[IOP=(2)][IoId=(4)] : \LCD:LCDPort(4)\ (fixed)
-IO_5@[IOP=(2)][IoId=(5)] : \LCD:LCDPort(5)\ (fixed)
-IO_6@[IOP=(2)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
-IO_2@[IOP=(6)][IoId=(2)] : BOTTOM_1(0)
-IO_1@[IOP=(5)][IoId=(1)] : BOTTOM_2(0)
-IO_3@[IOP=(3)][IoId=(3)] : BOTTOM_3(0)
-IO_2@[IOP=(3)][IoId=(2)] : BOTTOM_4(0)
-IO_7@[IOP=(4)][IoId=(7)] : TOP_2(0)
-IO_4@[IOP=(1)][IoId=(4)] : TOP_3(0)
-IO_1@[IOP=(0)][IoId=(1)] : TOP_4(0)
 Vref[6]@[FFB(Vref,6)] : VREF_GND
 SAR[1]@[FFB(SAR,1)] : \ADC_SAR_1:ADC_SAR\ (SAR-ExtVref)
 IO_2@[IOP=(0)][IoId=(2)] : \ADC_SAR_1:Bypass(0)\ (SAR-ExtVref)
 Vref[3]@[FFB(Vref,3)] : \ADC_SAR_1:vRef_1024\
 VIDAC[1]@[FFB(VIDAC,1)] : \IDAC8_REF:viDAC8\
-SC[3]@[FFB(SC,3)] : \PGA_GAIN:SC\
-SC[0]@[FFB(SC,0)] : \PGA_REF:SC\
-VIDAC[0]@[FFB(VIDAC,0)] : \VDAC8_REF:viDAC8\
-Log: apr.M0058: The analog placement iterative improvement is 31% done. (App=cydsfit)
-Log: apr.M0058: The analog placement iterative improvement is 50% done. (App=cydsfit)
-Log: apr.M0058: The analog placement iterative improvement is 81% done. (App=cydsfit)
+SC[3]@[FFB(SC,3)] : \PGA_BOTTOM_GND:SC\
+SC[0]@[FFB(SC,0)] : \PGA_GAIN:SC\
+SC[1]@[FFB(SC,1)] : \PGA_REF:SC\
+SC[2]@[FFB(SC,2)] : \PGA_TOP_GND:SC\
+VIDAC[3]@[FFB(VIDAC,3)] : \VDAC8_REF:viDAC8\
+Log: apr.M0058: The analog placement iterative improvement is 32% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 65% done. (App=cydsfit)
 Analog Placement Results:
+IO_0@[IOP=(3)][IoId=(0)] : BOTTOM_1(0) (fixed)
+IO_1@[IOP=(3)][IoId=(1)] : BOTTOM_2(0) (fixed)
+IO_2@[IOP=(3)][IoId=(2)] : BOTTOM_3(0) (fixed)
+IO_3@[IOP=(3)][IoId=(3)] : BOTTOM_4(0) (fixed)
 IO_0@[IOP=(6)][IoId=(0)] : RX(0) (fixed)
-IO_6@[IOP=(1)][IoId=(6)] : TOP_1(0) (fixed)
+IO_0@[IOP=(0)][IoId=(0)] : TOP_1(0) (fixed)
+IO_1@[IOP=(0)][IoId=(1)] : TOP_2(0) (fixed)
+IO_7@[IOP=(3)][IoId=(7)] : TOP_3(0) (fixed)
+IO_3@[IOP=(0)][IoId=(3)] : TOP_4(0) (fixed)
 IO_6@[IOP=(6)][IoId=(6)] : TX(0) (fixed)
-IO_0@[IOP=(2)][IoId=(0)] : \LCD:LCDPort(0)\ (fixed)
-IO_1@[IOP=(2)][IoId=(1)] : \LCD:LCDPort(1)\ (fixed)
-IO_2@[IOP=(2)][IoId=(2)] : \LCD:LCDPort(2)\ (fixed)
-IO_3@[IOP=(2)][IoId=(3)] : \LCD:LCDPort(3)\ (fixed)
-IO_4@[IOP=(2)][IoId=(4)] : \LCD:LCDPort(4)\ (fixed)
-IO_5@[IOP=(2)][IoId=(5)] : \LCD:LCDPort(5)\ (fixed)
-IO_6@[IOP=(2)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
-IO_7@[IOP=(4)][IoId=(7)] : BOTTOM_1(0)
-IO_0@[IOP=(4)][IoId=(0)] : BOTTOM_2(0)
-IO_4@[IOP=(6)][IoId=(4)] : BOTTOM_3(0)
-IO_3@[IOP=(6)][IoId=(3)] : BOTTOM_4(0)
-IO_4@[IOP=(5)][IoId=(4)] : TOP_2(0)
-IO_0@[IOP=(3)][IoId=(0)] : TOP_3(0)
-IO_2@[IOP=(4)][IoId=(2)] : TOP_4(0)
 Vref[6]@[FFB(Vref,6)] : VREF_GND
 SAR[1]@[FFB(SAR,1)] : \ADC_SAR_1:ADC_SAR\ (SAR-ExtVref)
 IO_2@[IOP=(0)][IoId=(2)] : \ADC_SAR_1:Bypass(0)\ (SAR-ExtVref)
 Vref[3]@[FFB(Vref,3)] : \ADC_SAR_1:vRef_1024\
-VIDAC[2]@[FFB(VIDAC,2)] : \IDAC8_REF:viDAC8\
+VIDAC[3]@[FFB(VIDAC,3)] : \IDAC8_REF:viDAC8\
+SC[3]@[FFB(SC,3)] : \PGA_BOTTOM_GND:SC\
 SC[1]@[FFB(SC,1)] : \PGA_GAIN:SC\
-SC[3]@[FFB(SC,3)] : \PGA_REF:SC\
-VIDAC[1]@[FFB(VIDAC,1)] : \VDAC8_REF:viDAC8\
+SC[2]@[FFB(SC,2)] : \PGA_REF:SC\
+SC[0]@[FFB(SC,0)] : \PGA_TOP_GND:SC\
+VIDAC[0]@[FFB(VIDAC,0)] : \VDAC8_REF:viDAC8\
 
-Analog Placement phase: Elapsed time ==> 4s.018ms
+Analog Placement phase: Elapsed time ==> 8s.548ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Log: apr.M0017: ============ VeraRouter Improve 1 OverUse=9 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vplus wire R"
-Net "Net_545" overuses wire "dsm0+ Wire"
-Net "Net_545" overuses wire "amuxbusL"
-Net "Net_575" overuses wire "AGR[5]"
-Net "Net_575" overuses wire "amuxbusL"
-Net "Net_425" overuses wire "AGR[5]"
-Net "Net_425" overuses wire "SAR vplus wire R"
-Net "AmuxEye::BOTTOM_MUX_4" overuses wire "dsm0+ Wire"
-Log: apr.M0017: ============ VeraRouter Improve 2 OverUse=4 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vminus wire R"
-Net "Net_575" overuses wire "AGR[4]"
-Net "Net_575" overuses wire "AGL[4]"
-Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
-Net "AmuxEye::BOTTOM_MUX_2" overuses wire "AGL[4]"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[4]"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[4]"
-Log: apr.M0017: ============ VeraRouter Improve 3 OverUse=3 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vplus wire R"
-Net "Net_425" overuses wire "SAR vplus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 4 OverUse=1 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vminus wire R"
-Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 5 OverUse=1 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vminus wire R"
-Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 6 OverUse=1 ============ (App=cydsfit)
-Net "AmuxEye::BOTTOM_MUX_2" overuses wire "AGL[4]"
-Net "AmuxNose::BOTTOM_MUX_2" overuses wire "DSM+ Sw__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGL[4]"
-Net "AmuxNose::TOP_MUX_3" overuses wire "DSM+ Sw__1b"
-Log: apr.M0017: ============ VeraRouter Improve 7 OverUse=3 ============ (App=cydsfit)
-Net "Net_425" overuses wire "SAR vplus wire R"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "SAR vplus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 8 OverUse=2 ============ (App=cydsfit)
-Net "Net_425" overuses wire "SAR vplus wire R"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "AGL[0]"
-Net "AmuxNose::BOTTOM_MUX_3" overuses wire "DSM+ Sw__7b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "AGL[0]"
-Net "AmuxNose::TOP_MUX_2" overuses wire "DSM+ Sw__7b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "SAR vplus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 9 OverUse=3 ============ (App=cydsfit)
-Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "CapSenseBuf0 VChan VP Mux__1b"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "CapSenseBuf0 VChan VP Mux__0b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "SAR vminus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 10 OverUse=3 ============ (App=cydsfit)
-Net "Net_575" overuses wire "AGL[5]"
-Net "Net_506" overuses wire "sc3 out Wire"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "CapSenseBuf1 VChan VP Mux__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "sc3 out Sw__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "sc3 out Wire"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGL[5]"
-Net "AmuxNose::TOP_MUX_3" overuses wire "sc3 out Sw__0b"
-Log: apr.M0017: ============ VeraRouter Improve 11 OverUse=4 ============ (App=cydsfit)
-Net "Net_575" overuses wire "AGR[7]"
-Net "Net_575" overuses wire "AGL[7]"
-Net "Net_425" overuses wire "AGR[7]"
-Net "Net_425" overuses wire "SAR vplus wire R"
-Net "AmuxEye::BOTTOM_MUX_1" overuses wire "AGL[7]"
-Net "AmuxEye::TOP_MUX_2" overuses wire "SAR vplus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 12 OverUse=3 ============ (App=cydsfit)
-Net "Net_575" overuses wire "1.024v_vref Wire"
-Net "Net_575" overuses wire "AGL[5]"
+Log: apr.M0017: ============ VeraRouter Improve 1 OverUse=19 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[4]"
+Net "Net_660" overuses wire "1.024v_vref Wire"
+Net "Net_660" overuses wire "sc3 Vin Wire"
 Net "\ADC_SAR_1:Net_248\" overuses wire "1.024v_vref Wire"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "AGL[0]"
-Net "AmuxNose::BOTTOM_MUX_3" overuses wire "DSM+ Sw__7b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "AGL[0]"
-Net "AmuxNose::TOP_MUX_2" overuses wire "DSM+ Sw__7b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGL[5]"
-Log: apr.M0017: ============ VeraRouter Improve 13 OverUse=4 ============ (App=cydsfit)
-Net "Net_575" overuses wire "amuxbusL"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "amuxbusL"
-Log: apr.M0017: ============ VeraRouter Improve 14 OverUse=1 ============ (App=cydsfit)
-Net "Net_575" overuses wire "AGR[4]"
-Net "Net_575" overuses wire "AGL[4]"
-Net "AmuxEye::BOTTOM_MUX_2" overuses wire "AGL[4]"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[4]"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[4]"
-Log: apr.M0017: ============ VeraRouter Improve 15 OverUse=2 ============ (App=cydsfit)
-Net "Net_545" overuses wire "dsm0+ Wire"
-Net "Net_545" overuses wire "dsm0- Wire"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "DSM+ Sw__0b"
-Net "AmuxEye::BOTTOM_MUX_3" overuses wire "dsm0+ Wire"
-Net "AmuxNose::BOTTOM_MUX_3" overuses wire "DSM+ Sw__0b"
-Net "AmuxEye::BOTTOM_MUX_4" overuses wire "DSM- Sw__5b"
-Net "AmuxEye::BOTTOM_MUX_4" overuses wire "dsm0- Wire"
-Net "AmuxNose::BOTTOM_MUX_4" overuses wire "DSM- Sw__5b"
-Log: apr.M0017: ============ VeraRouter Improve 16 OverUse=4 ============ (App=cydsfit)
-Net "Net_545" overuses wire "SAR vminus wire R"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__3b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__2b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[4]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc3 Vin Wire"
+Log: apr.M0017: ============ VeraRouter Improve 2 OverUse=4 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[5]"
+Net "Net_536" overuses wire "AGR[7]"
+Net "Net_660" overuses wire "1.024v_vref Wire"
+Net "Net_660" overuses wire "sc3 Vin Wire"
+Net "Net_660" overuses wire "AGL[7]"
+Net "Net_425" overuses wire "SAR vplus wire R"
+Net "\ADC_SAR_1:Net_248\" overuses wire "1.024v_vref Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SAR vplus wire R"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SAR vplus wire R"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[5]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[7]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[7]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[7]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc3 Vin Wire"
+Log: apr.M0017: ============ VeraRouter Improve 3 OverUse=6 ============ (App=cydsfit)
+Net "Net_593" overuses wire "i3 Wire"
+Net "Net_660" overuses wire "1.024v_vref Wire"
+Net "Net_660" overuses wire "sc3 Vin Wire"
+Net "\ADC_SAR_1:Net_248\" overuses wire "1.024v_vref Wire"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc3 Vin Wire"
+Log: apr.M0017: ============ VeraRouter Improve 4 OverUse=3 ============ (App=cydsfit)
+Net "Net_593" overuses wire "i3 Wire"
+Net "Net_660" overuses wire "sc1 out Wire"
+Net "Net_660" overuses wire "sc3 Vin Wire"
+Net "Net_660" overuses wire "SAR vplus wire R"
+Net "Net_425" overuses wire "sc1 out Wire"
+Net "Net_425" overuses wire "SAR vplus wire R"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc3 Vin Wire"
+Log: apr.M0017: ============ VeraRouter Improve 5 OverUse=4 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[5]"
+Net "Net_660" overuses wire "sc2 out Wire"
+Net "Net_660" overuses wire "dsm0+ Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[6]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__3b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__2b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[5]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[6]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "dsm0+ Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc2 out Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGR[6]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc2 out Wire"
+Log: apr.M0017: ============ VeraRouter Improve 6 OverUse=5 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[4]"
+Net "Net_647" overuses wire "AGL[5]"
+Net "Net_660" overuses wire "1.024v_vref Wire"
+Net "Net_660" overuses wire "AGL[5]"
+Net "\ADC_SAR_1:Net_248\" overuses wire "1.024v_vref Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__5b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[3] Mux__2b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[4]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[5]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[7]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL2AGR[7] Sw__0b"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGL[7]"
+Net "AmuxNose::TOP_MUX_GND" overuses wire "GPIO P0[3] Sw__1b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGL[7]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGL2AGR[7] Sw__0b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGL[7]"
+Net "AmuxNose::TOP_MUX_VREF" overuses wire "GPIO P0[3] Sw__1b"
+Log: apr.M0017: ============ VeraRouter Improve 7 OverUse=8 ============ (App=cydsfit)
+Net "Net_593" overuses wire "i3 Wire"
+Net "Net_660" overuses wire "sc2 out Wire"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc2 out Wire"
+Log: apr.M0017: ============ VeraRouter Improve 8 OverUse=2 ============ (App=cydsfit)
+Net "Net_593" overuses wire "i3 Wire"
+Net "Net_660" overuses wire "SAR vminus wire R"
 Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
-Log: apr.M0017: ============ VeraRouter Improve 17 OverUse=1 ============ (App=cydsfit)
-Net "Net_545" overuses wire "CapSenseBuf0 VChan VP Mux__0b"
-Net "Net_545" overuses wire "CapSenseBuf0 VChan VP Mux__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "AGR[0]"
-Net "AmuxEye::TOP_MUX_2" overuses wire "AGR[0]"
-Net "AmuxNose::TOP_MUX_2" overuses wire "sc3 out Sw__4b"
-Net "AmuxNose::TOP_MUX_2" overuses wire "AGL2AGR[0] Sw__0b"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[0]"
-Net "AmuxEye::TOP_MUX_3" overuses wire "AGR[0]"
-Net "AmuxNose::TOP_MUX_3" overuses wire "AGL2AGR[0] Sw__0b"
-Net "AmuxNose::TOP_MUX_3" overuses wire "sc3 out Sw__4b"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Log: apr.M0017: ============ VeraRouter Improve 9 OverUse=2 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[5]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SIO Ref[0] Sw__0b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SIO Ref[0] Sw__1b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[5]"
+Log: apr.M0017: ============ VeraRouter Improve 10 OverUse=2 ============ (App=cydsfit)
+Net "Net_536" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Log: apr.M0017: ============ VeraRouter Improve 11 OverUse=1 ============ (App=cydsfit)
+Net "Net_644" overuses wire "GPIO P3[2] Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[6]"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "GPIO P3[2] Sw__1b"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGR[6]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P3[2] Sw__1b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P3[2] Wire"
+Log: apr.M0017: ============ VeraRouter Improve 12 OverUse=4 ============ (App=cydsfit)
+Net "Net_593" overuses wire "sc1 Vin Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "sc1 Vin Wire"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGR[7]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P0[3] Mux__1b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P0[3] Mux__0b"
+Log: apr.M0017: ============ VeraRouter Improve 13 OverUse=4 ============ (App=cydsfit)
+Net "Net_644" overuses wire "GPIO P3[2] Wire"
+Net "Net_593" overuses wire "sc1 Vin Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[6]"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "GPIO P3[2] Sw__1b"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "sc1 Vin Wire"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "AGR[6]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P3[2] Sw__1b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P3[2] Wire"
+Log: apr.M0017: ============ VeraRouter Improve 14 OverUse=5 ============ (App=cydsfit)
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "SIO Ref[1] Sw__1b"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "SIO Ref[1] Sw__0b"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "amuxbusR"
+Log: apr.M0017: ============ VeraRouter Improve 15 OverUse=3 ============ (App=cydsfit)
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGR[7]"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "amuxbusR"
+Log: apr.M0017: ============ VeraRouter Improve 16 OverUse=2 ============ (App=cydsfit)
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[5] Mux__5b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[5] Mux__2b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[5]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "AGR[7]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "AGR[5]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGR[7]"
+Log: apr.M0017: ============ VeraRouter Improve 17 OverUse=3 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[4]"
+Net "Net_593" overuses wire "i3 Sw__1b"
+Net "Net_593" overuses wire "i3 Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[4]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[4]"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Sw__1b"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "amuxbusR"
 Log: apr.M0017: ============ VeraRouter Improve 18 OverUse=4 ============ (App=cydsfit)
-Net "Net_539" overuses wire "AGR[1]"
-Net "AmuxEye::TOP_MUX_2" overuses wire "SIO Ref[3] Sw__0b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "SIO Ref[3] Sw__1b"
-Net "AmuxEye::TOP_MUX_2" overuses wire "AGR[1]"
+Net "Net_593" overuses wire "i3 Wire"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "amuxbusR"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "amuxbusR"
 Log: apr.M0017: ============ VeraRouter Improve 19 OverUse=2 ============ (App=cydsfit)
+Net "Net_593" overuses wire "AGR[5]"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SIO Ref[0] Sw__0b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "SIO Ref[0] Sw__1b"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "AGR[5]"
+Net "AmuxEye::BOTTOM_MUX_SENSE" overuses wire "AGR[7]"
+Net "AmuxEye::TOP_MUX_GND" overuses wire "AGR[7]"
+Log: apr.M0017: ============ VeraRouter Improve 20 OverUse=3 ============ (App=cydsfit)
+Net "Net_643" overuses wire "GPIO P3[1] Wire"
+Net "Net_593" overuses wire "i3 Wire"
+Net "Net_647" overuses wire "GPIO P0[1] Wire"
+Net "Net_660" overuses wire "sc0 Vin Wire"
+Net "Net_425" overuses wire "sc1 out Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "i3 Wire"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[1] Wire Alt"
+Net "AmuxEye::BOTTOM_MUX_GND" overuses wire "GPIO P3[1] Wire"
+Net "AmuxNose::BOTTOM_MUX_GND" overuses wire "GPIO P3[1] Wire Alt"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc0 Vin Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "sc1 out Wire"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P0[1] Wire Alt2"
+Net "AmuxEye::TOP_MUX_VREF" overuses wire "GPIO P0[1] Wire"
+Net "AmuxNose::TOP_MUX_VREF" overuses wire "GPIO P0[1] Wire Alt2"
+Log: apr.M0017: ============ VeraRouter Improve 21 OverUse=7 ============ (App=cydsfit)
+Net "Net_660" overuses wire "SAR vminus wire R"
+Net "\ADC_SAR_1:Net_126\" overuses wire "SAR vminus wire R"
+Log: apr.M0017: ============ VeraRouter Improve 22 OverUse=1 ============ (App=cydsfit)
 ============ VeraRouter Final Answer Routes ============
-Connect Signal: Net_579 => (GPIO P4[7] (287)) 
-Route#9104: 
-  (GPIO P4[7] (287)) 
-Connect Signal: Net_545 => (VRef Block Vssa (1194)) 
-  augmented for Net_579 => (GPIO P4[7] (287)) 
-  augmented for Net_572 => (GPIO P4[0] (252)) 
-  augmented for Net_573 => (GPIO P6[4] (312)) 
-  augmented for Net_574 => (GPIO P6[3] (307)) 
-  augmented for Net_538 => (GPIO P1[6] (442)) 
-  augmented for Net_537 => (GPIO P5[4] (392)) 
-  augmented for Net_536 => (GPIO P3[0] (127)) 
-  augmented for Net_535 => (GPIO P4[2] (262)) 
-Route#9473: 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] 
-Connect Signal: Net_575 => (VIDAC Iout 2 (596)) (SC/CT 1vin (951)) 
-  augmented for Net_579 => (GPIO P4[7] (287)) 
-  augmented for Net_572 => (GPIO P4[0] (252)) 
-  augmented for Net_573 => (GPIO P6[4] (312)) 
-  augmented for Net_574 => (GPIO P6[3] (307)) 
-Route#9417: 
+Connect Signal: Net_585 => (SC/CT 3out (960)) 
+Route#6165: 
+  (SC/CT 3out (960)) 
+Connect Signal: Net_642 => (GPIO P3[0] (127)) 
+  augmented for Net_585 => (SC/CT 3out (960)) 
+  augmented for Net_593 => (VIDAC Iout 3 (598)) (SC/CT 1vin (951)) 
+Route#6168: 
+  (GPIO P3[0] (127)) [GPIO P3[0] Wire [592]] 
+Connect Signal: Net_643 => (GPIO P3[1] (133)) 
+  augmented for Net_585 => (SC/CT 3out (960)) 
+  augmented for Net_593 => (VIDAC Iout 3 (598)) (SC/CT 1vin (951)) 
+Route#6245: 
+  (GPIO P3[1] (133)) [GPIO P3[1] Wire [596]] 
+    (GPIO P3[1] Sw__1a (137)) [GPIO P3[1] Sw__1b [045]] 
+Connect Signal: Net_644 => (GPIO P3[2] (139)) 
+  augmented for Net_585 => (SC/CT 3out (960)) 
+  augmented for Net_593 => (VIDAC Iout 3 (598)) (SC/CT 1vin (951)) 
+Route#6178: 
+  (GPIO P3[2] (139)) [GPIO P3[2] Wire [599]] 
+Connect Signal: Net_645 => (GPIO P3[3] (154)) 
+  augmented for Net_585 => (SC/CT 3out (960)) 
+  augmented for Net_593 => (VIDAC Iout 3 (598)) (SC/CT 1vin (951)) 
+Route#6183: 
+  (GPIO P3[3] (154)) [GPIO P3[3] Wire [607]] 
+    (GPIO P3[3] Sw__0a (156)) [GPIO P3[3] Sw__0b [051]] (GPIO P3[3] Sw__0c (157)##) [amuxbusR [594]] 
+Connect Signal: Net_593 => (VIDAC Iout 3 (598)) (SC/CT 1vin (951)) 
+Route#6250: 
   (SC/CT 1vin (951)) [sc1 Vin Wire [752]] 
-    (sc1 Vin Sw__2a (1063)) [sc1 Vin Sw__2b [432]] (sc1 Vin Sw__2c (1064)##) [AGR[5] [598]] 
-    (AGL2AGR[5] Sw__0c (493)##) [AGL2AGR[5] Sw__0b [181]] (AGL2AGR[5] Sw__0a (492)) [AGL[5] [543]] 
-    (i2 Sw__2c (632)##) [i2 Sw__2b [235]] (i2 Sw__2a (631)) [i2 Wire [715]] 
-    (VIDAC Iout 2 (596)) 
-Connect Signal: Net_572 => (GPIO P4[0] (252)) 
-Route#9122: 
-  (GPIO P4[0] (252)) 
-Connect Signal: Net_573 => (GPIO P6[4] (312)) 
-Route#9125: 
-  (GPIO P6[4] (312)) 
-Connect Signal: Net_574 => (GPIO P6[3] (307)) 
-Route#9128: 
-  (GPIO P6[3] (307)) 
-Connect Signal: Net_538 => (GPIO P1[6] (442)) 
-Route#9131: 
-  (GPIO P1[6] (442)) 
-Connect Signal: Net_506 => (SC/CT 3out (960)) 
-  augmented for Net_538 => (GPIO P1[6] (442)) 
-  augmented for Net_537 => (GPIO P5[4] (392)) 
-  augmented for Net_536 => (GPIO P3[0] (127)) 
-  augmented for Net_535 => (GPIO P4[2] (262)) 
-Route#9357: 
-  (SC/CT 3out (960)) [sc3 out Wire [761]] 
-Connect Signal: Net_537 => (GPIO P5[4] (392)) 
-Route#9141: 
-  (GPIO P5[4] (392)) 
-Connect Signal: Net_536 => (GPIO P3[0] (127)) 
-Route#9144: 
-  (GPIO P3[0] (127)) 
-Connect Signal: Net_535 => (GPIO P4[2] (262)) 
-Route#9147: 
-  (GPIO P4[2] (262)) 
+    (sc1 Vin Sw__1a (1061)) [sc1 Vin Sw__1b [431]] (sc1 Vin Sw__1c (1062)##) [AGR[4] [595]] 
+    (i3 Sw__1c (666)##) [i3 Sw__1b [252]] (i3 Sw__1a (665)) [i3 Wire [717]] 
+    (VIDAC Iout 3 (598)) 
+Connect Signal: Net_669 => (SC/CT 0out (957)) 
+Route#6191: 
+  (SC/CT 0out (957)) 
+Connect Signal: Net_650 => (GPIO P0[0] (000)) 
+  augmented for Net_669 => (SC/CT 0out (957)) 
+  augmented for Net_616 => (SC/CT 2out (958)) 
+Route#6194: 
+  (GPIO P0[0] (000)) [GPIO P0[0] Wire [535]] 
+    (GPIO P0[0] Sw__1a (005)) [GPIO P0[0] Sw__1b [001]] (GPIO P0[0] Sw__1c (006)##) [AGL[4] [539]] 
+Connect Signal: Net_647 => (GPIO P0[1] (007)) 
+  augmented for Net_669 => (SC/CT 0out (957)) 
+  augmented for Net_616 => (SC/CT 2out (958)) 
+Route#6253: 
+  (GPIO P0[1] (007)) [GPIO P0[1] Wire [540]] 
+    (GPIO P0[1] Sw__1a (012)) [GPIO P0[1] Sw__1b [003]] (GPIO P0[1] Sw__1c (013)##) [AGL[5] [543]] 
+Connect Signal: Net_536 => (GPIO P3[7] (245)) 
+  augmented for Net_669 => (SC/CT 0out (957)) 
+  augmented for Net_616 => (SC/CT 2out (958)) 
+Route#6204: 
+  (GPIO P3[7] (245)) [GPIO P3[7] Wire [643]] 
+    (GPIO P3[7] Sw__1a (250)) [GPIO P3[7] Sw__1b [083]] (GPIO P3[7] Sw__1c (251)##) [AGR[7] [606]] 
+Connect Signal: Net_535 => (GPIO P0[3] (050)) 
+  augmented for Net_669 => (SC/CT 0out (957)) 
+  augmented for Net_616 => (SC/CT 2out (958)) 
+Route#6209: 
+  (GPIO P0[3] (050)) [GPIO P0[3] Wire [564]] 
+    (GPIO P0[3] Sw__0a (053)) [GPIO P0[3] Sw__0b [016]] (GPIO P0[3] Sw__0c (054)##) [amuxbusL [538]] 
+Connect Signal: Net_616 => (SC/CT 2out (958)) 
+Route#6214: 
+  (SC/CT 2out (958)) 
+Connect Signal: Net_660 => (VRef Block Vssa (1194)) (SC/CT 3vin (952)) (SC/CT 0vin (949)) 
+Route#6268: 
+  (SC/CT 0vin (949)) [sc0 Vin Wire [750]] 
+    (sc0 Vin Sw__9a (981)) [sc0 Vin Sw__9b [391]] (sc0 Vin Sw__9c (982)##) [AGL[1] [657]] 
+    (AGL2AGR[1] Sw__0a (484)) [AGL2AGR[1] Sw__0b [177]] (AGL2AGR[1] Sw__0c (485)##) [AGR[1] [677]] 
+    (sc3 Vin Sw__9c (1126)##) [sc3 Vin Sw__9b [463]] (sc3 Vin Sw__9a (1125)) [sc3 Vin Wire [753]] 
+    (SC/CT 3vin (952)) 
+  (sc0 Vin Sw__9c (982)##) [AGL[1] [657]] 
+    (DSM- Sw__4c (563)##) [DSM- Sw__4b [209]] (DSM- Sw__4a (562)) [dsm0- Wire [702]] 
+    (DSM- Swx__0a (568)) [DSM- Swx__0b [212]] (DSM- Swx__0c (569)##) [Vssa Wire Alt2 [704]] 
+    (Vssa Wire Alt2 Sw (1196)) [Vssa Wire [781]] 
+    (VRef Block Vssa (1194)) 
 Connect Signal: Net_425 => (SAR1 Vp (730)) (SC/CT 1out (959)) 
-Route#9381: 
+Route#6259: 
   (SC/CT 1out (959)) [sc1 out Wire [760]] 
-    (sc1 out Sw__1a (1095)) [sc1 out Sw__1b [448]] (sc1 out Sw__1c (1096)##) [AGR[7] [606]] 
-    (SAR vplus sw R__4c (744)##) [SAR vplus sw R__4b [284]] (SAR vplus sw R__4a (743)) [SAR vplus wire R [730]] 
+    (sc1 out Sw__5a (1103)) [sc1 out Sw__5b [452]] (sc1 out Sw__5c (1104)##) [AGR[3] [681]] 
+    (SAR vplus sw R__10c (756)##) [SAR vplus sw R__10b [290]] (SAR vplus sw R__10a (755)) [SAR vplus wire R [730]] 
     (SAR1 Vp (730)) 
 Connect Signal: \ADC_SAR_1:Net_126\ => (SAR1 Vn (731)) (SAR1 vrefhi_out (732)) 
-Route#9472: 
+Route#6269: 
   (SAR1 vrefhi_out (732)) [SAR vrefhi_out wire R [732]] 
     (SAR vminus sw R__7c (774)##) [SAR vminus sw R__7b [299]] (SAR vminus sw R__7a (773)) [SAR vminus wire R [731]] 
     (SAR1 Vn (731)) 
 Connect Signal: \ADC_SAR_1:Net_215\ => (SAR1 extvref (733)) (GPIO P0[2] (014)) 
-Route#9152: 
+Route#6220: 
   (GPIO P0[2] (014)) [GPIO P0[2] Wire [544]] 
     (GPIO P0[2] Wire ExVref Sw (016)) [GPIO P0[2] Wire ExVref [546]] 
     (SAR1 extvref (733)) 
 Connect Signal: \ADC_SAR_1:Net_248\ => (SAR1 vref (734)) (VRef Block 1.024v (1191)) 
-Route#9395: 
+Route#6221: 
   (VRef Block 1.024v (1191)) [1.024v_vref Wire [558]] 
     (1.024v_vref Wire sar1 Sw (786)) [1.024v_vref Wire sar1 [737]] 
     (SAR vref sw R__1c (780)!!) [SAR vref sw R__1b [302]] (SAR vref sw R__1a (779)) [SAR vref wire R [733]] 
     (SAR1 vref (734)) 
-Connect Signal: \IDAC8_REF:Net_124\ => (VIDAC Vout 2 (592)) 
-Route#9154: 
-  (VIDAC Vout 2 (592)) 
-Connect Signal: \PGA_GAIN:Net_17\ => (SC/CT 1vref (955)) 
-Route#9155: 
-  (SC/CT 1vref (955)) 
-Connect Signal: \PGA_REF:Net_17\ => (SC/CT 3vref (956)) 
-Route#9156: 
+Connect Signal: \IDAC8_REF:Net_124\ => (VIDAC Vout 3 (594)) 
+Route#6222: 
+  (VIDAC Vout 3 (594)) 
+Connect Signal: \PGA_BOTTOM_GND:Net_17\ => (SC/CT 3vref (956)) 
+Route#6223: 
   (SC/CT 3vref (956)) 
-Connect Signal: Net_539 => (SC/CT 3vin (952)) (VIDAC Vout 1 (593)) 
-Route#9498: 
-  (VIDAC Vout 1 (593)) [v1 Wire [712]] 
-    (v1 Sw__2a (639)) [v1 Sw__2b [239]] (v1 Sw__2c (640)##) [abusR3 [622]] 
-    (sc3 Vin Sw__7c (1122)##) [sc3 Vin Sw__7b [461]] (sc3 Vin Sw__7a (1121)) [sc3 Vin Wire [753]] 
-    (SC/CT 3vin (952)) 
-Connect Signal: \VDAC8_REF:Net_77\ => (VIDAC Iout 1 (597)) 
-Route#9158: 
-  (VIDAC Iout 1 (597)) 
-Connect Mux: Amux::BOTTOM_MUX_1 => { 
-  (GPIO P4[7] (287)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
+Connect Signal: \PGA_GAIN:Net_17\ => (SC/CT 1vref (955)) 
+Route#6224: 
+  (SC/CT 1vref (955)) 
+Connect Signal: \PGA_REF:Net_17\ => (SC/CT 2vref (954)) 
+Route#6225: 
+  (SC/CT 2vref (954)) 
+Connect Signal: Net_539 => (SC/CT 2vin (950)) (VIDAC Vout 0 (591)) 
+Route#6226: 
+  (VIDAC Vout 0 (591)) [v0 Wire [710]] 
+    (v0 Sw__3a (605)) [v0 Sw__3b [222]] (v0 Sw__3c (606)##) [AGL[0] [655]] 
+    (sc2 Vin Sw__8c (1028)##) [sc2 Vin Sw__8b [414]] (sc2 Vin Sw__8a (1027)) [sc2 Vin Wire [751]] 
+    (SC/CT 2vin (950)) 
+Connect Signal: \PGA_TOP_GND:Net_17\ => (SC/CT 0vref (953)) 
+Route#6227: 
+  (SC/CT 0vref (953)) 
+Connect Signal: \VDAC8_REF:Net_77\ => (VIDAC Iout 0 (595)) 
+Route#6228: 
+  (VIDAC Iout 0 (595)) 
+Connect Mux: Amux::BOTTOM_MUX_GND => { 
+  (SC/CT 3out (960)) } -->> {{  { 
+  (GPIO P3[0] (127)) [GPIO P3[0] Wire [592]] } || { 
+  (GPIO P3[1] (133)) [GPIO P3[1] Wire [596]] 
+    (GPIO P3[1] Sw__1a (137)) [GPIO P3[1] Sw__1b [045]] } || { 
+  (GPIO P3[2] (139)) [GPIO P3[2] Wire [599]] } || { 
+  (GPIO P3[3] (154)) [GPIO P3[3] Wire [607]] 
+    (GPIO P3[3] Sw__0a (156)) [GPIO P3[3] Sw__0b [051]] (GPIO P3[3] Sw__0c (157)##) [amuxbusR [594]] } }}
+Route#6262: 
+  (SC/CT 3out (960)) [sc3 out Wire [761]] 
+    (sc3 out Sw__4a (1149)) [sc3 out Sw__4b [475]] (sc3 out Sw__4c (1150)##) [AGR[0] [675]] 
+    (comp3+ Sw__7c (926)##) [comp3+ Sw__7b [369]] (comp3+ Sw__7a (925)) [comp3+ Wire [743]] 
+    (comp3+ Sw__2a (915)) [comp3+ Sw__2b [364]] (comp3+ Sw__2c (916)##) [AGR[5] [598]] 
+    (GPIO P3[1] Sw__1c (138)##) 
+  (comp3+ Sw__2c (916)##) [AGR[5] [598]] 
+    (GPIO P3[2] Mux AGR[5] Sw (152)) [GPIO P3[2] Mux AGR[5] [604]] 
+    (GPIO P3[2] Mux__0c (149)!!) [GPIO P3[2] Mux__0b [049]] (GPIO P3[2] Mux__0a (148)) [abuf3- Wire [603]] 
+    (GPIO P3[2] Seg Sw__0c (147)##) 
+  (sc3 out Sw__4c (1150)##) [AGR[0] [675]] 
+    (i1 Sw__1c (648)##) [i1 Sw__1b [243]] (i1 Sw__1a (647)) [i1 Wire [716]] 
+    (i1 hi Sw__0a (651)) [i1 hi Sw__0b [245]] (i1 hi Sw__0c (652)##) 
+  (i1 Sw__1a (647)) [i1 Wire [716]] 
+    (i1 Sw__0a (645)) [i1 Sw__0b [242]] (i1 Sw__0c (646)##) 
+Route#6263: 
+  (GPIO P3[1] Sw__1c (138)##) 
+  (GPIO P3[2] Seg Sw__0c (147)##) [GPIO P3[2] Seg Sw__0b [048]] (GPIO P3[2] Seg Sw__0a (146)) [GPIO P3[2] Wire Alt [600]] 
+    (GPIO P3[2] Wire Alt Sw (140)) 
+  (i1 hi Sw__0c (652)##) [GPIO P3[0] Wire Alt [593]] 
+    (GPIO P3[0] Wire Alt Sw (128)) 
+  (i1 Sw__0c (646)##) 
+Connect Mux: Amux::BOTTOM_MUX_SENSE => { 
   (SC/CT 1vin (951)) [sc1 Vin Wire [752]] 
-    (sc1 Vin Sw__2a (1063)) [sc1 Vin Sw__2b [432]] (sc1 Vin Sw__2c (1064)##) [AGR[5] [598]] 
-    (AGL2AGR[5] Sw__0c (493)##) [AGL2AGR[5] Sw__0b [181]] (AGL2AGR[5] Sw__0a (492)) [AGL[5] [543]] 
-    (i2 Sw__2c (632)##) [i2 Sw__2b [235]] (i2 Sw__2a (631)) [i2 Wire [715]] 
-    (VIDAC Iout 2 (596)) } }}
-Route#9474: 
-  (GPIO P4[7] (287)) [GPIO P4[7] Wire [653]] 
-    (GPIO P4[7] Sw__1a (290)) [GPIO P4[7] Sw__1b [099]] (GPIO P4[7] Sw__1c (291)##) [AGL[7] [559]] 
-    (GPIO P0[7] Sw__1c (126)##) [GPIO P0[7] Sw__1b [041]] (GPIO P0[7] Sw__1a (125)) [GPIO P0[7] Wire [590]] 
-    (GPIO P0[7] Wire Alt Sw (122)) [GPIO P0[7] Wire Alt [591]] 
-    (i2 hi Sw__0c (634)##) 
-  (GPIO P4[7] Sw__1c (291)##) [AGL[7] [559]] 
-    (DSM+ Sw__4c (537)##) 
-Route#9475: 
-  (i2 hi Sw__0c (634)##) [i2 hi Sw__0b [236]] (i2 hi Sw__0a (633)) 
-  (DSM+ Sw__4c (537)##) [DSM+ Sw__4b [197]] (DSM+ Sw__4a (536)) 
-Connect Mux: Amux::BOTTOM_MUX_2 => { 
-  (GPIO P4[0] (252)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 1vin (951)) [sc1 Vin Wire [752]] 
-    (sc1 Vin Sw__2a (1063)) [sc1 Vin Sw__2b [432]] (sc1 Vin Sw__2c (1064)##) [AGR[5] [598]] 
-    (AGL2AGR[5] Sw__0c (493)##) [AGL2AGR[5] Sw__0b [181]] (AGL2AGR[5] Sw__0a (492)) [AGL[5] [543]] 
-    (i2 Sw__2c (632)##) [i2 Sw__2b [235]] (i2 Sw__2a (631)) [i2 Wire [715]] 
-    (VIDAC Iout 2 (596)) } }}
-Route#9476: 
-  (GPIO P4[0] (252)) [GPIO P4[0] Wire [646]] 
-    (GPIO P4[0] Sw__1a (255)) [GPIO P4[0] Sw__1b [085]] (GPIO P4[0] Sw__1c (256)##) [AGL[4] [539]] 
-    (DSM+ Sw__1c (531)##) 
-  (GPIO P4[0] Sw__1c (256)##) [AGL[4] [539]] 
-    (i2 Sw__1c (630)##) 
-Route#9477: 
-  (DSM+ Sw__1c (531)##) [DSM+ Sw__1b [194]] (DSM+ Sw__1a (530)) 
-  (i2 Sw__1c (630)##) [i2 Sw__1b [234]] (i2 Sw__1a (629)) 
-Connect Mux: Amux::BOTTOM_MUX_3 => { 
-  (GPIO P6[4] (312)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 1vin (951)) [sc1 Vin Wire [752]] 
-    (sc1 Vin Sw__2a (1063)) [sc1 Vin Sw__2b [432]] (sc1 Vin Sw__2c (1064)##) [AGR[5] [598]] 
-    (AGL2AGR[5] Sw__0c (493)##) [AGL2AGR[5] Sw__0b [181]] (AGL2AGR[5] Sw__0a (492)) [AGL[5] [543]] 
-    (i2 Sw__2c (632)##) [i2 Sw__2b [235]] (i2 Sw__2a (631)) [i2 Wire [715]] 
-    (VIDAC Iout 2 (596)) } }}
-Route#9478: 
-  (GPIO P6[4] (312)) [GPIO P6[4] Wire [662]] 
-    (GPIO P6[4] Sw__1a (315)) [GPIO P6[4] Sw__1b [109]] (GPIO P6[4] Sw__1c (316)##) [AGL[0] [655]] 
-    (DSM+ Sw__7c (543)##) 
-  (GPIO P6[4] (312)) [GPIO P6[4] Wire [662]] 
-    (GPIO P6[4] Sw__0a (313)) [GPIO P6[4] Sw__0b [108]] (GPIO P6[4] Sw__0c (314)##) [amuxbusL [538]] 
-    (i2 Sw__0c (628)##) 
-Route#9479: 
-  (DSM+ Sw__7c (543)##) [DSM+ Sw__7b [200]] (DSM+ Sw__7a (542)) 
-  (i2 Sw__0c (628)##) [i2 Sw__0b [233]] (i2 Sw__0a (627)) 
-Connect Mux: Amux::BOTTOM_MUX_4 => { 
-  (GPIO P6[3] (307)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 1vin (951)) [sc1 Vin Wire [752]] 
-    (sc1 Vin Sw__2a (1063)) [sc1 Vin Sw__2b [432]] (sc1 Vin Sw__2c (1064)##) [AGR[5] [598]] 
-    (AGL2AGR[5] Sw__0c (493)##) [AGL2AGR[5] Sw__0b [181]] (AGL2AGR[5] Sw__0a (492)) [AGL[5] [543]] 
-    (i2 Sw__2c (632)##) [i2 Sw__2b [235]] (i2 Sw__2a (631)) [i2 Wire [715]] 
-    (VIDAC Iout 2 (596)) } }}
-Route#9480: 
-  (GPIO P6[3] (307)) [GPIO P6[3] Wire [660]] 
-    (GPIO P6[3] Sw__1a (310)) [GPIO P6[3] Sw__1b [107]] (GPIO P6[3] Sw__1c (311)##) [AGL[3] [661]] 
-    (DSM- Sw__5c (565)##) [DSM- Sw__5b [210]] (DSM- Sw__5a (564)) [dsm0- Wire [702]] 
-    (DSM- Sw__0a (554)) [DSM- Sw__0b [205]] (DSM- Sw__0c (555)##) 
-  (DSM- Sw__5a (564)) [dsm0- Wire [702]] 
-    (DSM- Swx__0a (568)) [DSM- Swx__0b [212]] (DSM- Swx__0c (569)##) 
-Route#9481: 
-  (DSM- Sw__0c (555)##) 
-  (DSM- Swx__0c (569)##) [Vssa Wire Alt2 [704]] 
-    (Vssa Wire Alt2 Sw (1196)) 
-Connect Mux: Amux::TOP_MUX_1 => { 
-  (GPIO P1[6] (442)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 3out (960)) [sc3 out Wire [761]] } }}
-Route#9482: 
-  (GPIO P1[6] (442)) [GPIO P1[6] Wire [692]] 
-    (GPIO P1[6] Sw__1a (445)) [GPIO P1[6] Sw__1b [161]] (GPIO P1[6] Sw__1c (446)##) [AGR[2] [679]] 
-    (AGL2AGR[2] Sw__0c (487)##) [AGL2AGR[2] Sw__0b [178]] (AGL2AGR[2] Sw__0a (486)) [AGL[2] [659]] 
-    (DSM+ Sw__9c (547)##) 
-  (GPIO P1[6] Sw__1c (446)##) [AGR[2] [679]] 
-    (sc3 out Sw__5c (1152)##) 
-Route#9483: 
-  (DSM+ Sw__9c (547)##) [DSM+ Sw__9b [202]] (DSM+ Sw__9a (546)) 
-  (sc3 out Sw__5c (1152)##) [sc3 out Sw__5b [476]] (sc3 out Sw__5a (1151)) 
-Connect Mux: Amux::TOP_MUX_2 => { 
-  (GPIO P5[4] (392)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 3out (960)) [sc3 out Wire [761]] } }}
-Route#9499: 
-  (GPIO P5[4] (392)) [GPIO P5[4] Wire [682]] 
-    (GPIO P5[4] Sw__0a (393)) [GPIO P5[4] Sw__0b [140]] (GPIO P5[4] Sw__0c (394)##) [amuxbusR [594]] 
-    (GPIO P5[1] Sw__0c (379)##) [GPIO P5[1] Sw__0b [134]] (GPIO P5[1] Sw__0a (378)) [GPIO P5[1] Wire [676]] 
-    (GPIO P5[1] Sw__1a (380)) [GPIO P5[1] Sw__1b [135]] (GPIO P5[1] Sw__1c (381)##) [AGR[1] [677]] 
-    (AGL2AGR[1] Sw__0c (485)##) [AGL2AGR[1] Sw__0b [177]] (AGL2AGR[1] Sw__0a (484)) [AGL[1] [657]] 
-    (DSM+ Sw__8c (545)##) 
-  (GPIO P5[4] (392)) [GPIO P5[4] Wire [682]] 
-    (GPIO P5[4] Sw__1a (395)) [GPIO P5[4] Sw__1b [141]] (GPIO P5[4] Sw__1c (396)##) [AGR[0] [675]] 
-    (sc3 out Sw__4c (1150)##) 
-Route#9500: 
-  (DSM+ Sw__8c (545)##) [DSM+ Sw__8b [201]] (DSM+ Sw__8a (544)) 
-  (sc3 out Sw__4c (1150)##) [sc3 out Sw__4b [475]] (sc3 out Sw__4a (1149)) 
-Connect Mux: Amux::TOP_MUX_3 => { 
-  (GPIO P3[0] (127)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 3out (960)) [sc3 out Wire [761]] } }}
-Route#9496: 
-  (GPIO P3[0] (127)) [GPIO P3[0] Wire [592]] 
-    (GPIO P3[0] Sw__1a (131)) [GPIO P3[0] Sw__1b [043]] (GPIO P3[0] Sw__1c (132)##) [AGR[4] [595]] 
-    (v3 Sw__1c (656)##) [v3 Sw__1b [247]] (v3 Sw__1a (655)) [v3 Wire [713]] 
-    (v3 Sw__3a (659)) [v3 Sw__3b [249]] (v3 Sw__3c (660)##) [abusR0 [619]] 
-    (abusL2abusR[0]__0c (501)##) [abusL2abusR[0]__0b [185]] (abusL2abusR[0]__0a (500)) [abusL0 [560]] 
-    (DSM+ Sw__5c (539)##) 
-  (v3 Sw__3c (660)##) [abusR0 [619]] 
-    (sc3 out Sw__2c (1146)##) 
-Route#9497: 
-  (DSM+ Sw__5c (539)##) [DSM+ Sw__5b [198]] (DSM+ Sw__5a (538)) 
-  (sc3 out Sw__2c (1146)##) [sc3 out Sw__2b [473]] (sc3 out Sw__2a (1145)) 
-Connect Mux: Amux::TOP_MUX_4 => { 
-  (GPIO P4[2] (262)) } -->> {{  { 
-  (VRef Block Vssa (1194)) [Vssa Wire [781]] 
-    (Vssa Wire Alt1 Sw (1195)) [Vssa Wire Alt1 [701]] 
-    (DSM+ Swx__0c (551)##) [DSM+ Swx__0b [204]] (DSM+ Swx__0a (550)) [dsm0+ Wire [700]] } || { 
-  (SC/CT 3out (960)) [sc3 out Wire [761]] } }}
-Route#9488: 
-  (GPIO P4[2] (262)) [GPIO P4[2] Wire [648]] 
-    (GPIO P4[2] Sw__1a (265)) [GPIO P4[2] Sw__1b [089]] (GPIO P4[2] Sw__1c (266)##) [AGL[6] [547]] 
-    (AGL2AGR[6] Sw__0a (494)) [AGL2AGR[6] Sw__0b [182]] (AGL2AGR[6] Sw__0c (495)##) [AGR[6] [602]] 
-    (sc3 out Sw__1c (1144)##) 
-  (GPIO P4[2] Sw__1c (266)##) [AGL[6] [547]] 
-    (DSM+ Sw__3c (535)##) 
-Route#9489: 
-  (sc3 out Sw__1c (1144)##) [sc3 out Sw__1b [472]] (sc3 out Sw__1a (1143)) 
-  (DSM+ Sw__3c (535)##) [DSM+ Sw__3b [196]] (DSM+ Sw__3a (534)) 
-Analog Routing phase: Elapsed time ==> 0s.249ms
+    (sc1 Vin Sw__1a (1061)) [sc1 Vin Sw__1b [431]] (sc1 Vin Sw__1c (1062)##) [AGR[4] [595]] 
+    (i3 Sw__1c (666)##) [i3 Sw__1b [252]] (i3 Sw__1a (665)) [i3 Wire [717]] 
+    (VIDAC Iout 3 (598)) } -->> {{  { 
+  (GPIO P3[0] (127)) [GPIO P3[0] Wire [592]] } || { 
+  (GPIO P3[1] (133)) [GPIO P3[1] Wire [596]] 
+    (GPIO P3[1] Sw__1a (137)) [GPIO P3[1] Sw__1b [045]] } || { 
+  (GPIO P3[2] (139)) [GPIO P3[2] Wire [599]] } || { 
+  (GPIO P3[3] (154)) [GPIO P3[3] Wire [607]] 
+    (GPIO P3[3] Sw__0a (156)) [GPIO P3[3] Sw__0b [051]] (GPIO P3[3] Sw__0c (157)##) [amuxbusR [594]] } }}
+Route#6251: 
+  (sc1 Vin Sw__3a (1065)) [sc1 Vin Sw__3b [433]] (sc1 Vin Sw__3c (1066)##) [AGR[6] [602]] 
+    (GPIO P3[2] Sw__1c (145)##) 
+  (i3 hi Sw__0a (669)) [i3 hi Sw__0b [254]] (i3 hi Sw__0c (670)##) 
+  (GPIO P3[0] Sw__1c (132)##) 
+  (i3 Sw__0a (663)) [i3 Sw__0b [251]] (i3 Sw__0c (664)##) 
+Route#6252: 
+  (GPIO P3[2] Sw__1c (145)##) [GPIO P3[2] Sw__1b [047]] (GPIO P3[2] Sw__1a (144)) 
+  (i3 hi Sw__0c (670)##) [GPIO P3[1] Wire Alt [597]] 
+    (GPIO P3[1] Wire Alt Sw (134)) 
+  (GPIO P3[0] Sw__1c (132)##) [GPIO P3[0] Sw__1b [043]] (GPIO P3[0] Sw__1a (131)) 
+  (i3 Sw__0c (664)##) 
+Connect Mux: Amux::TOP_MUX_GND => { 
+  (SC/CT 0out (957)) } -->> {{  { 
+  (GPIO P0[0] (000)) [GPIO P0[0] Wire [535]] 
+    (GPIO P0[0] Sw__1a (005)) [GPIO P0[0] Sw__1b [001]] (GPIO P0[0] Sw__1c (006)##) [AGL[4] [539]] } || { 
+  (GPIO P0[1] (007)) [GPIO P0[1] Wire [540]] 
+    (GPIO P0[1] Sw__1a (012)) [GPIO P0[1] Sw__1b [003]] (GPIO P0[1] Sw__1c (013)##) [AGL[5] [543]] } || { 
+  (GPIO P3[7] (245)) [GPIO P3[7] Wire [643]] 
+    (GPIO P3[7] Sw__1a (250)) [GPIO P3[7] Sw__1b [083]] (GPIO P3[7] Sw__1c (251)##) [AGR[7] [606]] } || { 
+  (GPIO P0[3] (050)) [GPIO P0[3] Wire [564]] 
+    (GPIO P0[3] Sw__0a (053)) [GPIO P0[3] Sw__0b [016]] (GPIO P0[3] Sw__0c (054)##) [amuxbusL [538]] } }}
+Route#6254: 
+  (SC/CT 0out (957)) [sc0 out Wire [758]] 
+    (sc0 out Sw__5a (1007)) [sc0 out Sw__5b [404]] (sc0 out Sw__5c (1008)##) [AGL[3] [661]] 
+    (DSM+ Sw__10c (549)##) [DSM+ Sw__10b [203]] (DSM+ Sw__10a (548)) [dsm0+ Wire [700]] 
+    (DSM+ Sw__1a (530)) [DSM+ Sw__1b [194]] (DSM+ Sw__1c (531)##) 
+  (SC/CT 0out (957)) [sc0 out Wire [758]] 
+    (sc0 out Sw__1a (999)) [sc0 out Sw__1b [400]] (sc0 out Sw__1c (1000)##) [AGL[7] [559]] 
+    (AGL2AGR[7] Sw__0a (496)) [AGL2AGR[7] Sw__0b [183]] (AGL2AGR[7] Sw__0c (497)##) 
+  (sc0 out Sw__5c (1008)##) [AGL[3] [661]] 
+    (GPIO P2[3] Sw__1c (351)##) [GPIO P2[3] Sw__1b [123]] (GPIO P2[3] Sw__1a (350)) [GPIO P2[3] Wire [669]] 
+    (GPIO P2[3] Sw__0a (348)) [GPIO P2[3] Sw__0b [122]] (GPIO P2[3] Sw__0c (349)##) 
+  (SC/CT 0out (957)) [sc0 out Wire [758]] 
+    (sc0 out Sw__0a (997)) [sc0 out Sw__0b [399]] (sc0 out Sw__0c (998)##) 
+Route#6255: 
+  (DSM+ Sw__1c (531)##) 
+  (AGL2AGR[7] Sw__0c (497)##) 
+  (GPIO P2[3] Sw__0c (349)##) 
+  (sc0 out Sw__0c (998)##) 
+Connect Mux: Amux::TOP_MUX_VREF => { 
+  (SC/CT 2out (958)) } -->> {{  { 
+  (GPIO P0[0] (000)) [GPIO P0[0] Wire [535]] 
+    (GPIO P0[0] Sw__1a (005)) [GPIO P0[0] Sw__1b [001]] (GPIO P0[0] Sw__1c (006)##) [AGL[4] [539]] } || { 
+  (GPIO P0[1] (007)) [GPIO P0[1] Wire [540]] 
+    (GPIO P0[1] Sw__1a (012)) [GPIO P0[1] Sw__1b [003]] (GPIO P0[1] Sw__1c (013)##) [AGL[5] [543]] } || { 
+  (GPIO P3[7] (245)) [GPIO P3[7] Wire [643]] 
+    (GPIO P3[7] Sw__1a (250)) [GPIO P3[7] Sw__1b [083]] (GPIO P3[7] Sw__1c (251)##) [AGR[7] [606]] } || { 
+  (GPIO P0[3] (050)) [GPIO P0[3] Wire [564]] 
+    (GPIO P0[3] Sw__0a (053)) [GPIO P0[3] Sw__0b [016]] (GPIO P0[3] Sw__0c (054)##) [amuxbusL [538]] } }}
+Route#6266: 
+  (SC/CT 2out (958)) [sc2 out Wire [759]] 
+    (sc2 out Sw__1a (1047)) [sc2 out Sw__1b [424]] (sc2 out Sw__1c (1048)##) [AGL[6] [547]] 
+    (comp0- Sw__2c (826)##) [comp0- Sw__2b [319]] (comp0- Sw__2a (825)) [comp0- Wire [744]] 
+    (CMP0 Vref Mux__1a (1256)) [CMP0 Vref Mux__1b [504]] (CMP0 Vref Mux__1c (1257)##) [cmp1_vref [801]] 
+    (CMP3 Vref Mux__1c (1269)##) [CMP3 Vref Mux__1b [510]] (CMP3 Vref Mux__1a (1268)) [comp3- Wire [747]] 
+    (comp3- Sw__2a (939)) [comp3- Sw__2b [376]] (comp3- Sw__2c (940)##) 
+  (CMP3 Vref Mux__1c (1269)##) [cmp1_vref [801]] 
+    (CMP2 Vref Mux__1c (1265)##) [CMP2 Vref Mux__1b [508]] (CMP2 Vref Mux__1a (1264)) [comp2- Wire [745]] 
+    (comp2- Sw__1a (861)) [comp2- Sw__1b [337]] (comp2- Sw__1c (862)##) 
+  (sc2 out Sw__1c (1048)##) [AGL[6] [547]] 
+    (GPIO P4[6] Sw__1c (286)##) [GPIO P4[6] Sw__1b [097]] (GPIO P4[6] Sw__1a (285)) [GPIO P4[6] Wire [652]] 
+    (GPIO P4[6] Sw__0a (283)) [GPIO P4[6] Sw__0b [096]] (GPIO P4[6] Sw__0c (284)##) 
+  (CMP0 Vref Mux__1a (1256)) [comp0- Wire [744]] 
+    (comp0- Sw__1a (823)) [comp0- Sw__1b [318]] (comp0- Sw__1c (824)##) 
+Route#6267: 
+  (comp3- Sw__2c (940)##) 
+  (comp2- Sw__1c (862)##) 
+  (GPIO P4[6] Sw__0c (284)##) 
+  (comp0- Sw__1c (824)##) 
+Analog Routing phase: Elapsed time ==> 0s.832ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
-Warning: apr.M0042: Bonded pin(s) "P0[7] and P5[1]" are not used in your current design but have been connected in order to route the design. (App=cydsfit)
-Analog Code Generation phase: Elapsed time ==> 0s.497ms
+Warning: apr.M0042: Bonded pin(s) "P2[3] and P4[6]" are not used in your current design but have been connected in order to route the design. (App=cydsfit)
+Analog Code Generation phase: Elapsed time ==> 0s.499ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -2539,15 +2595,15 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :   12 :   36 :   48 :  25.00%
+                     PLDs :   13 :   35 :   48 :  27.08%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            7.00
-                   Pterms :            4.17
-               Macrocells :            2.17
+                   Inputs :            6.69
+                   Pterms :            3.85
+               Macrocells :            2.00
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
@@ -2559,13 +2615,13 @@ PLD Packing: Elapsed time ==> 0s.038ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.245ms
+Partitioning: Elapsed time ==> 0s.239ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.044ms
+Annealing: Elapsed time ==> 0s.043ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
-Inital cost was 195, final cost is 195 (0.00% improvement).</CYPRESSTAG>
+Inital cost was 200, final cost is 200 (0.00% improvement).</CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2575,7 +2631,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          7 :       8.86 :       3.71
+                 UDB :          7 :       8.14 :       3.71
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2586,104 +2642,79 @@ UDB [UDB=(0,0)] is empty.
 UDB [UDB=(0,1)] is empty.
 UDB [UDB=(0,2)] is empty.
 UDB [UDB=(0,3)] contents:
-LAB@[UDB=(0,3)][LB=0] #macrocells=1, #inputs=11, #pterms=4
+LAB@[UDB=(0,3)][LB=0] #macrocells=2, #inputs=5, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_state_0\, Mode=(T-Register) @ [UDB=(0,3)][LB=0][MC=0]
-        Total # of inputs        : 11
-        Total # of product terms : 4
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\UART:BUART:tx_bitclk\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
         List of special equations: 
             Clock  = (\UART:Net_9\) => Global
             Clock Enable: True
-        Main Equation            : 4 pterms
+        Main Equation            : 1 pterm
         (
-              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              !\UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
-              !\UART:BUART:pollcount_1\ * !Net_80 * 
-              !\UART:BUART:rx_address_detected\
-            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              !\UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
-              !\UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\ * 
-              !\UART:BUART:rx_address_detected\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
+              !\UART:BUART:tx_bitclk_dp\
         );
-        Output = \UART:BUART:rx_state_0\ (fanout=8)
+        Output = \UART:BUART:tx_bitclk\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:counter_load_not\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
+              !\UART:BUART:tx_state_2\
+            + !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
+              \UART:BUART:tx_bitclk\
+        );
+        Output = \UART:BUART:counter_load_not\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,3)][LB=1] #macrocells=2, #inputs=8, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_bitclk_enable_pre\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART:BUART:tx_bitclk_dp\
+        );
+        Output = \UART:BUART:tx_bitclk_enable_pre\ (fanout=1)
         Properties               : 
         {
         }
 
     [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(0,3)][LB=1] #macrocells=3, #inputs=10, #pterms=6
-{
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_state_2\, Mode=(T-Register) @ [UDB=(0,3)][LB=1][MC=0]
-        Total # of inputs        : 10
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:txn\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=2]
+        Total # of inputs        : 7
         Total # of product terms : 5
         List of special equations: 
             Clock  = (\UART:Net_9\) => Global
             Clock Enable: True
         Main Equation            : 5 pterms
         (
-              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              \UART:BUART:rx_state_3\ * !\UART:BUART:rx_address_detected\
-            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              \UART:BUART:rx_state_2\ * !\UART:BUART:rx_address_detected\
-            + !\UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !Net_80 * 
-              !\UART:BUART:rx_address_detected\ * \UART:BUART:rx_last\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
+              \UART:BUART:txn\ * \UART:BUART:tx_state_1\ * 
+              !\UART:BUART:tx_bitclk\
+            + \UART:BUART:txn\ * \UART:BUART:tx_state_2\
+            + !\UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
+              !\UART:BUART:tx_shift_out\ * !\UART:BUART:tx_state_2\
+            + !\UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
+              !\UART:BUART:tx_state_2\ * !\UART:BUART:tx_bitclk\
+            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
+              !\UART:BUART:tx_shift_out\ * !\UART:BUART:tx_state_2\ * 
+              \UART:BUART:tx_bitclk\ * \UART:BUART:tx_counter_dp\
         );
-        Output = \UART:BUART:rx_state_2\ (fanout=7)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\UART:BUART:rx_load_fifo\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=1]
-        Total # of inputs        : 8
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              \UART:BUART:rx_state_3\ * !\UART:BUART:rx_state_2\ * 
-              !\UART:BUART:rx_address_detected\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
-            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
-              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
-              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
-        );
-        Output = \UART:BUART:rx_load_fifo\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_address_detected\, Mode=(T-Register) @ [UDB=(0,3)][LB=1][MC=2]
-        Total # of inputs        : 0
-        Total # of product terms : 0
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 0 pterms
-        (
-            0
-        );
-        Output = \UART:BUART:rx_address_detected\ (fanout=8)
+        Output = \UART:BUART:txn\ (fanout=2)
         Properties               : 
         {
         }
@@ -2691,124 +2722,12 @@ LAB@[UDB=(0,3)][LB=1] #macrocells=3, #inputs=10, #pterms=6
     [McSlotId=3]: (empty)
 }
 
-UDB [UDB=(0,4)] contents:
-LAB@[UDB=(0,4)][LB=0] #macrocells=3, #inputs=10, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_status_3\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=0]
-        Total # of inputs        : 8
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              \UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
-              !\UART:BUART:pollcount_1\ * !Net_80 * 
-              !\UART:BUART:rx_address_detected\
-            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
-              \UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
-              !\UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\ * 
-              !\UART:BUART:rx_address_detected\
-        );
-        Output = \UART:BUART:rx_status_3\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\UART:BUART:pollcount_1\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=1]
-        Total # of inputs        : 5
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
-              !\UART:BUART:pollcount_1\ * Net_80 * \UART:BUART:pollcount_0\
-            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
-              \UART:BUART:pollcount_1\ * !Net_80
-            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
-              \UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\
-        );
-        Output = \UART:BUART:pollcount_1\ (fanout=4)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_postpoll\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \UART:BUART:pollcount_1\
-            + Net_80 * \UART:BUART:pollcount_0\
-        );
-        Output = \UART:BUART:rx_postpoll\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(0,4)][LB=1] #macrocells=3, #inputs=8, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=1][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \UART:BUART:rx_load_fifo\ * \UART:BUART:rx_fifofull\
-        );
-        Output = \UART:BUART:rx_status_4\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=1][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \UART:BUART:rx_fifonotempty\ * \UART:BUART:rx_state_stop1_reg\
-        );
-        Output = \UART:BUART:rx_status_5\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\UART:BUART:rx_state_stop1_reg\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_state_3\ * 
-              \UART:BUART:rx_state_2\ * !\UART:BUART:rx_address_detected\
-        );
-        Output = \UART:BUART:rx_state_stop1_reg\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-datapathcell: Name =\UART:BUART:sRX:RxShifter:u0\
+datapathcell: Name =\UART:BUART:sTX:sCLOCK:TxBitClkGen\
     PORT MAP (
         clock => \UART:Net_9\ ,
-        cs_addr_2 => \UART:BUART:rx_address_detected\ ,
-        cs_addr_1 => \UART:BUART:rx_state_0\ ,
-        cs_addr_0 => \UART:BUART:rx_bitclk_enable\ ,
-        route_si => \UART:BUART:rx_postpoll\ ,
-        f0_load => \UART:BUART:rx_load_fifo\ ,
-        f0_bus_stat_comb => \UART:BUART:rx_fifonotempty\ ,
-        f0_blk_stat_comb => \UART:BUART:rx_fifofull\ );
+        cs_addr_0 => \UART:BUART:counter_load_not\ ,
+        cl0_comb => \UART:BUART:tx_bitclk_dp\ ,
+        cl1_comb => \UART:BUART:tx_counter_dp\ );
     Properties:
     {
         a0_init = "00000000"
@@ -2819,7 +2738,7 @@ datapathcell: Name =\UART:BUART:sRX:RxShifter:u0\
         cl1_sync = 1
         cmsb_sync = 1
         co_msb_sync = 1
-        cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
         d0_init = "00000000"
         d1_init = "00000000"
         f0_blk_sync = 1
@@ -2836,104 +2755,51 @@ datapathcell: Name =\UART:BUART:sRX:RxShifter:u0\
     Clock Polarity: Active High
     Clock Enable: True
 
-statusicell: Name =\UART:BUART:sRX:RxSts\
-    PORT MAP (
-        clock => \UART:Net_9\ ,
-        status_5 => \UART:BUART:rx_status_5\ ,
-        status_4 => \UART:BUART:rx_status_4\ ,
-        status_3 => \UART:BUART:rx_status_3\ ,
-        interrupt => Net_263 );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "1011111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(0,5)] contents:
-LAB@[UDB=(0,5)][LB=0] #macrocells=3, #inputs=5, #pterms=4
+UDB [UDB=(0,4)] contents:
+LAB@[UDB=(0,4)][LB=0] #macrocells=2, #inputs=6, #pterms=4
 {
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_last\, Mode=(D-Register) @ [UDB=(0,5)][LB=0][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(0,4)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 3
         List of special equations: 
             Clock  = (\UART:Net_9\) => Global
             Clock Enable: True
-        Main Equation            : 1 pterm
+        Main Equation            : 3 pterms
         (
-              Net_80
+              \UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
+              \UART:BUART:tx_bitclk\
+            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_2\ * 
+              \UART:BUART:tx_bitclk\ * !\UART:BUART:tx_counter_dp\
+            + \UART:BUART:tx_state_0\ * !\UART:BUART:tx_state_2\ * 
+              \UART:BUART:tx_bitclk\
         );
-        Output = \UART:BUART:rx_last\ (fanout=1)
+        Output = \UART:BUART:tx_state_1\ (fanout=7)
         Properties               : 
         {
         }
 
     [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(0,5)][LB=0][MC=2]
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=Net_194, Mode=(Combinatorial) @ [UDB=(0,4)][LB=0][MC=3]
         Total # of inputs        : 1
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              !\UART:BUART:tx_fifo_notfull\
+              !\UART:BUART:txn\
         );
-        Output = \UART:BUART:tx_status_2\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\UART:BUART:pollcount_0\, Mode=(D-Register) @ [UDB=(0,5)][LB=0][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * !Net_80 * 
-              \UART:BUART:pollcount_0\
-            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * Net_80 * 
-              !\UART:BUART:pollcount_0\
-        );
-        Output = \UART:BUART:pollcount_0\ (fanout=5)
+        Output = Net_194 (fanout=1)
         Properties               : 
         {
         }
 }
 
-LAB@[UDB=(0,5)][LB=1] #macrocells=4, #inputs=7, #pterms=7
+LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=5, #pterms=4
 {
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,5)][LB=1][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
-              \UART:BUART:tx_fifo_empty\ * \UART:BUART:tx_state_2\ * 
-              \UART:BUART:tx_bitclk\
-        );
-        Output = \UART:BUART:tx_status_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\UART:BUART:tx_bitclk_enable_pre\, Mode=(Combinatorial) @ [UDB=(0,5)][LB=1][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\UART:BUART:tx_bitclk_dp\
-        );
-        Output = \UART:BUART:tx_bitclk_enable_pre\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(0,5)][LB=1][MC=2]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\UART:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(0,4)][LB=1][MC=3]
         Total # of inputs        : 5
         Total # of product terms : 4
         List of special equations: 
@@ -2954,19 +2820,134 @@ LAB@[UDB=(0,5)][LB=1] #macrocells=4, #inputs=7, #pterms=7
         Properties               : 
         {
         }
+}
 
-    [McSlotId=3]:     MacroCell: Name=Net_194, Mode=(Combinatorial) @ [UDB=(0,5)][LB=1][MC=3]
+UDB [UDB=(0,5)] contents:
+LAB@[UDB=(0,5)][LB=0] #macrocells=1, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\UART:BUART:pollcount_1\, Mode=(D-Register) @ [UDB=(0,5)][LB=0][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
+              !\UART:BUART:pollcount_1\ * Net_80 * \UART:BUART:pollcount_0\
+            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
+              \UART:BUART:pollcount_1\ * !Net_80
+            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
+              \UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\
+        );
+        Output = \UART:BUART:pollcount_1\ (fanout=4)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,5)][LB=1] #macrocells=1, #inputs=4, #pterms=2
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:pollcount_0\, Mode=(D-Register) @ [UDB=(0,5)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * !Net_80 * 
+              \UART:BUART:pollcount_0\
+            + !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * Net_80 * 
+              !\UART:BUART:pollcount_0\
+        );
+        Output = \UART:BUART:pollcount_0\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+UDB [UDB=(1,2)] is empty.
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=3, #inputs=8, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
+              \UART:BUART:tx_fifo_empty\ * \UART:BUART:tx_state_2\ * 
+              \UART:BUART:tx_bitclk\
+        );
+        Output = \UART:BUART:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=1]
         Total # of inputs        : 1
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              !\UART:BUART:txn\
+              !\UART:BUART:tx_fifo_notfull\
         );
-        Output = Net_194 (fanout=1)
+        Output = \UART:BUART:tx_status_2\ (fanout=1)
         Properties               : 
         {
         }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\UART:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART:BUART:rx_load_fifo\ * \UART:BUART:rx_fifofull\
+        );
+        Output = \UART:BUART:rx_status_4\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,3)][LB=1] #macrocells=1, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
+              \UART:BUART:tx_state_2\ * \UART:BUART:tx_bitclk\
+            + \UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
+              \UART:BUART:tx_bitclk\
+            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_2\ * 
+              \UART:BUART:tx_bitclk\ * !\UART:BUART:tx_counter_dp\
+        );
+        Output = \UART:BUART:tx_state_2\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
 }
 
 datapathcell: Name =\UART:BUART:sTX:TxShifter:u0\
@@ -3022,30 +3003,10 @@ statusicell: Name =\UART:BUART:sTX:TxSts\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] contents:
-LAB@[UDB=(1,3)][LB=1] #macrocells=3, #inputs=11, #pterms=5
+UDB [UDB=(1,4)] contents:
+LAB@[UDB=(1,4)][LB=0] #macrocells=3, #inputs=10, #pterms=5
 {
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_bitclk_enable\, Mode=(D-Register) @ [UDB=(1,3)][LB=1][MC=0]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
-              !\UART:BUART:rx_count_0\
-        );
-        Output = \UART:BUART:rx_bitclk_enable\ (fanout=6)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_state_3\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=2]
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_state_3\, Mode=(T-Register) @ [UDB=(1,4)][LB=0][MC=0]
         Total # of inputs        : 8
         Total # of product terms : 3
         List of special equations: 
@@ -3068,7 +3029,175 @@ LAB@[UDB=(1,3)][LB=1] #macrocells=3, #inputs=11, #pterms=5
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\UART:BUART:rx_counter_load\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=1][MC=3]
+    [McSlotId=1]:     MacroCell: Name=\UART:BUART:rx_state_stop1_reg\, Mode=(D-Register) @ [UDB=(1,4)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_state_3\ * 
+              \UART:BUART:rx_state_2\ * !\UART:BUART:rx_address_detected\
+        );
+        Output = \UART:BUART:rx_state_stop1_reg\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\UART:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(1,4)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART:BUART:rx_fifonotempty\ * \UART:BUART:rx_state_stop1_reg\
+        );
+        Output = \UART:BUART:rx_status_5\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,4)][LB=1] #macrocells=2, #inputs=8, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_status_3\, Mode=(D-Register) @ [UDB=(1,4)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              \UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
+              !\UART:BUART:pollcount_1\ * !Net_80 * 
+              !\UART:BUART:rx_address_detected\
+            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              \UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
+              !\UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\ * 
+              !\UART:BUART:rx_address_detected\
+        );
+        Output = \UART:BUART:rx_status_3\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_postpoll\, Mode=(Combinatorial) @ [UDB=(1,4)][LB=1][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \UART:BUART:pollcount_1\
+            + Net_80 * \UART:BUART:pollcount_0\
+        );
+        Output = \UART:BUART:rx_postpoll\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\UART:BUART:sRX:RxShifter:u0\
+    PORT MAP (
+        clock => \UART:Net_9\ ,
+        cs_addr_2 => \UART:BUART:rx_address_detected\ ,
+        cs_addr_1 => \UART:BUART:rx_state_0\ ,
+        cs_addr_0 => \UART:BUART:rx_bitclk_enable\ ,
+        route_si => \UART:BUART:rx_postpoll\ ,
+        f0_load => \UART:BUART:rx_load_fifo\ ,
+        f0_bus_stat_comb => \UART:BUART:rx_fifonotempty\ ,
+        f0_blk_stat_comb => \UART:BUART:rx_fifofull\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\UART:BUART:sRX:RxSts\
+    PORT MAP (
+        clock => \UART:Net_9\ ,
+        status_5 => \UART:BUART:rx_status_5\ ,
+        status_4 => \UART:BUART:rx_status_4\ ,
+        status_3 => \UART:BUART:rx_status_3\ ,
+        interrupt => Net_263 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "1011111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,5)] contents:
+LAB@[UDB=(1,5)][LB=0] #macrocells=3, #inputs=11, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_load_fifo\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              \UART:BUART:rx_state_3\ * !\UART:BUART:rx_state_2\ * 
+              !\UART:BUART:rx_address_detected\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
+        );
+        Output = \UART:BUART:rx_load_fifo\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART:BUART:rx_bitclk_enable\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART:BUART:rx_count_2\ * !\UART:BUART:rx_count_1\ * 
+              !\UART:BUART:rx_count_0\
+        );
+        Output = \UART:BUART:rx_bitclk_enable\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_counter_load\, Mode=(Combinatorial) @ [UDB=(1,5)][LB=0][MC=2]
         Total # of inputs        : 4
         Total # of product terms : 1
             Clock Enable: True
@@ -3078,6 +3207,96 @@ LAB@[UDB=(1,3)][LB=1] #macrocells=3, #inputs=11, #pterms=5
               !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_address_detected\
         );
         Output = \UART:BUART:rx_counter_load\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,5)][LB=1] #macrocells=4, #inputs=12, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\UART:BUART:rx_state_0\, Mode=(T-Register) @ [UDB=(1,5)][LB=1][MC=0]
+        Total # of inputs        : 11
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              !\UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
+              !\UART:BUART:pollcount_1\ * !Net_80 * 
+              !\UART:BUART:rx_address_detected\
+            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              !\UART:BUART:rx_state_3\ * \UART:BUART:rx_state_2\ * 
+              !\UART:BUART:pollcount_1\ * !\UART:BUART:pollcount_0\ * 
+              !\UART:BUART:rx_address_detected\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
+        );
+        Output = \UART:BUART:rx_state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART:BUART:rx_last\, Mode=(D-Register) @ [UDB=(1,5)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_80
+        );
+        Output = \UART:BUART:rx_last\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART:BUART:rx_state_2\, Mode=(T-Register) @ [UDB=(1,5)][LB=1][MC=2]
+        Total # of inputs        : 10
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              \UART:BUART:rx_state_3\ * !\UART:BUART:rx_address_detected\
+            + !\UART:BUART:rx_state_0\ * \UART:BUART:rx_bitclk_enable\ * 
+              \UART:BUART:rx_state_2\ * !\UART:BUART:rx_address_detected\
+            + !\UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !Net_80 * 
+              !\UART:BUART:rx_address_detected\ * \UART:BUART:rx_last\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_5\ * !\UART:BUART:rx_address_detected\
+            + \UART:BUART:rx_state_0\ * !\UART:BUART:rx_state_3\ * 
+              !\UART:BUART:rx_state_2\ * !\UART:BUART:rx_count_6\ * 
+              !\UART:BUART:rx_count_4\ * !\UART:BUART:rx_address_detected\
+        );
+        Output = \UART:BUART:rx_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\UART:BUART:rx_address_detected\, Mode=(T-Register) @ [UDB=(1,5)][LB=1][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART:BUART:rx_address_detected\ (fanout=8)
         Properties               : 
         {
         }
@@ -3106,162 +3325,6 @@ count7cell: Name =\UART:BUART:sRX:RxBitCounter\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(1,4)] contents:
-LAB@[UDB=(1,4)][LB=0] #macrocells=1, #inputs=5, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(1,4)][LB=0][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              \UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
-              \UART:BUART:tx_bitclk\
-            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_2\ * 
-              \UART:BUART:tx_bitclk\ * !\UART:BUART:tx_counter_dp\
-            + \UART:BUART:tx_state_0\ * !\UART:BUART:tx_state_2\ * 
-              \UART:BUART:tx_bitclk\
-        );
-        Output = \UART:BUART:tx_state_1\ (fanout=7)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(1,4)][LB=1] #macrocells=1, #inputs=5, #pterms=3
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\UART:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(1,4)][LB=1][MC=3]
-        Total # of inputs        : 5
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
-              \UART:BUART:tx_state_2\ * \UART:BUART:tx_bitclk\
-            + \UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
-              \UART:BUART:tx_bitclk\
-            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_2\ * 
-              \UART:BUART:tx_bitclk\ * !\UART:BUART:tx_counter_dp\
-        );
-        Output = \UART:BUART:tx_state_2\ (fanout=6)
-        Properties               : 
-        {
-        }
-}
-
-UDB [UDB=(1,5)] contents:
-LAB@[UDB=(1,5)][LB=0] #macrocells=1, #inputs=7, #pterms=5
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\UART:BUART:txn\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=1]
-        Total # of inputs        : 7
-        Total # of product terms : 5
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 5 pterms
-        (
-              \UART:BUART:txn\ * \UART:BUART:tx_state_1\ * 
-              !\UART:BUART:tx_bitclk\
-            + \UART:BUART:txn\ * \UART:BUART:tx_state_2\
-            + !\UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
-              !\UART:BUART:tx_shift_out\ * !\UART:BUART:tx_state_2\
-            + !\UART:BUART:tx_state_1\ * \UART:BUART:tx_state_0\ * 
-              !\UART:BUART:tx_state_2\ * !\UART:BUART:tx_bitclk\
-            + \UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
-              !\UART:BUART:tx_shift_out\ * !\UART:BUART:tx_state_2\ * 
-              \UART:BUART:tx_bitclk\ * \UART:BUART:tx_counter_dp\
-        );
-        Output = \UART:BUART:txn\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(1,5)][LB=1] #macrocells=2, #inputs=5, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=\UART:BUART:tx_bitclk\, Mode=(D-Register) @ [UDB=(1,5)][LB=1][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\UART:Net_9\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\UART:BUART:tx_bitclk_dp\
-        );
-        Output = \UART:BUART:tx_bitclk\ (fanout=6)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\UART:BUART:counter_load_not\, Mode=(Combinatorial) @ [UDB=(1,5)][LB=1][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        !(
-              !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
-              !\UART:BUART:tx_state_2\
-            + !\UART:BUART:tx_state_1\ * !\UART:BUART:tx_state_0\ * 
-              \UART:BUART:tx_bitclk\
-        );
-        Output = \UART:BUART:counter_load_not\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-datapathcell: Name =\UART:BUART:sTX:sCLOCK:TxBitClkGen\
-    PORT MAP (
-        clock => \UART:Net_9\ ,
-        cs_addr_0 => \UART:BUART:counter_load_not\ ,
-        cl0_comb => \UART:BUART:tx_bitclk_dp\ ,
-        cl1_comb => \UART:BUART:tx_counter_dp\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
 UDB [UDB=(2,0)] is empty.
 UDB [UDB=(2,1)] is empty.
 UDB [UDB=(2,2)] is empty.
@@ -3269,13 +3332,14 @@ UDB [UDB=(2,3)] is empty.
 UDB [UDB=(2,4)] is empty.
 UDB [UDB=(2,5)] is empty.
 UDB [UDB=(3,0)] is empty.
-UDB [UDB=(3,1)] contents:
-LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=0, #pterms=0
+UDB [UDB=(3,1)] is empty.
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=1, #inputs=0, #pterms=0
 {
     [McSlotId=0]: (empty)
     [McSlotId=1]: (empty)
     [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(3,1)][LB=0][MC=3]
+    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=3]
         Total # of inputs        : 0
         Total # of product terms : 0
             Clock Enable: True
@@ -3289,7 +3353,6 @@ LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=0, #pterms=0
         }
 }
 
-UDB [UDB=(3,2)] is empty.
 UDB [UDB=(3,3)] is empty.
 UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
@@ -3297,7 +3360,7 @@ Intr hod @ [IntrHod=(0)]:
   Intr@ [IntrHod=(0)][IntrId=(0)] 
     interrupt: Name =\ADC_SAR_1:IRQ\
         PORT MAP (
-            interrupt => Net_460 );
+            interrupt => Net_709 );
         Properties:
         {
             int_type = "10"
@@ -3320,6 +3383,84 @@ Intr hod @ [IntrHod=(0)]:
         }
 Drq hod @ [DrqHod=(0)]: empty
 Port 0 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = TOP_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_650 ,
+        pad => TOP_1(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = TOP_2(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_647 ,
+        pad => TOP_2(0)_PAD );
+    Properties:
+    {
+    }
+
 [IoId=2]: 
 Pin : Name = \ADC_SAR_1:Bypass(0)\
     Attributes:
@@ -3359,9 +3500,8 @@ Pin : Name = \ADC_SAR_1:Bypass(0)\
     {
     }
 
-Port 1 contains the following IO cells:
-[IoId=6]: 
-Pin : Name = TOP_1(0)
+[IoId=3]: 
+Pin : Name = TOP_4(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3393,13 +3533,212 @@ Pin : Name = TOP_1(0)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        analog_term => Net_538 ,
-        pad => TOP_1(0)_PAD );
+        analog_term => Net_535 ,
+        pad => TOP_4(0)_PAD );
     Properties:
     {
     }
 
-Port 2 contains the following IO cells:
+Port 1 is empty
+Port 2 is empty
+Port 3 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = BOTTOM_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_642 ,
+        pad => BOTTOM_1(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = BOTTOM_2(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_643 ,
+        pad => BOTTOM_2(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = BOTTOM_3(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_644 ,
+        pad => BOTTOM_3(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = BOTTOM_4(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_645 ,
+        pad => BOTTOM_4(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = TOP_3(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: ANALOG
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        analog_term => Net_536 ,
+        pad => TOP_3(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 4 is empty
+Port 5 contains the following IO cells:
 [IoId=0]: 
 Pin : Name = \LCD:LCDPort(0)\
     Attributes:
@@ -3666,204 +4005,6 @@ Pin : Name = \LCD:LCDPort(6)\
     {
     }
 
-Port 3 contains the following IO cells:
-[IoId=0]: 
-Pin : Name = TOP_3(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_536 ,
-        pad => TOP_3(0)_PAD );
-    Properties:
-    {
-    }
-
-Port 4 contains the following IO cells:
-[IoId=0]: 
-Pin : Name = BOTTOM_2(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_572 ,
-        pad => BOTTOM_2(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
-Pin : Name = TOP_4(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_535 ,
-        pad => TOP_4(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=7]: 
-Pin : Name = BOTTOM_1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_579 ,
-        pad => BOTTOM_1(0)_PAD );
-    Properties:
-    {
-    }
-
-Port 5 contains the following IO cells:
-[IoId=4]: 
-Pin : Name = TOP_2(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_537 ,
-        pad => TOP_2(0)_PAD );
-    Properties:
-    {
-    }
-
 Port 6 contains the following IO cells:
 [IoId=0]: 
 Pin : Name = RX(0)
@@ -3900,84 +4041,6 @@ Pin : Name = RX(0)
     PORT MAP (
         fb => Net_80 ,
         pad => RX(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=3]: 
-Pin : Name = BOTTOM_4(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_574 ,
-        pad => BOTTOM_4(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=4]: 
-Pin : Name = BOTTOM_3(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        analog_term => Net_573 ,
-        pad => BOTTOM_3(0)_PAD );
     Properties:
     {
     }
@@ -4060,24 +4123,46 @@ Fixed Function block hod @ [FFB(LCD,0)]: empty
 Fixed Function block hod @ [FFB(LVD,0)]: empty
 Fixed Function block hod @ [FFB(PM,0)]: empty
 Fixed Function block hod @ [FFB(SC,0)]: 
+    SC Block @ [FFB(SC,0)]: 
+    sccell: Name =\PGA_TOP_GND:SC\
+        PORT MAP (
+            vref => \PGA_TOP_GND:Net_17\ ,
+            vin => Net_660 ,
+            modout => \PGA_TOP_GND:Net_41\ ,
+            vout => Net_669 );
+        Properties:
+        {
+            cy_registers = ""
+        }
     SC Block @ [FFB(SC,1)]: 
     sccell: Name =\PGA_GAIN:SC\
         PORT MAP (
             vref => \PGA_GAIN:Net_17\ ,
-            vin => Net_575 ,
+            vin => Net_593 ,
             modout => \PGA_GAIN:Net_41\ ,
             vout => Net_425 );
         Properties:
         {
             cy_registers = ""
         }
-    SC Block @ [FFB(SC,3)]: 
+    SC Block @ [FFB(SC,2)]: 
     sccell: Name =\PGA_REF:SC\
         PORT MAP (
             vref => \PGA_REF:Net_17\ ,
             vin => Net_539 ,
             modout => \PGA_REF:Net_41\ ,
-            vout => Net_506 );
+            vout => Net_616 );
+        Properties:
+        {
+            cy_registers = ""
+        }
+    SC Block @ [FFB(SC,3)]: 
+    sccell: Name =\PGA_BOTTOM_GND:SC\
+        PORT MAP (
+            vref => \PGA_BOTTOM_GND:Net_17\ ,
+            vin => Net_660 ,
+            modout => \PGA_BOTTOM_GND:Net_41\ ,
+            vout => Net_585 );
         Properties:
         {
             cy_registers = ""
@@ -4086,7 +4171,7 @@ Fixed Function block hod @ [FFB(SPC,0)]: empty
 Fixed Function block hod @ [FFB(Timer,0)]: empty
 Fixed Function block hod @ [FFB(USB,0)]: empty
 Fixed Function block hod @ [FFB(VIDAC,0)]: 
-    VIDAC Block @ [FFB(VIDAC,1)]: 
+    VIDAC Block @ [FFB(VIDAC,0)]: 
     vidaccell: Name =\VDAC8_REF:viDAC8\
         PORT MAP (
             vout => Net_539 ,
@@ -4097,11 +4182,11 @@ Fixed Function block hod @ [FFB(VIDAC,0)]:
             is_all_if_any = 0
             reg_data = 0
         }
-    VIDAC Block @ [FFB(VIDAC,2)]: 
+    VIDAC Block @ [FFB(VIDAC,3)]: 
     vidaccell: Name =\IDAC8_REF:viDAC8\
         PORT MAP (
             vout => \IDAC8_REF:Net_124\ ,
-            iout => Net_575 );
+            iout => Net_593 );
         Properties:
         {
             cy_registers = ""
@@ -4125,7 +4210,7 @@ Fixed Function block hod @ [FFB(Vref,0)]:
     Vref Block @ [FFB(Vref,6)]: 
     vrefcell: Name =VREF_GND
         PORT MAP (
-            vout => Net_545 );
+            vout => Net_660 );
         Properties:
         {
             autoenable = 1
@@ -4147,7 +4232,7 @@ Fixed Function block hod @ [FFB(SAR,0)]:
             pump_clock => \ADC_SAR_1:Net_221\ ,
             sof_udb => __ONE__ ,
             irq => \ADC_SAR_1:Net_252\ ,
-            next => Net_463 ,
+            next => Net_712 ,
             data_out_udb_11 => \ADC_SAR_1:Net_207_11\ ,
             data_out_udb_10 => \ADC_SAR_1:Net_207_10\ ,
             data_out_udb_9 => \ADC_SAR_1:Net_207_9\ ,
@@ -4160,7 +4245,7 @@ Fixed Function block hod @ [FFB(SAR,0)]:
             data_out_udb_2 => \ADC_SAR_1:Net_207_2\ ,
             data_out_udb_1 => \ADC_SAR_1:Net_207_1\ ,
             data_out_udb_0 => \ADC_SAR_1:Net_207_0\ ,
-            eof_udb => Net_460 );
+            eof_udb => Net_709 );
         Properties:
         {
             cy_registers = ""
@@ -4168,131 +4253,75 @@ Fixed Function block hod @ [FFB(SAR,0)]:
 
 Blocks not positioned by the digital component placer:
     Amux Block @ <No Location>: 
-    amuxcell: Name =BOTTOM_MUX_1
+    amuxcell: Name =BOTTOM_MUX_GND
         PORT MAP (
-            muxin_1 => Net_575 ,
-            muxin_0 => Net_545 ,
-            vout => Net_579 );
+            muxin_3 => Net_645 ,
+            muxin_2 => Net_644 ,
+            muxin_1 => Net_643 ,
+            muxin_0 => Net_642 ,
+            vout => Net_585 );
         Properties:
         {
             api_type = 0
             connect_mode = 1
             cy_registers = ""
             hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
+            init_mux_sel = "0000"
+            muxin_width = 4
             one_active = 0
         }
     Amux Block @ <No Location>: 
-    amuxcell: Name =BOTTOM_MUX_2
+    amuxcell: Name =BOTTOM_MUX_SENSE
         PORT MAP (
-            muxin_1 => Net_575 ,
-            muxin_0 => Net_545 ,
-            vout => Net_572 );
+            muxin_3 => Net_645 ,
+            muxin_2 => Net_644 ,
+            muxin_1 => Net_643 ,
+            muxin_0 => Net_642 ,
+            vout => Net_593 );
         Properties:
         {
             api_type = 0
             connect_mode = 1
             cy_registers = ""
             hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
+            init_mux_sel = "0000"
+            muxin_width = 4
             one_active = 0
         }
     Amux Block @ <No Location>: 
-    amuxcell: Name =BOTTOM_MUX_3
+    amuxcell: Name =TOP_MUX_GND
         PORT MAP (
-            muxin_1 => Net_575 ,
-            muxin_0 => Net_545 ,
-            vout => Net_573 );
+            muxin_3 => Net_535 ,
+            muxin_2 => Net_536 ,
+            muxin_1 => Net_647 ,
+            muxin_0 => Net_650 ,
+            vout => Net_669 );
         Properties:
         {
             api_type = 0
             connect_mode = 1
             cy_registers = ""
             hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
+            init_mux_sel = "0000"
+            muxin_width = 4
             one_active = 0
         }
     Amux Block @ <No Location>: 
-    amuxcell: Name =BOTTOM_MUX_4
+    amuxcell: Name =TOP_MUX_VREF
         PORT MAP (
-            muxin_1 => Net_575 ,
-            muxin_0 => Net_545 ,
-            vout => Net_574 );
+            muxin_3 => Net_535 ,
+            muxin_2 => Net_536 ,
+            muxin_1 => Net_647 ,
+            muxin_0 => Net_650 ,
+            vout => Net_616 );
         Properties:
         {
             api_type = 0
             connect_mode = 1
             cy_registers = ""
             hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
-            one_active = 0
-        }
-    Amux Block @ <No Location>: 
-    amuxcell: Name =TOP_MUX_1
-        PORT MAP (
-            muxin_1 => Net_506 ,
-            muxin_0 => Net_545 ,
-            vout => Net_538 );
-        Properties:
-        {
-            api_type = 0
-            connect_mode = 1
-            cy_registers = ""
-            hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
-            one_active = 0
-        }
-    Amux Block @ <No Location>: 
-    amuxcell: Name =TOP_MUX_2
-        PORT MAP (
-            muxin_1 => Net_506 ,
-            muxin_0 => Net_545 ,
-            vout => Net_537 );
-        Properties:
-        {
-            api_type = 0
-            connect_mode = 1
-            cy_registers = ""
-            hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
-            one_active = 0
-        }
-    Amux Block @ <No Location>: 
-    amuxcell: Name =TOP_MUX_3
-        PORT MAP (
-            muxin_1 => Net_506 ,
-            muxin_0 => Net_545 ,
-            vout => Net_536 );
-        Properties:
-        {
-            api_type = 0
-            connect_mode = 1
-            cy_registers = ""
-            hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
-            one_active = 0
-        }
-    Amux Block @ <No Location>: 
-    amuxcell: Name =TOP_MUX_4
-        PORT MAP (
-            muxin_1 => Net_506 ,
-            muxin_0 => Net_545 ,
-            vout => Net_535 );
-        Properties:
-        {
-            api_type = 0
-            connect_mode = 1
-            cy_registers = ""
-            hw_control = 0
-            init_mux_sel = "00"
-            muxin_width = 2
+            init_mux_sel = "0000"
+            muxin_width = 4
             one_active = 0
         }
 </CYPRESSTAG>
@@ -4304,69 +4333,68 @@ Port Configuration report
      |     |       | Interrupt |                  |                       | 
 Port | Pin | Fixed |      Type |       Drive Mode |                  Name | Connections
 -----+-----+-------+-----------+------------------+-----------------------+----------------------------
-   0 |   2 |       |      NONE |      HI_Z_ANALOG | \ADC_SAR_1:Bypass(0)\ | Analog(\ADC_SAR_1:Net_215\)
+   0 |   0 |     * |      NONE |      HI_Z_ANALOG |              TOP_1(0) | Analog(Net_650)
+     |   1 |     * |      NONE |      HI_Z_ANALOG |              TOP_2(0) | Analog(Net_647)
+     |   2 |       |      NONE |      HI_Z_ANALOG | \ADC_SAR_1:Bypass(0)\ | Analog(\ADC_SAR_1:Net_215\)
+     |   3 |     * |      NONE |      HI_Z_ANALOG |              TOP_4(0) | Analog(Net_535)
 -----+-----+-------+-----------+------------------+-----------------------+----------------------------
-   1 |   6 |     * |      NONE |      HI_Z_ANALOG |              TOP_1(0) | Analog(Net_538)
+   3 |   0 |     * |      NONE |      HI_Z_ANALOG |           BOTTOM_1(0) | Analog(Net_642)
+     |   1 |     * |      NONE |      HI_Z_ANALOG |           BOTTOM_2(0) | Analog(Net_643)
+     |   2 |     * |      NONE |      HI_Z_ANALOG |           BOTTOM_3(0) | Analog(Net_644)
+     |   3 |     * |      NONE |      HI_Z_ANALOG |           BOTTOM_4(0) | Analog(Net_645)
+     |   7 |     * |      NONE |      HI_Z_ANALOG |              TOP_3(0) | Analog(Net_536)
 -----+-----+-------+-----------+------------------+-----------------------+----------------------------
-   2 |   0 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(0)\ | 
-     |   1 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(1)\ | 
-     |   2 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(2)\ | 
-     |   3 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(3)\ | 
-     |   4 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(4)\ | 
-     |   5 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(5)\ | 
-     |   6 |     * |      NONE |         CMOS_OUT |      \LCD:LCDPort(6)\ | 
------+-----+-------+-----------+------------------+-----------------------+----------------------------
-   3 |   0 |       |      NONE |      HI_Z_ANALOG |              TOP_3(0) | Analog(Net_536)
------+-----+-------+-----------+------------------+-----------------------+----------------------------
-   4 |   0 |       |      NONE |      HI_Z_ANALOG |           BOTTOM_2(0) | Analog(Net_572)
-     |   2 |       |      NONE |      HI_Z_ANALOG |              TOP_4(0) | Analog(Net_535)
-     |   7 |       |      NONE |      HI_Z_ANALOG |           BOTTOM_1(0) | Analog(Net_579)
------+-----+-------+-----------+------------------+-----------------------+----------------------------
-   5 |   4 |       |      NONE |      HI_Z_ANALOG |              TOP_2(0) | Analog(Net_537)
+   5 |   0 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(0)\ | 
+     |   1 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(1)\ | 
+     |   2 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(2)\ | 
+     |   3 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(3)\ | 
+     |   4 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(4)\ | 
+     |   5 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(5)\ | 
+     |   6 |       |      NONE |         CMOS_OUT |      \LCD:LCDPort(6)\ | 
 -----+-----+-------+-----------+------------------+-----------------------+----------------------------
    6 |   0 |     * |      NONE |     HI_Z_DIGITAL |                 RX(0) | FB(Net_80)
-     |   3 |       |      NONE |      HI_Z_ANALOG |           BOTTOM_4(0) | Analog(Net_574)
-     |   4 |       |      NONE |      HI_Z_ANALOG |           BOTTOM_3(0) | Analog(Net_573)
      |   6 |     * |      NONE |         CMOS_OUT |                 TX(0) | In(Net_194)
 -------------------------------------------------------------------------------------------------------
 </CYPRESSTAG>
+Log: plm.M0038: The pin named TOP_1(0) at location P0[0] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
+Log: plm.M0038: The pin named TOP_2(0) at location P0[1] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
 Log: plm.M0040: The pin named \ADC_SAR_1:Bypass(0)\ at location P0[2] prevents a direct input connection to an Opamp. (App=cydsfit)
-Log: plm.M0038: The pin named \LCD:LCDPort(3)\ at location P2[3] prevents usage of special purposes: Trace. (App=cydsfit)
-Log: plm.M0038: The pin named \LCD:LCDPort(4)\ at location P2[4] prevents usage of special purposes: Trace. (App=cydsfit)
-Log: plm.M0038: The pin named \LCD:LCDPort(5)\ at location P2[5] prevents usage of special purposes: Trace. (App=cydsfit)
-Log: plm.M0038: The pin named \LCD:LCDPort(6)\ at location P2[6] prevents usage of special purposes: Trace. (App=cydsfit)
+Log: plm.M0040: The pin named TOP_4(0) at location P0[3] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0040: The pin named BOTTOM_3(0) at location P3[2] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0040: The pin named BOTTOM_4(0) at location P3[3] prevents a direct input connection to an Opamp. (App=cydsfit)
+Log: plm.M0038: The pin named TOP_3(0) at location P3[7] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
 Info: plm.M0037: Glow.rpt: 
-      Certain internal analog resources use the following pins for preferred routing: P0[2], P2[3], P2[4], P2[5], P2[6].
+      Certain internal analog resources use the following pins for preferred routing: P0[0], P0[1], P0[2], P0[3], P3[2], P3[3], P3[7].
       Please check the "Final Placement Details" section of the report file (Glow.rpt) to see what resources are impacted by your pin selections.
      (File=C:\Users\Kojo\Code\GlowProcessing\Glow.cydsn\Glow.rpt(1))
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.039ms
-Digital Placement phase: Elapsed time ==> 2s.015ms
+Digital Placement phase: Elapsed time ==> 1s.978ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.309ms
+Digital Routing phase: Elapsed time ==> 2s.342ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.474ms
+Bitstream and API generation phase: Elapsed time ==> 0s.478ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.184ms
+Bitstream verification phase: Elapsed time ==> 0s.183ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Glow_timing.html.
 Static timing analysis phase: Elapsed time ==> 0s.458ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.004ms
+Data reporting phase: Elapsed time ==> 0s.005ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.236ms
+Design database save phase: Elapsed time ==> 0s.231ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 11s.093ms
+cydsfit: Elapsed time ==> 16s.191ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 11s.153ms
-API generation phase: Elapsed time ==> 0s.750ms
-Dependency generation phase: Elapsed time ==> 0s.017ms
-Cleanup phase: Elapsed time ==> 0s.001ms
+Fitter phase: Elapsed time ==> 16s.257ms
+API generation phase: Elapsed time ==> 0s.700ms
+Dependency generation phase: Elapsed time ==> 0s.016ms
+Cleanup phase: Elapsed time ==> 0s.002ms
