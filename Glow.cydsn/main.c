@@ -1,9 +1,9 @@
 #include <device.h>
 
 // Mat constants
-#define HEIGHT (4)
+#define HEIGHT (5)
 #define WIDTH (4)
-#define MAT_SIZE (16)
+#define MAT_SIZE (20)
 
 // Serial Communcation Constants
 #define SERIAL_START_CHAR ('A')

@@ -827,6 +827,21 @@
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\PGA_TOP_GND_PM.c</FilePath>
             </File>
+            <File>
+              <FileName>TOP_5_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1655,6 +1670,21 @@
               <FileName>PGA_TOP_GND_PM.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\PGA_TOP_GND_PM.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_5_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_5.h</FilePath>
             </File>
           </Files>
         </Group>
