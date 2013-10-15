@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RS232-000\Glow\Glow.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RS232-000\Glow\Source Files\main.c">
 <ExpandedNodeIds>
 <v>RS232-000</v>
 <v>RS232-000\Glow</v>
@@ -166,6 +166,12 @@
 <VisibleNodeIds>
 <v>RS232-000</v>
 <v>RS232-000\Glow</v>
+<v>RS232-000\Glow\CortexM3</v>
+<v>RS232-000\Glow\CortexM3\ARM_GCC_441</v>
+<v>RS232-000\Glow\CortexM3\ARM_GCC_441\Debug</v>
+<v>RS232-000\Glow\CortexM3\ARM_GCC_441\Debug\Glow.elf</v>
+<v>RS232-000\Glow\CortexM3\ARM_GCC_441\Debug\Glow.hex</v>
+<v>RS232-000\Glow\CortexM3\ARM_GCC_441\Debug\Glow.map</v>
 <v>RS232-000\Glow\Glow.rpt</v>
 <v>RS232-000\Glow\Glow_timing.html</v>
 </VisibleNodeIds>

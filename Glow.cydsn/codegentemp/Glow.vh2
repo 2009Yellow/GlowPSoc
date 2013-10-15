@@ -2,7 +2,7 @@
 --	Conversion of Glow.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Oct 15 09:58:44 2013
+--	Tue Oct 15 10:01:35 2013
 --
 
 USE cypress.cypress.all;

@@ -65,7 +65,7 @@ void processRX(uint8 input) {
     int i;
     for (i = 0; i < MAT_SIZE; ++i) {
         //UART_PutChar(adcValues[i]);
-        UART_PutChar(0x80);
+        UART_PutChar(0xF0 * i);
     }
 
     // Send final char of sequence

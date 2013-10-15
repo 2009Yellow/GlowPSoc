@@ -6,7 +6,7 @@
 
 #Build Date:         Sep 13 2012 13:30:21
 
-#File Generated:     Oct 15 2013 09:58:45
+#File Generated:     Oct 15 2013 10:01:37
 
 #Purpose:            
 
@@ -80,7 +80,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 6
-Clock: CyBUS_CLK            | Frequency:  50.4 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:  48.4 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
@@ -155,5 +155,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.0 sec.
+I2076: Total run-time: 0.9 sec.
 
