@@ -19,7 +19,7 @@ uint8 adcValues [HEIGHT * WIDTH];
 
 CY_ISR(RX_INT) {
     uint8 input = UART_ReadRxData();
-    LCD_PutChar(input);     // RX ISR
+    //LCD_PutChar(input);     // RX ISR
     processRX(input);
 }
 
@@ -33,6 +33,14 @@ void init() {
     
     UART_Start();                       // initialize UART
     UART_ClearRxBuffer();
+    
+    // Init Electronic Components
+    PGA_1_Start();
+    VDAC8_1_Start();
+    PGA_2_Start();
+    IDAC8_1_Start();
+    ADC_SAR_1_Start();
+    ADC_SAR_1_StartConvert();
 }
 
 
@@ -64,8 +72,8 @@ void processRX(uint8 input) {
     // Send payload data
     int i;
     for (i = 0; i < MAT_SIZE; ++i) {
-        //UART_PutChar(adcValues[i]);
-        UART_PutChar(0xF0 * i);
+        UART_PutChar(adcValues[i]);
+        //UART_PutChar(0xF0 * i);
     }
 
     // Send final char of sequence
@@ -73,5 +81,13 @@ void processRX(uint8 input) {
 }
 
 void processMat() {
+    ADC_SAR_1_IsEndConversion(1);
+    adcResult = ADC_SAR_1_GetResult16();
+    LCD_ClearDisplay();
+    LCD_PutChar(adcResult);     // RX ISR
+    int i;
+    for (i = 0; i < MAT_SIZE; ++i) {
+        adcValues[i] = adcResult;
+    }
 }
 
