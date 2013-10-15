@@ -204,10 +204,6 @@
 <dep name=".\Generated_Source\PSoC5\UART_PM.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\UART_PM.c" />
-<file name=".\CortexM3\ARM_GCC_441\Debug\core_cm3.o">
-<dep name=".\Generated_Source\PSoC5\core_cm3.c" />
-</file>
-<file name=".\Generated_Source\PSoC5\core_cm3.c" />
 <file name=".\CortexM3\ARM_GCC_441\Debug\cyPm.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -278,6 +274,10 @@
 </file>
 <file name=".\Generated_Source\PSoC5\tx_int.H" />
 <file name=".\Generated_Source\PSoC5\tx_int.c" />
+<file name=".\CortexM3\ARM_GCC_441\Debug\core_cm3.o">
+<dep name=".\Generated_Source\PSoC5\core_cm3.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\core_cm3.c" />
 <file name=".\CortexM3\ARM_GCC_441\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 </file>
@@ -632,8 +632,20 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\2.1\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130263154830083189" />
+<deps_time v="130263191317490150" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
+</dataGuid>
+<dataGuid v="bf610382-39c6-441f-80b8-b04622ea7845">
+<CyGuid_bf610382-39c6-441f-80b8-b04622ea7845 type_name="CyDesigner.Common.Debugger.CyWatchedVariableList" version="1">
+<debugger_watch_list />
+</CyGuid_bf610382-39c6-441f-80b8-b04622ea7845>
+</dataGuid>
+<dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
+<CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469 type_name="CyDesigner.Common.Debugger.CyBreakpointList" version="1">
+<debugger_breakpoint_list>
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="23" />
+</debugger_breakpoint_list>
+</CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>

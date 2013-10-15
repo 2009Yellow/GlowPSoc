@@ -1,23 +1,26 @@
-/* ========================================
- *
- * Copyright MIT 6.115, 2013
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF MIT 6.115.
- *
- * This file is necessary for your project to build.
- * Please do not delete it.
- *
- * ========================================
-*/
-
 #include <device.h>
 
+// Mat constants
+#define HEIGHT (4)
+#define WIDTH (4)
+#define MAT_SIZE (16)
+
+// Serial Communcation Constants
+#define SERIAL_START_CHAR ('A')
+#define FIRST_SERIAL_RECEIVE_CHAR ('B') 
+#define FINAL_SERIAL_RECEIVE_CHAR (10)  // Linefeed in ASCII
+
+// ADC constnats 
+#define ADC_GAIN (100)
+
+// ADC members
+uint16 adcResult = 0;
+uint8 adcValues [HEIGHT * WIDTH];
 
 CY_ISR(RX_INT) {
-    LCD_PutChar(UART_ReadRxData());     // RX ISR
+    uint8 input = UART_ReadRxData();
+    LCD_PutChar(input);     // RX ISR
+    processRX(input);
 }
 
 void init() {
@@ -41,11 +44,34 @@ void crlf(){
 
 void main() {	
     init();
-
-    for(;;){
+    // Main process loop.
+    while(1) {
+        // Read ADC inputs
+        processMat();
     }
 }
 
 
+void processRX(uint8 input) {
+    // Only start sending values if receive start char
+    if (input != SERIAL_START_CHAR) {
+        return;
+    }
+    
+    // Send start char of sequence
+    UART_PutChar(FIRST_SERIAL_RECEIVE_CHAR);
 
-/* [] END OF FILE */
+    // Send payload data
+    int i;
+    for (i = 0; i < MAT_SIZE; ++i) {
+        //UART_PutChar(adcValues[i]);
+        UART_PutChar(0x80);
+    }
+
+    // Send final char of sequence
+    UART_PutChar(FINAL_SERIAL_RECEIVE_CHAR);
+}
+
+void processMat() {
+}
+
