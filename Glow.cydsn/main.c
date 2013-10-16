@@ -2,8 +2,8 @@
 
 // Mat constants
 #define HEIGHT (5)
-#define WIDTH (4)
-#define MAT_SIZE (20)
+#define WIDTH (7)
+#define MAT_SIZE (35)
 
 // Serial Communcation Constants
 #define SERIAL_START_CHAR ('A')
@@ -107,7 +107,6 @@ void processMat() {
 }
 
 void configureMat(int i, int j) {
-    //i = 2;
     // Zero all pins
     zeroAllPins();
     // Set the i pin to Vref

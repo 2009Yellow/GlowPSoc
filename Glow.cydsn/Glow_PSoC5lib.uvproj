@@ -842,6 +842,51 @@
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\TOP_5.h</FilePath>
             </File>
+            <File>
+              <FileName>BOTTOM_5_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1685,6 +1730,51 @@
               <FileName>TOP_5.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\TOP_5.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_5_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_5.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_6.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_6.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_7.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.h</FilePath>
             </File>
           </Files>
         </Group>
