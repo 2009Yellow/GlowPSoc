@@ -89,6 +89,14 @@ void processRX(uint8 input) {
     UART_PutChar(FINAL_SERIAL_RECEIVE_CHAR);
 }
 
+uint32 cV(uint16 adcResult) {
+    uint32 Vout = adcResult;
+    uint32 Vin = 4096;
+    uint32 Iref = 1044480;
+    return Iref/ (Vin - Vout);
+}
+
+
 void processMat() {
     int i;
     int j;
@@ -100,11 +108,12 @@ void processMat() {
             ADC_SAR_1_IsEndConversion(1);
             adcResult = ADC_SAR_1_GetResult16();
             ADC_SAR_1_StopConvert();
-            adcValues[i * WIDTH + j] = adcResult;
+            adcValues[i * WIDTH + j] = cV(adcResult);
 
         }
     }
 }
+
 
 void configureMat(int i, int j) {
     // Zero all pins
@@ -128,7 +137,7 @@ void zeroAllPins() {
     }
     int j;
     for (j=0; j < WIDTH; ++j) {
-        BOTTOM_MUX_GND_Connect(j);
+        //BOTTOM_MUX_GND_Connect(j);
     }
 }
 
