@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RS232-000\Glow\Glow.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RS232-000\Glow\Header Files\device.h">
 <ExpandedNodeIds>
 <v>RS232-000</v>
 <v>RS232-000\Glow</v>
@@ -296,7 +296,15 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\generated_source\psoc5\UART.c" />
+<name v=".\Glow.cydwr" />
+<name v=".\Generated_Source\PSoC5\LCD.h" />
+<name v=".\Generated_Source\PSoC5\BOTTOM_MUX_GND.h" />
+<name v=".\device.h" />
+</OpenDocs>
 <config v="" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
 </CyXmlSerializer>
