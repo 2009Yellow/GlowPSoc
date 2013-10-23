@@ -1,9 +1,9 @@
 #include <device.h>
 
 // Mat constants
-#define HEIGHT (5)
-#define WIDTH (7)
-#define MAT_SIZE (35)
+#define HEIGHT (10)
+#define WIDTH (12)
+#define MAT_SIZE (120)
 
 // Serial Communcation Constants
 #define SERIAL_START_CHAR ('A')
@@ -19,13 +19,10 @@ uint8 adcValues [HEIGHT * WIDTH];
 
 CY_ISR(RX_INT) {
     uint8 input = UART_ReadRxData();
-    //LCD_PutChar(input);     // RX ISR
     processRX(input);
 }
 
 void init() {
-	LCD_Start();					    // initialize lcd
-	LCD_ClearDisplay();
     
     CyGlobalIntEnable;
     rx_int_StartEx(RX_INT);             // start RX interrupt (look for CY_ISR with RX_INT address)
@@ -36,9 +33,7 @@ void init() {
     
     // Init Electronic Components
     PGA_TOP_GND_Start();
-    PGA_BOTTOM_GND_Start();
     PGA_REF_Start();
-    VDAC8_REF_Start();
     PGA_GAIN_Start();
     IDAC8_REF_Start();
     ADC_SAR_1_Start();
@@ -46,7 +41,6 @@ void init() {
     
     // Init muxes
     TOP_MUX_GND_Start();
-    BOTTOM_MUX_GND_Start();
     TOP_MUX_VREF_Start();
     BOTTOM_MUX_SENSE_Start();
     zeroAllPins();
@@ -122,7 +116,6 @@ void configureMat(int i, int j) {
     TOP_MUX_GND_Disconnect(i);
     TOP_MUX_VREF_Select(i);
     // Connect the j pin to sense
-    BOTTOM_MUX_GND_Disconnect(j);
     BOTTOM_MUX_SENSE_Select(j);
 }
 
@@ -134,10 +127,6 @@ void zeroAllPins() {
     int i;
     for (i=0; i < HEIGHT; ++i) {
         TOP_MUX_GND_Connect(i);
-    }
-    int j;
-    for (j=0; j < WIDTH; ++j) {
-        //BOTTOM_MUX_GND_Connect(j);
     }
 }
 

@@ -448,36 +448,6 @@
               <FilePath>.\Generated_Source\PSoC5\project.h</FilePath>
             </File>
             <File>
-              <FileName>LCD.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD.h</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_PM.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort_aliases.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort_aliases.h</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort.h</FilePath>
-            </File>
-            <File>
               <FileName>UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\UART.c</FilePath>
@@ -576,21 +546,6 @@
               <FileName>ADC_SAR_1_Bypass.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF.c</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF.h</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF_PM.c</FilePath>
             </File>
             <File>
               <FileName>PGA_GAIN.c</FileName>
@@ -768,16 +723,6 @@
               <FilePath>.\Generated_Source\PSoC5\TOP_MUX_VREF.h</FilePath>
             </File>
             <File>
-              <FileName>BOTTOM_MUX_GND.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_GND.c</FilePath>
-            </File>
-            <File>
-              <FileName>BOTTOM_MUX_GND.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_GND.h</FilePath>
-            </File>
-            <File>
               <FileName>BOTTOM_MUX_SENSE.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_SENSE.c</FilePath>
@@ -796,21 +741,6 @@
               <FileName>TOP_MUX_GND.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\TOP_MUX_GND.h</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND.c</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND.h</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND_PM.c</FilePath>
             </File>
             <File>
               <FileName>PGA_TOP_GND.c</FileName>
@@ -886,6 +816,156 @@
               <FileName>BOTTOM_7.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1337,36 +1417,6 @@
               <FilePath>.\Generated_Source\PSoC5\project.h</FilePath>
             </File>
             <File>
-              <FileName>LCD.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD.h</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_PM.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort_aliases.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort_aliases.h</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_LCDPort.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\LCD_LCDPort.h</FilePath>
-            </File>
-            <File>
               <FileName>UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\UART.c</FilePath>
@@ -1465,21 +1515,6 @@
               <FileName>ADC_SAR_1_Bypass.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF.c</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF.h</FilePath>
-            </File>
-            <File>
-              <FileName>VDAC8_REF_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\VDAC8_REF_PM.c</FilePath>
             </File>
             <File>
               <FileName>PGA_GAIN.c</FileName>
@@ -1657,16 +1692,6 @@
               <FilePath>.\Generated_Source\PSoC5\TOP_MUX_VREF.h</FilePath>
             </File>
             <File>
-              <FileName>BOTTOM_MUX_GND.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_GND.c</FilePath>
-            </File>
-            <File>
-              <FileName>BOTTOM_MUX_GND.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_GND.h</FilePath>
-            </File>
-            <File>
               <FileName>BOTTOM_MUX_SENSE.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\BOTTOM_MUX_SENSE.c</FilePath>
@@ -1685,21 +1710,6 @@
               <FileName>TOP_MUX_GND.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\TOP_MUX_GND.h</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND.c</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND.h</FilePath>
-            </File>
-            <File>
-              <FileName>PGA_BOTTOM_GND_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\PGA_BOTTOM_GND_PM.c</FilePath>
             </File>
             <File>
               <FileName>PGA_TOP_GND.c</FileName>
@@ -1775,6 +1785,156 @@
               <FileName>BOTTOM_7.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\BOTTOM_7.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_6.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_6.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_7.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_7.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_8.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_8.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_9.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_9.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10.c</FilePath>
+            </File>
+            <File>
+              <FileName>TOP_10.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\TOP_10.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_8.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_8.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_9.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_9.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_10.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_10.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_11.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_11.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12_aliases.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12_aliases.h</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12.c</FilePath>
+            </File>
+            <File>
+              <FileName>BOTTOM_12.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Generated_Source\PSoC5\BOTTOM_12.h</FilePath>
             </File>
           </Files>
         </Group>
